@@ -1,0 +1,87 @@
+import React from "react";
+import Image from "next/image";
+import Slider from "./Slider";
+import Footer from "./Footer";
+import { sliderImage } from "./SliderData";
+import DragImage from "./DragImage";
+
+const HomePage = () => {
+  return (
+    <div>
+      {/* slider */}
+      <div className=" mt-16 ">
+        <Slider slides={sliderImage} />
+      </div>
+      {/* Service */}
+      <div className="mt-4 md:mt-16 grid grid-cols-3 gap-4 ">
+        <div className="flex flex-col space-y-1 md:space-y-3 col-span-2 mx-3">
+          <h1 className="text-slate-900 tracking-wide text-2xl md:text-5xl font-quicksand px-3 md:px-20">
+            Our Services
+          </h1>
+          <p className="text-slate-500 tracking-wide text-sm md:text-xl font-quicksand px-3 md:px-20">
+            Blandit 1,900 natoque dui justo, dictum turpis amet, viverra vel
+            ornare quis mattis mi ac eget id integer dolor dui aliquam volutpat
+            varius pulvinar massa
+          </p>
+        </div>
+        <div className="flex flex-col justify-center">
+          <button
+            type="button"
+            className="text-white text-xs sm:text-sm md:text-xl rounded-lg text-center items-center w-[60%]  h-[30%] sm:h-[40%] bg-sky-700 hover:bg-sky-900"
+          >
+            Learn More
+          </button>
+        </div>
+      </div>
+      {/* Drag Image */}
+      <div className="h-screen">
+        <DragImage />
+      </div>
+      {/* Dream Reach */}
+      <div className="h-screen grid grid-cols-2 content-center px-[3%]">
+        <div className="flex justify-center flex-col space-y-1 md:space-y-3 col-span-1 mx-3">
+          <h1 className="text-slate-900 tracking-wide text-2xl md:text-5xl font-quicksand  ">
+            Dream Bigger.
+          </h1>
+          <h1 className="text-slate-900 tracking-wide text-2xl md:text-5xl font-quicksand ">
+            Reach Higher.
+          </h1>
+          <p className="text-slate-500 tracking-wide text-sm md:text-xl font-quicksand ">
+            HANDAL SELARAS GROUP is a group of companies with integrated
+            business coverage. Engaged in the field of surveying and mapping,
+            spatial planning, public policy development, architecture,
+            construction management, design, and creative visual design, we
+            provide services from upstream to downstream.
+          </p>
+        </div>
+        <div className="flex justify-end">
+          <div className="grid grid-cols-1 content-end text-center bg-page3 bg-cover bg-center rounded-[2rem] w-[90%]  h-[30rem]">
+            <div>
+              <img src="./testimonials.png" className="border-[3rem]" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Grow continue */}
+      <div className="h-screen grid grid-cols-2 content-center px-[3%] ">
+        <div className="flex justify-start">
+          <div className="text-center bg-page4 bg-cover bg-center rounded-[2rem] w-[90%]  h-[30rem]"></div>
+        </div>
+        <div className="flex justify-center flex-col space-y-1 md:space-y-3 col-span-1 ">
+          <h1 className="text-slate-900 tracking-wide text-2xl md:text-5xl font-quicksand ">
+            Grow & Continue
+          </h1>
+          <p className="text-slate-500 tracking-wide text-sm md:text-xl font-quicksand ">
+            HANDAL SELARAS GROUP determined to continue to grow and continue to
+            exist for the success of national development programs both at
+            central and regional level by promoting the affordability, quality
+            of work output, and complete the work on time in order to provide
+            excellent service to clients.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default HomePage;
