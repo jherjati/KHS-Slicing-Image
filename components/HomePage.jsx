@@ -7,7 +7,7 @@ import DragImage from "./DragImage";
 
 const HomePage = () => {
   return (
-    <div>
+    <div className="flex flex-col">
       {/* slider */}
       <div className=" mt-16 ">
         <Slider slides={sliderImage} />
@@ -34,16 +34,16 @@ const HomePage = () => {
         </div>
       </div>
       {/* Drag Image */}
-      <div className="h-screen">
+      <div className="h-90%">
         <DragImage />
       </div>
       {/* Dream Reach */}
-      <div className="h-screen flex flex-col md:grid md:grid-cols-2 content-center px-[3%]">
+      <div className="h-screen flex flex-col space-y-8 md:grid md:grid-cols-2 content-center px-[3%]">
         <div className="flex justify-center flex-col space-y-1 md:space-y-3 col-span-1 mx-3">
-          <h1 className="text-slate-900 tracking-wide text-2xl md:text-5xl font-quicksand  ">
+          <h1 className="text-slate-900 font-bold tracking-wide text-2xl md:text-5xl font-quicksand  ">
             Dream Bigger.
           </h1>
-          <h1 className="text-slate-900 tracking-wide text-2xl md:text-5xl font-quicksand ">
+          <h1 className="text-slate-900 font-bold tracking-wide text-2xl md:text-5xl font-quicksand ">
             Reach Higher.
           </h1>
           <p className="text-slate-500 tracking-wide text-sm md:text-xl font-quicksand ">
@@ -71,7 +71,7 @@ const HomePage = () => {
         </div>
       </div>
       {/* Grow continue */}
-      <div className="h-screen flex flex-col md:grid md:grid-cols-2 md:justify-items-start content-center px-[3%]">
+      <div className="h-screen flex flex-col space-y-8 md:grid md:grid-cols-2 md:justify-items-start content-center px-[3%]">
         <div className="flex justify-start items-center">
           <div className="grid grid-rows-2  bg-page4 bg-cover bg-center rounded-[2rem] w-[90%]  h-[60%]">
             <div className="grid grid-cols-2 row-start-2">
@@ -88,7 +88,7 @@ const HomePage = () => {
           </div>
         </div>
         <div className="flex justify-center flex-col space-y-1 md:space-y-3 col-span-1 mx-3">
-          <h1 className="text-slate-900 tracking-wide text-2xl md:text-5xl font-quicksand  ">
+          <h1 className="text-slate-900 font-bold tracking-wide text-2xl md:text-5xl font-quicksand  ">
             Grow & Continue
           </h1>
           <p className="text-slate-500 tracking-wide text-sm md:text-xl font-quicksand ">
@@ -99,6 +99,54 @@ const HomePage = () => {
             excellent service to clients.
           </p>
         </div>
+      </div>
+      {/* Imagine, Believe, Achive */}
+      <div className="h-screen grid grid-rows-3 px-[3%] text-black">
+        {/* subpage 1 */}
+        <div className="flex  w-[100%] md:w-1/2 flex-col space-y-1 md:space-y-3 col-span-1 mx-3">
+          <h1 className="text-slate-900 font-bold tracking-wide text-2xl md:text-5xl font-quicksand">
+            Imagine, Believe, Achive!
+          </h1>
+          <p className="text-slate-500 tracking-wide text-sm md:text-xl font-quicksand">
+            Engaged in the field of surveying and mapping, spatial planning,
+            public policy development, architecture, construction management,
+            design, and creative visual design, we provide services from
+            upstream to downstream.
+          </p>
+        </div>
+        {/* subpage 2 */}
+        <div className="grid grid-cols-4 justify-items-center  gap-8">
+          <div className=" bg-white grid gap-2  content-center w-[90%] h-[60%] rounded-[1rem] shadow-2xl px-[4%]">
+            <div className="text-4xl font-bold text-sky-700 ">1992</div>
+            <div className="text-2xl font-semibold text-slate-900">Year</div>
+            <div className="text-xl text-slate-600">
+              We started our business
+            </div>
+          </div>
+          <div className=" bg-white grid gap-2  content-center w-[90%] h-[60%] rounded-[1rem] shadow-2xl px-[4%]">
+            <div className="text-4xl font-bold text-sky-700 ">523</div>
+            <div className="text-2xl font-semibold text-slate-900">
+              Projects
+            </div>
+            <div className="text-xl text-slate-600">Have been done</div>
+          </div>
+          <div className=" bg-white grid gap-2  content-center w-[90%] h-[60%] rounded-[1rem] shadow-2xl px-[4%]">
+            <div className="text-4xl font-bold text-sky-700 ">123</div>
+            <div className="text-2xl font-semibold text-slate-900">
+              Employees
+            </div>
+            <div className="text-xl text-slate-600">Working together</div>
+          </div>
+          <div className=" bg-white grid gap-2  content-center w-[90%] h-[60%] rounded-[1rem] shadow-2xl px-[4%]">
+            <div className="text-4xl font-bold text-sky-700 ">10</div>
+            <div className="text-2xl font-semibold text-slate-900">
+              Countries
+            </div>
+            <div className="text-xl text-slate-600">Connected with us</div>
+          </div>
+        </div>
+        {/* subpage 3 */}
+        <div>3</div>
       </div>
     </div>
   );
