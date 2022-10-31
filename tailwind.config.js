@@ -13,9 +13,9 @@ module.exports = {
         sliderimage4: "url('/sliderimage4.png')",
         sliderimage5: "url('/sliderimage5.png')",
         page3:
-          "linear-gradient(to right,rgba(255,255,255,1),rgba(255,0,0,0), transparent), url('/Home.png')",
+          "linear-gradient(to right,rgba(255,255,255,1),70%,rgba(255,0,0,0), transparent), url('/Home.png')",
         page4:
-          "linear-gradient(to left,rgba(255,255,255,1),rgba(255,0,0,0), transparent), url('/Home.png')",
+          "linear-gradient(to left,rgba(255,255,255,1),70%,rgba(255,0,0,0), transparent), url('/Home.png')",
       },
       fontFamily: {
         quicksand: ["Quicksand", "sans-serif"],

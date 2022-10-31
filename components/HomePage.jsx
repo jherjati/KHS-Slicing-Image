@@ -38,7 +38,7 @@ const HomePage = () => {
         <DragImage />
       </div>
       {/* Dream Reach */}
-      <div className="h-screen grid grid-cols-2 content-center px-[3%]">
+      <div className="h-screen flex flex-col md:grid md:grid-cols-2 content-center px-[3%]">
         <div className="flex justify-center flex-col space-y-1 md:space-y-3 col-span-1 mx-3">
           <h1 className="text-slate-900 tracking-wide text-2xl md:text-5xl font-quicksand  ">
             Dream Bigger.
@@ -54,21 +54,41 @@ const HomePage = () => {
             provide services from upstream to downstream.
           </p>
         </div>
-        <div className="flex justify-end">
-          <div className="grid grid-cols-1 content-end text-center bg-page3 bg-cover bg-center rounded-[2rem] w-[90%]  h-[30rem]">
-            <div>
-              <img src="./testimonials.png" className="border-[3rem]" alt="" />
+        <div className="flex justify-end items-center">
+          <div className="grid grid-rows-2  bg-page3 bg-cover bg-center rounded-[2rem] w-[90%]  h-[60%]">
+            <div className="grid grid-cols-2 row-start-2">
+              <div className="border-[2rem]  border-white rounded-[2rem]">
+                <img src="./testimonials.png" className="" alt="" />
+                <h1 className="text-black font-bold tracking-wide text-xs md:text-xl font-quicksand  ">
+                  Handal Selaras Group
+                </h1>
+                <p className="text-slate-500 tracking-wide text-xs md:text-xl font-quicksand  ">
+                  Agustus 2018
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
       {/* Grow continue */}
-      <div className="h-screen grid grid-cols-2 content-center px-[3%] ">
-        <div className="flex justify-start">
-          <div className="text-center bg-page4 bg-cover bg-center rounded-[2rem] w-[90%]  h-[30rem]"></div>
+      <div className="h-screen flex flex-col md:grid md:grid-cols-2 md:justify-items-start content-center px-[3%]">
+        <div className="flex justify-start items-center">
+          <div className="grid grid-rows-2  bg-page4 bg-cover bg-center rounded-[2rem] w-[90%]  h-[60%]">
+            <div className="grid grid-cols-2 row-start-2">
+              <div className="border-[2rem] col-start-2 border-white rounded-[2rem]">
+                <img src="./testimonials.png" className="" alt="" />
+                <h1 className="text-black font-bold tracking-wide text-xs md:text-xl font-quicksand  ">
+                  Handal Selaras Group
+                </h1>
+                <p className="text-slate-500 tracking-wide text-xs md:text-xl font-quicksand  ">
+                  Agustus 2018
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="flex justify-center flex-col space-y-1 md:space-y-3 col-span-1 ">
-          <h1 className="text-slate-900 tracking-wide text-2xl md:text-5xl font-quicksand ">
+        <div className="flex justify-center flex-col space-y-1 md:space-y-3 col-span-1 mx-3">
+          <h1 className="text-slate-900 tracking-wide text-2xl md:text-5xl font-quicksand  ">
             Grow & Continue
           </h1>
           <p className="text-slate-500 tracking-wide text-sm md:text-xl font-quicksand ">
