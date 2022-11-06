@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import HomePage from "../components/HomePage";
 import AboutUs from "../components/AboutUs";
+import SurveyAndMapping from "../components/SurveyAndMapping";
 
 export default function Home() {
   return (
@@ -15,7 +16,8 @@ export default function Home() {
       </Head>
       <Navbar />
       {/* <HomePage /> */}
-      <AboutUs />
+      {/* <AboutUs /> */}
+      <SurveyAndMapping />
       <Footer />
     </div>
   );
