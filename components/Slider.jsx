@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React, { useState } from "react";
-import { sliderImage } from "./SliderData";
+import { sliderImage } from "./Data";
 import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
 
 const Slider = ({ slides }) => {

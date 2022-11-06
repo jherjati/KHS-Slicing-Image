@@ -43,3 +43,20 @@ export const sliderImage = [
     text: "Kami dapat membantu pekerjaan pengumpulan data lapangan yang dibutuhkan dalam bentuk apapun.",
   },
 ];
+
+export const logoClient = [
+  { logo: "logo-client1.png" },
+  { logo: "logo-client1.png" },
+  { logo: "logo-client1.png" },
+  { logo: "logo-client1.png" },
+  { logo: "logo-client1.png" },
+  { logo: "logo-client1.png" },
+  { logo: "logo-client1.png" },
+  { logo: "logo-client1.png" },
+];
+export const licences = [
+  { licence: "licence-1.png" },
+  { licence: "licence-2.png" },
+  { licence: "licence-3.png" },
+  { licence: "licence-4.png" },
+];

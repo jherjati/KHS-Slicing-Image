@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import Slider from "./Slider";
-import Footer from "./Footer";
-import { sliderImage } from "./SliderData";
+import { sliderImage } from "./Data";
 import DragImage from "./DragImage";
+import { logoClient } from "./Data";
 
 const HomePage = () => {
   return (
@@ -146,7 +146,15 @@ const HomePage = () => {
           </div>
         </div>
         {/* subpage 3 */}
-        <div>3</div>
+        <div className="grid grid-cols-8 justify-items-center  gap-8">
+          {logoClient.map((logo) => {
+            return (
+              <div className=" grid gap-2 justify-items-center content-center w-[90%] h-[40%] rounded-[1rem]  px-[4%]">
+                <img className="object-fill" src="logo-client1.png" alt="" />
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

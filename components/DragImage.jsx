@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
-import { dragImage } from "./SliderData";
+import { dragImage } from "./Data";
 function DragImage() {
   const [width, setWidth] = useState(0);
   const carousel = useRef();

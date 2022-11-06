@@ -44,3 +44,129 @@
     </p>
   </div>
 </div>;
+
+
+
+<div className="flex flex-col justify-items-stretch px-[15%]">
+          <div className="flex ">
+            <h1 className=" text-slate-900 tracking-wide text-sm md:text-xl font-bold font-quicksand">
+              Commisioner
+            </h1>
+            {/* <hr class="my-4 mx-auto w-full h-1 bg-gray-100 rounded border-0 md:my-10 dark:bg-gray-700" /> */}
+          </div>
+
+          <div className=" items-center justify-self-center py-12 flex flex-col">
+            <img className="rounded-full" src="/commisionerimage.png" alt="" />
+            <h1 className="text-slate-900 font-bold tracking-wide text-lg md:text-xl font-quicksand">
+              Ir. H. Ahmad Syiham
+            </h1>
+            <h2 className="text-sky-700 tracking-wide text-sm md:text-base font-quicksand font-bold">
+              General Commissioner
+            </h2>
+            <p className="text-sky-900 tracking-wide text-sm md:text-base font-quicksand">
+              Architecture, University of Indonesia
+            </p>
+          </div>
+        </div>
+        <div className="flex flex-col justify-items-stretch px-[15%]">
+          <div className="flex ">
+            <h1 className=" text-slate-900 tracking-wide text-sm md:text-xl font-bold font-quicksand">
+              Board of Director
+            </h1>
+            {/* <hr class="my-4 mx-auto w-full h-1 bg-gray-100 rounded border-0 md:my-10 dark:bg-gray-700" /> */}
+          </div>
+
+          <div className=" items-center justify-self-center py-12 flex justify-center">
+            <div className="">
+              <img
+                className="rounded-full"
+                src="/commisionerimage.png"
+                alt=""
+              />
+              <h1 className="text-slate-900 font-bold tracking-wide text-lg md:text-xl font-quicksand">
+                Ir. H. Ahmad Syiham
+              </h1>
+              <h2 className="text-sky-700 tracking-wide text-sm md:text-base font-quicksand font-bold">
+                General Commissioner
+              </h2>
+              <p className="text-sky-900 tracking-wide text-sm md:text-base font-quicksand">
+                Architecture, University of Indonesia
+              </p>
+            </div>
+            <div>
+              <img
+                className="rounded-full"
+                src="/commisionerimage.png"
+                alt=""
+              />
+              <h1 className="text-slate-900 font-bold tracking-wide text-lg md:text-xl font-quicksand">
+                Ir. H. Ahmad Syiham
+              </h1>
+              <h2 className="text-sky-700 tracking-wide text-sm md:text-base font-quicksand font-bold">
+                General Commissioner
+              </h2>
+              <p className="text-sky-900 tracking-wide text-sm md:text-base font-quicksand">
+                Architecture, University of Indonesia
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col justify-items-stretch px-[15%]">
+          <div className="flex ">
+            <h1 className=" text-slate-900 tracking-wide text-sm md:text-xl font-bold font-quicksand">
+              Board of Director
+            </h1>
+            {/* <hr class="my-4 mx-auto w-full h-1 bg-gray-100 rounded border-0 md:my-10 dark:bg-gray-700" /> */}
+          </div>
+
+          <div className=" items-center justify-self-center py-12 flex justify-center">
+            <div className="">
+              <img
+                className="rounded-full"
+                src="/commisionerimage.png"
+                alt=""
+              />
+              <h1 className="text-slate-900 font-bold tracking-wide text-lg md:text-xl font-quicksand">
+                Ir. H. Ahmad Syiham
+              </h1>
+              <h2 className="text-sky-700 tracking-wide text-sm md:text-base font-quicksand font-bold">
+                General Commissioner
+              </h2>
+              <p className="text-sky-900 tracking-wide text-sm md:text-base font-quicksand">
+                Architecture, University of Indonesia
+              </p>
+            </div>
+            <div>
+              <img
+                className="rounded-full"
+                src="/commisionerimage.png"
+                alt=""
+              />
+              <h1 className="text-slate-900 font-bold tracking-wide text-lg md:text-xl font-quicksand">
+                Ir. H. Ahmad Syiham
+              </h1>
+              <h2 className="text-sky-700 tracking-wide text-sm md:text-base font-quicksand font-bold">
+                General Commissioner
+              </h2>
+              <p className="text-sky-900 tracking-wide text-sm md:text-base font-quicksand">
+                Architecture, University of Indonesia
+              </p>
+            </div>
+            <div>
+              <img
+                className="rounded-full"
+                src="/commisionerimage.png"
+                alt=""
+              />
+              <h1 className="text-slate-900 font-bold tracking-wide text-lg md:text-xl font-quicksand">
+                Ir. H. Ahmad Syiham
+              </h1>
+              <h2 className="text-sky-700 tracking-wide text-sm md:text-base font-quicksand font-bold">
+                General Commissioner
+              </h2>
+              <p className="text-sky-900 tracking-wide text-sm md:text-base font-quicksand">
+                Architecture, University of Indonesia
+              </p>
+            </div>
+          </div>
+        </div>

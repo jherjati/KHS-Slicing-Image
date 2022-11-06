@@ -40,7 +40,7 @@ function Footer() {
             </div>
           </ul>
         </div>
-        <div className="flex flex-col min-[360px]:flex-row md:mr-20 pb-5 space-x-4">
+        <div className="flex flex-col md:flex-row md:mr-20 pb-5 space-x-4">
           <div className="">
             <ul>
               <p className="text-white  text-2xl pb-4">Company</p>
