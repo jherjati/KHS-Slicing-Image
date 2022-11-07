@@ -60,3 +60,9 @@ export const licences = [
   { licence: "licence-3.png" },
   { licence: "licence-4.png" },
 ];
+export const licencesss = [
+  { licence: "licence-1.png" },
+  { licence: "licence-2.png" },
+  { licence: "licence-3.png" },
+  { licence: "licence-4.png" },
+];
