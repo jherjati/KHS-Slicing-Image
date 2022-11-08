@@ -149,7 +149,7 @@ const HomePage = () => {
         <div className="grid grid-cols-8 justify-items-center  gap-8">
           {logoClient.map((logo) => {
             return (
-              <div className=" grid gap-2 justify-items-center content-center w-[90%] h-[40%] rounded-[1rem]  px-[4%]">
+              <div key={Logo} className=" grid gap-2 justify-items-center content-center w-[90%] h-[40%] rounded-[1rem]  px-[4%]">
                 <img className="object-fill" src="logo-client1.png" alt="" />
               </div>
             );

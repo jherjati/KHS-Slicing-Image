@@ -60,9 +60,36 @@ export const licences = [
   { licence: "licence-3.png" },
   { licence: "licence-4.png" },
 ];
-export const licencesss = [
-  { licence: "licence-1.png" },
-  { licence: "licence-2.png" },
-  { licence: "licence-3.png" },
-  { licence: "licence-4.png" },
+export const tools = [
+  { tool: "/toolsimage1.png", name: "Fixed Wing Ai-450 ER" },
+  { tool: "/toolsimage2.png", name: "DJI Phantom 3-4 Pro" },
+  { tool: "/toolsimage3.png", name: "DJI Matrice 600" },
+  { tool: "/toolsimage4.png", name: "Topcon GPS Geodetik" },
+  { tool: "/toolsimage5.png", name: "Yellowscan LiDAR System" },
+  { tool: "/toolsimage6.png", name: "Beo Skywalker Fixed Wing" },
+  { tool: "/toolsimage7.png", name: "Leica BLK360 Scanner" },
+  { tool: "/toolsimage8.png", name: "Comnav T300 GNSS + RTK" },
+  { tool: "/toolsimage9.png", name: "Micasense RedEdge" },
+];
+export const aerials = [
+  {
+    aerial: "/aerialfoto1.png",
+    name: "Provosion of Drone For Pipeline Ispection Exxonmobil Cepu Limited",
+    year: "2018",
+  },
+  {
+    aerial: "/aerialfoto2.png",
+    name: "UAV Implementation of Forestry Sinarmas Forestry",
+    year: "2018",
+  },
+  {
+    aerial: "/aerialfoto3.png",
+    name: "Situ Front City Kabupaten Bogor",
+    year: "2018",
+  },
+  {
+    aerial: "/aerialfoto4.png",
+    name: "Resort Masterplan Camp Hulu Cai",
+    year: "2018",
+  },
 ];
