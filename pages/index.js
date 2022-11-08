@@ -5,6 +5,8 @@ import Footer from "../components/Footer";
 import HomePage from "../components/HomePage";
 import AboutUs from "../components/AboutUs";
 import SurveyAndMapping from "../components/SurveyAndMapping";
+import ArchitectureConstructionManagement from "../components/ArchitectureConstructionManagement";
+import UrbanPlanning from "../components/UrbanPlanning";
 
 export default function Home() {
   return (
@@ -17,7 +19,9 @@ export default function Home() {
       <Navbar />
       {/* <HomePage /> */}
       {/* <AboutUs /> */}
-      <SurveyAndMapping />
+      {/* <SurveyAndMapping /> */}
+      {/* <ArchitectureConstructionManagement /> */}
+      <UrbanPlanning />
       <Footer />
     </div>
   );

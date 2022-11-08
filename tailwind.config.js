@@ -18,6 +18,10 @@ module.exports = {
           "linear-gradient(to left,rgba(255,255,255,1),70%,rgba(255,0,0,0), transparent), url('/Home.png')",
         survey:
           "linear-gradient(to right,rgba(255,255,255,1),30%,rgba(255,0,0,0), transparent), url('/surveyImage.png')",
+        architecture:
+          "linear-gradient(to right,rgba(255,255,255,1),30%,rgba(255,0,0,0), transparent), url('/bg-architecture.png')",
+        urban:
+          "linear-gradient(to right,rgba(255,255,255,1),30%,rgba(255,0,0,0), transparent), url('/bg-urban.png')",
       },
       fontFamily: {
         quicksand: ["Quicksand", "sans-serif"],

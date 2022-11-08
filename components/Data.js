@@ -93,3 +93,25 @@ export const aerials = [
     year: "2018",
   },
 ];
+export const architecs = [
+  {
+    architec: "/architecfoto1.png",
+    name: "An-Nur Plaza Bapindo | Bank Mandiri",
+    year: "2014",
+  },
+  {
+    architec: "/architecfoto2.png",
+    name: "Perencanaan Masjid | RS Dharmais",
+    year: "2014",
+  },
+  {
+    architec: "/architecfoto3.png",
+    name: "Drive Thru Bali | Bank Mandiri",
+    year: "2014",
+  },
+  {
+    architec: "/architecfoto4.png",
+    name: "Perencanaan Sekolah Yayasan Pendidikan (YP-BDN) Wijaya Kusuma | Bank Mandiri",
+    year: "2014",
+  },
+];
