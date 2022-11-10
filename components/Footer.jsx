@@ -3,6 +3,8 @@ import Image from "next/image";
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
+import { MdCall, MdEmail } from "react-icons/md";
+import { HiOfficeBuilding } from "react-icons/hi";
 
 function Footer() {
   return (
@@ -23,24 +25,31 @@ function Footer() {
             <div className="flex flex-col gap-6 pb-5">
               <ul>
                 <div className="p-3">
-                  <p className="text-white">
-                    Pondok Pinang Center C-34 Jalan Ciputat Raya,
-                  </p>
-                  <p className="text-white">
-                    Kota Jakarta Selatan, DKI Jakarta 12310
-                  </p>
+                  <div className="flex items-center space-x-1">
+                    <HiOfficeBuilding className="text-2xl text-white cursor-pointer  hover:text-sky-200" />
+                    <div>
+                      <p className="text-white">
+                        Pondok Pinang Center C-34 Jalan Ciputat Raya,
+                      </p>
+                      <p className="text-white">
+                        Kota Jakarta Selatan, DKI Jakarta 12310
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <div className="p-3">
+                <div className="p-3 flex items-center space-x-1">
+                  <MdEmail className="text-2xl text-white cursor-pointer  hover:text-sky-200" />
                   <p className="text-white">info@handalselaras.com</p>
                 </div>
-                <div className="p-3">
+                <div className="p-3 flex items-center space-x-1">
+                  <MdCall className="text-2xl text-white cursor-pointer  hover:text-sky-200" />
                   <p className="text-white">0217514589</p>
                 </div>
               </ul>
             </div>
           </ul>
         </div>
-        <div className="flex flex-col md:flex-row md:mr-20 pb-5 space-x-4">
+        <div className="flex flex-row md:mr-20 pb-5 space-x-4 lg:space-x-28">
           <div className="">
             <ul>
               <p className="text-white  text-2xl pb-4">Company</p>

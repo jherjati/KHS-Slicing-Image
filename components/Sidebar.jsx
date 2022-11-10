@@ -1,9 +1,11 @@
 import React from "react";
 import Image from "next/image";
 import { useState } from "react";
+import Link from "next/link";
 
 const Sidebar = () => {
   const [showSidebar, setShowSidebar] = useState(false);
+  const [dropdownOpen, setdropdownOpen] = useState(false);
   return (
     <>
       {showSidebar ? (
@@ -29,7 +31,7 @@ const Sidebar = () => {
       )}
 
       <div
-        className={`top-0 right-0 w-[25vw] md:w-[15vw] bg-white shadow-lg  text-black fixed h-full z-40  ease-in-out duration-300 ${
+        className={`top-0 right-0 w-[40vw] md:w-[20vw] bg-white shadow-lg  text-black fixed h-full z-40  ease-in-out duration-300 ${
           showSidebar ? "translate-x-0 " : "translate-x-full"
         }`}
       >
@@ -53,24 +55,69 @@ const Sidebar = () => {
             />
           </div>
           <div className="flex-col text-xs md:text-base pt-5 px-2 divide-y items-center ">
-            <div className=" py-3 align-middle">Home</div>
+            <div className=" py-3 align-middle hover:text-blue-900 hover:font-bold hover:cursor-pointer text-slate-900 tracking-wide text-base font-quicksand">
+              <Link href="/">Home</Link>
+            </div>
             <ul className="">
-              <li className=" py-3 align-middle">About Us</li>
+              <li className=" py-3 align-middle hover:text-blue-900 hover:font-bold hover:cursor-pointer text-slate-900 tracking-wide text-base font-quicksand">
+                <Link href="/about-us"> About Us</Link>
+              </li>
+            </ul>
+            <div className="py-3 align-middle">
+              <div
+                onClick={() => setdropdownOpen(!dropdownOpen)}
+                className=" hover:text-blue-900 hover:font-bold
+    hover:cursor-pointer text-slate-900 tracking-wide text-base font-quicksand
+    "
+              >
+                Service
+              </div>
+
+              <div
+                className={`${
+                  dropdownOpen ? `top-full opacity-100 visible` : "hidden"
+                } flex flex-col pt-1 space-y-2 pl-2 md:pl-8 
+        `}
+              >
+                <div className="hover:text-blue-900 hover:cursor-pointer text-slate-400 tracking-wide text-sm font-quicksand">
+                  <Link href="/service/survey-and-mapping">
+                    Survey & Mapping
+                  </Link>
+                </div>
+                <div className="hover:text-blue-900 hover:cursor-pointer text-slate-400 tracking-wide text-sm font-quicksand">
+                  <Link href="/service/architecture-construction">
+                    Architecture & Construction
+                  </Link>
+                </div>
+                <div className="hover:text-blue-900 hover:cursor-pointer text-slate-400 tracking-wide text-sm font-quicksand">
+                  <Link href="/service/urban-planning">Urban Planning</Link>
+                </div>
+              </div>
+            </div>
+            <ul>
+              <li className=" py-3 align-middle hover:text-blue-900 hover:font-bold hover:cursor-pointer text-slate-900 tracking-wide text-base font-quicksand">
+                <Link href="/clients">Clients</Link>
+              </li>
             </ul>
             <ul>
-              <li className=" py-3 align-middle">Clients</li>
+              <li className=" py-3 align-middle hover:text-blue-900 hover:font-bold hover:cursor-pointer text-slate-900 tracking-wide text-base font-quicksand">
+                <Link href="/#">Galery</Link>
+              </li>
             </ul>
             <ul>
-              <li className=" py-3 align-middle">Gallery</li>
+              <li className=" py-3 align-middle hover:text-blue-900 hover:font-bold hover:cursor-pointer text-slate-900 tracking-wide text-base font-quicksand">
+                <Link href="/#">Blog & Publications</Link>
+              </li>
             </ul>
             <ul>
-              <li className=" py-3 align-middle">Blog & Publications</li>
+              <li className=" py-3 align-middle hover:text-blue-900 hover:font-bold hover:cursor-pointer text-slate-900 tracking-wide text-base font-quicksand">
+                <Link href="/contact-us">Contact Us</Link>
+              </li>
             </ul>
             <ul>
-              <li className=" py-3 align-middle">Contact Us</li>
-            </ul>
-            <ul>
-              <li className=" py-3 align-middle">Monitoring</li>
+              <li className=" py-3 align-middle hover:text-blue-900 hover:font-bold hover:cursor-pointer text-slate-900 tracking-wide text-base font-quicksand">
+                <Link href="/#">Monitoring</Link>
+              </li>
             </ul>
           </div>
         </div>

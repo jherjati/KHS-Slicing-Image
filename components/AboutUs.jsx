@@ -278,7 +278,7 @@ const AboutUs = () => {
           {licences.map(({ licence }) => {
             return (
               <div
-                key={license}
+                key={licence}
                 className=" grid gap-2 justify-items-center content-center    px-[4%]"
               >
                 <img className="object-fill" src={licence} alt="" />

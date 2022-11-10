@@ -170,3 +170,42 @@
             </div>
           </div>
         </div>
+
+
+
+<div className="grid grid-cols-6 justify-items-center content-center px-[5%] gap-x-0 gap-y-8">
+        {clients.map(({ client }) => {
+          return (
+            <div key={client} className="grid content-center items-center">
+              <Image
+                layout="cover"
+                width="50"
+                height="30"
+                src={client}
+                alt=""
+              />
+            </div>
+          );
+        })}
+      </div>
+    </div>
+
+    <div class="relative w-[400px] overflow-hidden">
+<input type="checkbox" class="absolute">
+<div class="
+bg-blue-500
+h-12 w-full pl-5
+flex items-center
+">
+<h1 class="text-lg font-semibold text-white">
+What is Tailwindcss?
+</h1>
+</div>
+
+<!-- Arrow Icon -->
+<div>
+<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+stroke="currentColor">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2 " d= "M19 91-7 7-7-7" />
+</svg>
+</div> 

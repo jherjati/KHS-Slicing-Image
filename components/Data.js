@@ -115,3 +115,116 @@ export const architecs = [
     year: "2014",
   },
 ];
+export const clients = [
+  {
+    client: "/client (1).png",
+  },
+  {
+    client: "/client (2).png",
+  },
+  {
+    client: "/client (3).png",
+  },
+  {
+    client: "/client (4).png",
+  },
+  {
+    client: "/client (5).png",
+  },
+  {
+    client: "/client (6).png",
+  },
+  {
+    client: "/client (7).png",
+  },
+  {
+    client: "/client (8).png",
+  },
+  {
+    client: "/client (9).png",
+  },
+  {
+    client: "/client (10).png",
+  },
+  {
+    client: "/client (11).png",
+  },
+  {
+    client: "/client (12).png",
+  },
+  {
+    client: "/client (13).png",
+  },
+  {
+    client: "/client (14).png",
+  },
+  {
+    client: "/client (15).png",
+  },
+  {
+    client: "/client (16).png",
+  },
+  {
+    client: "/client (17).png",
+  },
+  {
+    client: "/client (18).png",
+  },
+  {
+    client: "/client (19).png",
+  },
+  {
+    client: "/client (20).png",
+  },
+  {
+    client: "/client (21).png",
+  },
+  {
+    client: "/client (22).png",
+  },
+  {
+    client: "/client (23).png",
+  },
+  {
+    client: "/client (24).png",
+  },
+  {
+    client: "/client (25).png",
+  },
+  {
+    client: "/client (26).png",
+  },
+  {
+    client: "/client (27).png",
+  },
+  {
+    client: "/client (28).png",
+  },
+  {
+    client: "/client (29).png",
+  },
+  {
+    client: "/client (30).png",
+  },
+  {
+    client: "/client (31).png",
+  },
+  {
+    client: "/client (32).png",
+  },
+  {
+    client: "/client (33).png",
+  },
+  {
+    client: "/client (34).png",
+  },
+  {
+    client: "/client (35).png",
+  },
+  {
+    client: "/client (36).png",
+  },
+  {
+    client: "/client (37).png",
+  },
+];

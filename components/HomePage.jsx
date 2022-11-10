@@ -7,7 +7,7 @@ import { logoClient } from "./Data";
 
 const HomePage = () => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col ">
       {/* slider */}
       <div className=" mt-16 ">
         <Slider slides={sliderImage} />
@@ -34,11 +34,12 @@ const HomePage = () => {
         </div>
       </div>
       {/* Drag Image */}
-      <div className="h-90%">
+      <div className="">
         <DragImage />
       </div>
+
       {/* Dream Reach */}
-      <div className="h-screen flex flex-col space-y-8 md:grid md:grid-cols-2 content-center px-[3%]">
+      <div className="flex flex-col space-y-8 md:grid md:grid-cols-2 px-[3%]">
         <div className="flex justify-center flex-col space-y-1 md:space-y-3 col-span-1 mx-3">
           <h1 className="text-slate-900 font-bold tracking-wide text-2xl md:text-5xl font-quicksand  ">
             Dream Bigger.
@@ -55,10 +56,16 @@ const HomePage = () => {
           </p>
         </div>
         <div className="flex justify-end items-center">
-          <div className="grid grid-rows-2  bg-page3 bg-cover bg-center rounded-[2rem] w-[90%]  h-[60%]">
+          <div className="grid grid-rows-2  bg-page3 bg-cover bg-center rounded-[1rem] w-[90%]  h-[90%]">
             <div className="grid grid-cols-2 row-start-2">
-              <div className="border-[2rem]  border-white rounded-[2rem]">
-                <img src="./testimonials.png" className="" alt="" />
+              <div className="border-[2rem] bg-white w-[100%]  border-white rounded-[1rem]">
+                <Image
+                  src="/testimonials.png"
+                  className=""
+                  alt=""
+                  width="300"
+                  height="300"
+                />
                 <h1 className="text-black font-bold tracking-wide text-xs md:text-xl font-quicksand  ">
                   Handal Selaras Group
                 </h1>
@@ -71,12 +78,18 @@ const HomePage = () => {
         </div>
       </div>
       {/* Grow continue */}
-      <div className="h-screen flex flex-col space-y-8 md:grid md:grid-cols-2 md:justify-items-start content-center px-[3%]">
-        <div className="flex justify-start items-center">
-          <div className="grid grid-rows-2  bg-page4 bg-cover bg-center rounded-[2rem] w-[90%]  h-[60%]">
+      <div className=" flex flex-col space-y-8 md:grid md:grid-cols-2 md:justify-items-start content-center px-[3%]">
+        <div className="flex justify-start items-center py-8">
+          <div className="grid grid-rows-2  bg-page4 bg-cover bg-center rounded-[2rem] w-[90%]  h-[90%]">
             <div className="grid grid-cols-2 row-start-2">
               <div className="border-[2rem] col-start-2 border-white rounded-[2rem]">
-                <img src="./testimonials.png" className="" alt="" />
+                <Image
+                  src="/testimonials.png"
+                  className=""
+                  alt=""
+                  width="300"
+                  height="300"
+                />
                 <h1 className="text-black font-bold tracking-wide text-xs md:text-xl font-quicksand  ">
                   Handal Selaras Group
                 </h1>
@@ -87,7 +100,7 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-center flex-col space-y-1 md:space-y-3 col-span-1 mx-3">
+        <div className="order-first md:order-last flex justify-center flex-col space-y-1 md:space-y-3 col-span-1 mx-3">
           <h1 className="text-slate-900 font-bold tracking-wide text-2xl md:text-5xl font-quicksand  ">
             Grow & Continue
           </h1>
@@ -101,9 +114,9 @@ const HomePage = () => {
         </div>
       </div>
       {/* Imagine, Believe, Achive */}
-      <div className="h-screen grid grid-rows-3 px-[3%] text-black">
+      <div className="flex flex-col space-y-12 px-[3%] text-black">
         {/* subpage 1 */}
-        <div className="flex  w-[100%] md:w-1/2 flex-col space-y-1 md:space-y-3 col-span-1 mx-3">
+        <div className="flex  md:w-1/2 flex-col space-y-2 md:space-y-6 col-span-1 mx-3">
           <h1 className="text-slate-900 font-bold tracking-wide text-2xl md:text-5xl font-quicksand">
             Imagine, Believe, Achive!
           </h1>
@@ -115,29 +128,29 @@ const HomePage = () => {
           </p>
         </div>
         {/* subpage 2 */}
-        <div className="grid grid-cols-4 justify-items-center  gap-8">
-          <div className=" bg-white grid gap-2  content-center w-[90%] h-[60%] rounded-[1rem] shadow-2xl px-[4%]">
+        <div className="flex flex-col md:grid md:grid-cols-4  gap-8">
+          <div className=" bg-white grid gap-2  content-center text-center  rounded-[1rem] shadow-2xl px-[4%]">
             <div className="text-4xl font-bold text-sky-700 ">1992</div>
             <div className="text-2xl font-semibold text-slate-900">Year</div>
             <div className="text-xl text-slate-600">
               We started our business
             </div>
           </div>
-          <div className=" bg-white grid gap-2  content-center w-[90%] h-[60%] rounded-[1rem] shadow-2xl px-[4%]">
+          <div className=" bg-white grid gap-2  content-center text-center  rounded-[1rem] shadow-2xl px-[4%]">
             <div className="text-4xl font-bold text-sky-700 ">523</div>
             <div className="text-2xl font-semibold text-slate-900">
               Projects
             </div>
             <div className="text-xl text-slate-600">Have been done</div>
           </div>
-          <div className=" bg-white grid gap-2  content-center w-[90%] h-[60%] rounded-[1rem] shadow-2xl px-[4%]">
+          <div className=" bg-white grid gap-2  content-center text-center  rounded-[1rem] shadow-2xl px-[4%]">
             <div className="text-4xl font-bold text-sky-700 ">123</div>
             <div className="text-2xl font-semibold text-slate-900">
               Employees
             </div>
             <div className="text-xl text-slate-600">Working together</div>
           </div>
-          <div className=" bg-white grid gap-2  content-center w-[90%] h-[60%] rounded-[1rem] shadow-2xl px-[4%]">
+          <div className=" bg-white grid gap-2  content-center text-center  rounded-[1rem] shadow-2xl px-[4%]">
             <div className="text-4xl font-bold text-sky-700 ">10</div>
             <div className="text-2xl font-semibold text-slate-900">
               Countries
@@ -149,7 +162,10 @@ const HomePage = () => {
         <div className="grid grid-cols-8 justify-items-center  gap-8">
           {logoClient.map((logo) => {
             return (
-              <div key={Logo} className=" grid gap-2 justify-items-center content-center w-[90%] h-[40%] rounded-[1rem]  px-[4%]">
+              <div
+                key={logo}
+                className=" grid gap-2 justify-items-center content-center w-[90%] h-[40%] rounded-[1rem]  px-[4%]"
+              >
                 <img className="object-fill" src="logo-client1.png" alt="" />
               </div>
             );
