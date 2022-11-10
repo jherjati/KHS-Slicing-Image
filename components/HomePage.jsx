@@ -160,7 +160,7 @@ const HomePage = () => {
         </div>
         {/* subpage 3 */}
         <div className="grid grid-cols-8 justify-items-center  gap-8">
-          {logoClient.map((logo) => {
+          {logoClient.map(({ logo }) => {
             return (
               <div
                 key={logo}

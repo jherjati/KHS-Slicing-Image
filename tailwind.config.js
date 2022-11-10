@@ -22,6 +22,7 @@ module.exports = {
           "linear-gradient(to right,rgba(255,255,255,1),30%,rgba(255,0,0,0), transparent), url('/bg-architecture.png')",
         urban:
           "linear-gradient(to right,rgba(255,255,255,1),30%,rgba(255,0,0,0), transparent), url('/bg-urban.png')",
+        blog: "linear-gradient(to bottom, rgba(22,126,196,1) 60%, white 50%)",
       },
       fontFamily: {
         quicksand: ["Quicksand", "sans-serif"],

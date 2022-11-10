@@ -46,13 +46,9 @@ export const sliderImage = [
 
 export const logoClient = [
   { logo: "logo-client1.png" },
-  { logo: "logo-client1.png" },
-  { logo: "logo-client1.png" },
-  { logo: "logo-client1.png" },
-  { logo: "logo-client1.png" },
-  { logo: "logo-client1.png" },
-  { logo: "logo-client1.png" },
-  { logo: "logo-client1.png" },
+  { logo: "logo-client2.png" },
+  { logo: "logo-client3.png" },
+  { logo: "logo-client4.png" },
 ];
 export const licences = [
   { licence: "licence-1.png" },
@@ -93,6 +89,50 @@ export const aerials = [
     year: "2018",
   },
 ];
+export const blogs = [
+  {
+    image: "/blogimage1.png",
+    category: "UAV LiDAR",
+    title: "UAV Lidar untuk Perencanaan Perumahan",
+    text: "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor",
+    publish: "Publish: 29 April 2020",
+  },
+  {
+    image: "/blogimage2.png",
+    category: "UAV LiDAR",
+    title: "UAV Lidar untuk Perencanaan Perumahan",
+    text: "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor",
+    publish: "Publish: 29 April 2020",
+  },
+  {
+    image: "/blogimage3.png",
+    category: "UAV LiDAR",
+    title: "UAV Lidar untuk Perencanaan Perumahan",
+    text: "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor",
+    publish: "Publish: 29 April 2020",
+  },
+  {
+    image: "/blogimage4.png",
+    category: "UAV LiDAR",
+    title: "UAV Lidar untuk Perencanaan Perumahan",
+    text: "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor",
+    publish: "Publish: 29 April 2020",
+  },
+  {
+    image: "/blogimage5.png",
+    category: "UAV LiDAR",
+    title: "UAV Lidar untuk Perencanaan Perumahan",
+    text: "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor",
+    publish: "Publish: 29 April 2020",
+  },
+  {
+    image: "/blogimage6.png",
+    category: "UAV LiDAR",
+    title: "UAV Lidar untuk Perencanaan Perumahan",
+    text: "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor",
+    publish: "Publish: 29 April 2020",
+  },
+];
 export const architecs = [
   {
     architec: "/architecfoto1.png",
@@ -115,6 +155,7 @@ export const architecs = [
     year: "2014",
   },
 ];
+
 export const clients = [
   {
     client: "/client (1).png",
@@ -226,5 +267,28 @@ export const clients = [
   },
   {
     client: "/client (37).png",
+  },
+];
+
+export const gallery = [
+  {
+    gallery: "/videoimage.png",
+    text: "[HSG Sekreatif] TEGAR BERIMAN TOL WITH 3D",
+    key: "1",
+  },
+  {
+    gallery: "/videoimage.png",
+    text: "[HSG Sekreatif] TEGAR BERIMAN TOL WITH 3D",
+    key: "2",
+  },
+  {
+    gallery: "/videoimage.png",
+    text: "[HSG Sekreatif] TEGAR BERIMAN TOL WITH 3D",
+    key: "3",
+  },
+  {
+    gallery: "/videoimage.png",
+    text: "[HSG Sekreatif] TEGAR BERIMAN TOL WITH 3D",
+    key: "4",
   },
 ];

@@ -19,7 +19,7 @@ const Slider = ({ slides }) => {
       <div className="  ">
         {sliderImage.map((slide, index) => {
           return (
-            <div key={index} onClick={nextSlide}>
+            <div key={slide.image} onClick={nextSlide}>
               {index === current && (
                 <div
                   className={`${slide.image} flex flex-col justify-center bg-cover bg-center  h-[37.5rem] space-y-8`}
