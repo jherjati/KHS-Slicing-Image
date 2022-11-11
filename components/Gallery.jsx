@@ -30,7 +30,7 @@ const Galery = () => {
                 <Image
                   layout="responsive"
                   src={gallery}
-                  alt={name}
+                  alt={text}
                   width="800"
                   height="400"
                 />
