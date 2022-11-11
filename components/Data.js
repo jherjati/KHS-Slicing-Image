@@ -91,6 +91,7 @@ export const aerials = [
 ];
 export const blogs = [
   {
+    id: "1",
     image: "/blogimage1.png",
     category: "UAV LiDAR",
     title: "UAV Lidar untuk Perencanaan Perumahan",
@@ -98,39 +99,49 @@ export const blogs = [
     publish: "Publish: 29 April 2020",
   },
   {
+    id: "2",
     image: "/blogimage2.png",
     category: "UAV LiDAR",
     title: "UAV Lidar untuk Perencanaan Perumahan",
     text: "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor",
     publish: "Publish: 29 April 2020",
+    writer: "Penulis: Gunawan Wibisono",
   },
   {
+    id: "3",
     image: "/blogimage3.png",
     category: "UAV LiDAR",
     title: "UAV Lidar untuk Perencanaan Perumahan",
     text: "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor",
     publish: "Publish: 29 April 2020",
+    writer: "Penulis: Gunawan Wibisono",
   },
   {
+    id: "4",
     image: "/blogimage4.png",
     category: "UAV LiDAR",
     title: "UAV Lidar untuk Perencanaan Perumahan",
     text: "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor",
     publish: "Publish: 29 April 2020",
+    writer: "Penulis: Gunawan Wibisono",
   },
   {
+    id: "5",
     image: "/blogimage5.png",
     category: "UAV LiDAR",
     title: "UAV Lidar untuk Perencanaan Perumahan",
     text: "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor",
     publish: "Publish: 29 April 2020",
+    writer: "Penulis: Gunawan Wibisono",
   },
   {
+    id: "6",
     image: "/blogimage6.png",
     category: "UAV LiDAR",
     title: "UAV Lidar untuk Perencanaan Perumahan",
     text: "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor",
     publish: "Publish: 29 April 2020",
+    writer: "Penulis: Gunawan Wibisono",
   },
 ];
 export const architecs = [

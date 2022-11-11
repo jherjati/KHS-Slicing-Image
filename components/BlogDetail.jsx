@@ -1,13 +1,14 @@
 import React from "react";
 import Image from "next/image";
-import { clients } from "./Data";
+import { blogs } from "./Data";
 
 const Detail = () => {
+  // get id of the blog
   return (
     <div className="my-16 flex flex-col space-y-12  content-center px-[5%] md:px-[15%] ">
       <div className="mt-16 flex justify-center px-[5%]">
         <Image
-          src="/blogdetailimage.png"
+          src="/blogimage1.png"
           className="rounded-lg "
           alt=""
           width="1600"
@@ -16,6 +17,9 @@ const Detail = () => {
         />
       </div>
       <div className="flex justify-center flex-col space-y-2 md:space-y-8 col-span-1 mx-3">
+        <div className="text-sky-600 font-bold tracking-wide text-sm md:text-lg font-quicksand">
+          UAV LiDAR
+        </div>
         <h1 className="text-slate-900 font-bold tracking-wide text-2xl md:text-5xl font-quicksand ">
           Detail
         </h1>

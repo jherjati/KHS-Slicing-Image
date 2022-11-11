@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import { blogs } from "./Data";
 
@@ -50,10 +51,10 @@ const Blog = () => {
         </div>
         {/* list blog detail */}
         <div className="row-span-2 flex flex-col  space-y-3 lg:grid lg:grid-cols-3 gap-2 lg:gap-12 px-[2%]">
-          {blogs.map(({ image, category, title, text, publish }) => {
+          {blogs.map(({ id, image, category, title, text, publish }) => {
             return (
               <div
-                key={title}
+                key={id}
                 className=" grid grid-cols-6 gap-4 lg:flex lg:flex-col justify-items-center content-center  rounded-[1rem] bg-white shadow-2xl px-[4%] py-[5%]"
               >
                 <div className="col-span-2 order-last lg:order-first grid content-center ">
@@ -79,7 +80,10 @@ const Blog = () => {
                   <p className="text-slate-500 tracking-wide text-sm md:text-xl font-quicksand">
                     {publish}
                   </p>
-                  <div className="flex justify-between">
+                  <Link
+                    href={`/blog/detail?id=${id}`}
+                    className="flex justify-between"
+                  >
                     <p className="text-sky-600 font-bold hover:text-sky-900 tracking-wide text-sm md:text-base font-quicksand">
                       Read More
                     </p>
@@ -87,7 +91,7 @@ const Blog = () => {
                       {" "}
                       {">"}{" "}
                     </p>
-                  </div>
+                  </Link>
                 </div>
               </div>
             );
