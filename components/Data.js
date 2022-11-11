@@ -51,10 +51,10 @@ export const logoClient = [
   { logo: "logo-client4.png" },
 ];
 export const licences = [
-  { licence: "licence-1.png" },
-  { licence: "licence-2.png" },
-  { licence: "licence-3.png" },
-  { licence: "licence-4.png" },
+  { licence: "/licence-1.png" },
+  { licence: "/licence-2.png" },
+  { licence: "/licence-3.png" },
+  { licence: "/licence-4.png" },
 ];
 export const tools = [
   { tool: "/toolsimage1.png", name: "Fixed Wing Ai-450 ER" },

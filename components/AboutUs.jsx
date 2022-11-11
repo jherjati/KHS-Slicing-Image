@@ -1,5 +1,6 @@
 import React from "react";
 import { licences } from "./Data";
+import Image from "next/image";
 
 const AboutUs = () => {
   return (
@@ -7,7 +8,7 @@ const AboutUs = () => {
       <div className="mt-16">
         <div className="flex flex-col xl:gap-2 xl:grid xl:grid-cols-5">
           <div className="hidden  xl:col-span-1 xl:grid content-end">
-            <img src="/aboutusimage1.png" alt="" />
+            <Image width="400" height="300" src="/aboutusimage1.png" alt="" />
           </div>
 
           <div className="order-first xl:order-none col-span-3 flex flex-col space-y-4 justify-center p-[5%]">
@@ -63,16 +64,13 @@ const AboutUs = () => {
             </div>
           </div>
           <div className="flex justify-center xl:justify-end xl:grid xl:col-span-1 ">
-            <img
-              className="grid xl:hidden max-[320]:max-md:w-[50%]"
-              src="/aboutusimage1.png"
-              alt=""
-            />
-            <img
-              className="min-[320]:max-md:w-[50%]"
-              src="/aboutusimage2.png"
-              alt=""
-            />
+            <div className="grid xl:hidden max-[320]:max-md:w-[50%]">
+              {" "}
+              <Image width="400" height="300" src="/aboutusimage1.png" alt="" />
+            </div>
+            <div className="min-[320]:max-md:w-[50%]">
+              <Image width="400" height="300" src="/aboutusimage2.png" alt="" />
+            </div>
           </div>
         </div>
       </div>
@@ -100,7 +98,7 @@ const AboutUs = () => {
           </ul>
         </div>
         <div className="flex justify-center col-span-2">
-          <img src="/aboutusimage3.png" alt="" />
+          <Image width="400" height="300" src="/aboutusimage3.png" alt="" />
         </div>
       </div>
       <div className="flex flex-col space-y-4 px-[5%]">
@@ -120,11 +118,17 @@ const AboutUs = () => {
           <h1 className=" text-slate-900 tracking-wide text-sm md:text-xl font-bold font-quicksand">
             Commisioner
           </h1>
-          {/* <hr class="my-4 mx-auto w-full h-1 bg-gray-100 rounded border-0 md:my-10 dark:bg-gray-700" /> */}
         </div>
         <div className="flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 md:space-x-20">
           <div className="flex flex-col items-center">
-            <img className="rounded-full" src="/commisionerimage.png" alt="" />
+            <Image
+              width="150"
+              height="100"
+              src="/commisionerImage.png"
+              layout="responsive"
+              alt=""
+              className="rounded-full"
+            />
             <h1 className="text-slate-900 font-bold tracking-wide text-lg md:text-xl font-quicksand">
               Ir. H. Ahmad Syiham
             </h1>
@@ -140,15 +144,18 @@ const AboutUs = () => {
           <h1 className=" text-slate-900 tracking-wide text-sm md:text-xl font-bold font-quicksand">
             Board of Director
           </h1>
-          {/* <hr class="my-4 mx-auto w-full h-1 bg-gray-100 rounded border-0 md:my-10 dark:bg-gray-700" /> */}
         </div>
         <div className="flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 md:space-x-16">
           <div className="flex flex-col items-center">
-            <img
-              className="rounded-full"
+            <Image
+              width="150"
+              height="100"
               src="/presidenDirectorImage.png"
+              layout="responsive"
               alt=""
+              className="rounded-full"
             />
+
             <h1 className="text-slate-900 font-bold tracking-wide text-lg md:text-xl font-quicksand">
               Nurohim
             </h1>
@@ -160,7 +167,14 @@ const AboutUs = () => {
             </p>
           </div>
           <div className="flex flex-col items-center">
-            <img className="rounded-full" src="/directorImage.png" alt="" />
+            <Image
+              width="150"
+              height="100"
+              src="/directorImage.png"
+              layout="responsive"
+              alt=""
+              className="rounded-full"
+            />
             <h1 className="text-slate-900 font-bold tracking-wide text-lg md:text-xl font-quicksand">
               Arszandi Pratama, M.Sc
             </h1>
@@ -176,11 +190,17 @@ const AboutUs = () => {
           <h1 className=" text-slate-900 tracking-wide text-sm md:text-xl font-bold font-quicksand">
             Head of Division
           </h1>
-          {/* <hr class="my-4 mx-auto w-full h-1 bg-gray-100 rounded border-0 md:my-10 dark:bg-gray-700" /> */}
         </div>
         <div className="flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 md:space-x-20">
           <div className="flex flex-col items-center">
-            <img className="rounded-full" src="/headOfSurvey.png" alt="" />
+            <Image
+              width="150"
+              height="100"
+              src="/headOfSurvey.png"
+              layout="responsive"
+              alt=""
+              className="rounded-full"
+            />
             <h1 className="text-slate-900 font-bold tracking-wide text-lg md:text-xl font-quicksand">
               Rabby Awalludin, S.T
             </h1>
@@ -192,10 +212,13 @@ const AboutUs = () => {
             </p>
           </div>
           <div className="flex flex-col items-center">
-            <img
-              className="rounded-full"
+            <Image
+              width="150"
+              height="100"
               src="/headOfArchitecture.png"
+              layout="responsive"
               alt=""
+              className="rounded-full"
             />
             <h1 className="text-slate-900 font-bold tracking-wide text-lg md:text-xl font-quicksand">
               Elssany Noor D, S.T
@@ -211,7 +234,15 @@ const AboutUs = () => {
             </p>
           </div>
           <div className="flex flex-col items-center">
-            <img className="rounded-full" src="/headOfMarketting.png" alt="" />
+            <Image
+              width="150"
+              height="100"
+              src="/headOfMarketting.png"
+              layout="responsive"
+              alt=""
+              className="rounded-full"
+            />
+
             <h1 className="text-slate-900 font-bold tracking-wide text-lg md:text-xl font-quicksand">
               Nurul Megawati Putri, S.T
             </h1>
@@ -229,9 +260,9 @@ const AboutUs = () => {
       </div>
 
       {/* page3 */}
-      <div className="h-screen grid grid-rows-3 px-[3%] text-black">
+      <div className="flex flex-col space-y-12 px-[3%] text-black">
         {/* subpage 1 */}
-        <div className="flex  w-[100%] md:w-1/2 flex-col space-y-1 md:space-y-3 col-span-1 mx-3">
+        <div className="flex  md:w-1/2 flex-col space-y-2 md:space-y-6 col-span-1 mx-3">
           <h1 className="text-slate-900 font-bold tracking-wide text-2xl md:text-5xl font-quicksand">
             Imagine, Believe, Achive!
           </h1>
@@ -243,29 +274,29 @@ const AboutUs = () => {
           </p>
         </div>
         {/* subpage 2 */}
-        <div className="grid grid-cols-4 justify-items-center  gap-8">
-          <div className=" bg-white grid gap-2  content-center w-[90%] h-[60%] rounded-[1rem] shadow-2xl px-[4%]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4   gap-8">
+          <div className=" bg-white grid gap-2  content-center text-center  rounded-[1rem] shadow-2xl px-[4%]">
             <div className="text-4xl font-bold text-sky-700 ">1992</div>
             <div className="text-2xl font-semibold text-slate-900">Year</div>
             <div className="text-xl text-slate-600">
               We started our business
             </div>
           </div>
-          <div className=" bg-white grid gap-2  content-center w-[90%] h-[60%] rounded-[1rem] shadow-2xl px-[4%]">
+          <div className=" bg-white grid gap-2  content-center text-center  rounded-[1rem] shadow-2xl px-[4%]">
             <div className="text-4xl font-bold text-sky-700 ">523</div>
             <div className="text-2xl font-semibold text-slate-900">
               Projects
             </div>
             <div className="text-xl text-slate-600">Have been done</div>
           </div>
-          <div className=" bg-white grid gap-2  content-center w-[90%] h-[60%] rounded-[1rem] shadow-2xl px-[4%]">
+          <div className=" bg-white grid gap-2  content-center text-center  rounded-[1rem] shadow-2xl px-[4%]">
             <div className="text-4xl font-bold text-sky-700 ">123</div>
             <div className="text-2xl font-semibold text-slate-900">
               Employees
             </div>
             <div className="text-xl text-slate-600">Working together</div>
           </div>
-          <div className=" bg-white grid gap-2  content-center w-[90%] h-[60%] rounded-[1rem] shadow-2xl px-[4%]">
+          <div className=" bg-white grid gap-2  content-center text-center  rounded-[1rem] shadow-2xl px-[4%]">
             <div className="text-4xl font-bold text-sky-700 ">10</div>
             <div className="text-2xl font-semibold text-slate-900">
               Countries
@@ -274,14 +305,14 @@ const AboutUs = () => {
           </div>
         </div>
         {/* subpage 3 */}
-        <div className="grid grid-cols-4 justify-items-center  gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4  justify-items-center  gap-8 pb-8">
           {licences.map(({ licence }) => {
             return (
               <div
                 key={licence}
-                className=" grid gap-2 justify-items-center content-center    px-[4%]"
+                className="  grid gap-2 justify-items-center content-center px-[4%]"
               >
-                <img className="object-fill" src={licence} alt="" />
+                <Image width="200" height="100" src={licence} alt="" />
               </div>
             );
           })}
