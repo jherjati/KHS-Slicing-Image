@@ -4,6 +4,7 @@ import Slider from "./Slider";
 import { sliderImage } from "./Data";
 import DragImage from "./DragImage";
 import { logoClient } from "./Data";
+import SlideLogo from "./SlideLogo";
 
 const HomePage = () => {
   return (
@@ -114,7 +115,7 @@ const HomePage = () => {
         </div>
       </div>
       {/* Imagine, Believe, Achive */}
-      <div className="flex flex-col space-y-12 px-[3%] text-black">
+      <div className="flex flex-col space-y-12 md:space-y-20 px-[3%] text-black">
         {/* subpage 1 */}
         <div className="flex  md:w-1/2 flex-col space-y-2 md:space-y-6 col-span-1 mx-3">
           <h1 className="text-slate-900 font-bold tracking-wide text-2xl md:text-5xl font-quicksand">
@@ -159,17 +160,8 @@ const HomePage = () => {
           </div>
         </div>
         {/* subpage 3 */}
-        <div className="grid grid-cols-8 justify-items-center  gap-8">
-          {logoClient.map(({ logo }) => {
-            return (
-              <div
-                key={logo}
-                className=" grid gap-2 justify-items-center content-center w-[90%] h-[40%] rounded-[1rem]  px-[4%]"
-              >
-                <img className="object-fill" src="logo-client1.png" alt="" />
-              </div>
-            );
-          })}
+        <div className="flex justify-center px-[5%] pb-16">
+          <SlideLogo slides={logoClient} />
         </div>
       </div>
     </div>

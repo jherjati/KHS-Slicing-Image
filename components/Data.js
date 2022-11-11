@@ -45,10 +45,11 @@ export const sliderImage = [
 ];
 
 export const logoClient = [
-  { logo: "logo-client1.png" },
-  { logo: "logo-client2.png" },
-  { logo: "logo-client3.png" },
-  { logo: "logo-client4.png" },
+  { logo: "/Clients-1.png" },
+  { logo: "/Clients-2.png" },
+  { logo: "/Clients-3.png" },
+  { logo: "/Clients-4.png" },
+  { logo: "/Clients-5.png" },
 ];
 export const licences = [
   { licence: "/licence-1.png" },

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const AboutUs = () => {
   return (
-    <div className="flex flex-col space-y-8">
+    <div className="flex flex-col space-y-8 md:space-y-16">
       <div className="mt-16">
         <div className="flex flex-col xl:gap-2 xl:grid xl:grid-cols-5">
           <div className="hidden  xl:col-span-1 xl:grid content-end">
@@ -260,7 +260,7 @@ const AboutUs = () => {
       </div>
 
       {/* page3 */}
-      <div className="flex flex-col space-y-12 px-[3%] text-black">
+      <div className="flex flex-col space-y-16 md:space-y-20 px-[3%] text-black">
         {/* subpage 1 */}
         <div className="flex  md:w-1/2 flex-col space-y-2 md:space-y-6 col-span-1 mx-3">
           <h1 className="text-slate-900 font-bold tracking-wide text-2xl md:text-5xl font-quicksand">
