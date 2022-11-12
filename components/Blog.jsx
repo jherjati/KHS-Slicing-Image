@@ -1,9 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-
 import { blogs } from "./Data";
-
 const Blog = () => {
   return (
     <div className="mt-16 bg-blog">
