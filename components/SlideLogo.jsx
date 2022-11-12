@@ -40,13 +40,7 @@ const SlideLogo = ({ slides }) => {
                 size={30}
               />
               {index === current && (
-                <Image
-                  src={logo}
-                  alt="/"
-                  width="1440"
-                  height="600"
-                  objectFit="cover"
-                />
+                <Image src={logo} alt="/" width="1440" height="600" />
               )}
               <FaArrowCircleRight
                 onClick={nextSlide}

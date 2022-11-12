@@ -35,7 +35,6 @@ const Sidebar = () => {
           showSidebar ? "translate-x-0 " : "translate-x-full"
         }`}
       >
-        {" "}
         <div>
           <div>
             <Image
@@ -106,6 +105,11 @@ const Sidebar = () => {
             </ul>
             <ul>
               <li className=" py-3 align-middle hover:text-blue-900 hover:font-bold hover:cursor-pointer text-slate-900 tracking-wide text-base font-quicksand">
+                <Link href="/career">Career</Link>
+              </li>
+            </ul>
+            <ul>
+              <li className=" py-3 align-middle hover:text-blue-900 hover:font-bold hover:cursor-pointer text-slate-900 tracking-wide text-base font-quicksand">
                 <Link href="/blog">Blog & Publications</Link>
               </li>
             </ul>
@@ -116,7 +120,7 @@ const Sidebar = () => {
             </ul>
             <ul>
               <li className=" py-3 align-middle hover:text-blue-900 hover:font-bold hover:cursor-pointer text-slate-900 tracking-wide text-base font-quicksand">
-                <Link href="/#">Monitoring</Link>
+                <Link href="/monitor">Monitoring</Link>
               </li>
             </ul>
           </div>

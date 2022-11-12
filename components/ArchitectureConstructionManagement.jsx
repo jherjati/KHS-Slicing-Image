@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { architecs } from "./Data";
+import Dropdown from "./Dropdown";
 
 const ArchitectureConstructionManagement = () => {
   return (
@@ -51,127 +52,143 @@ const ArchitectureConstructionManagement = () => {
       </div>
 
       {/* page 3 */}
-      <div className="px-[5%] md:grid md:grid-cols-4 md:divide-x">
+      <div className="px-[5%] ">
         {/* sisi kanan */}
-        <div className="col-span-3 flex flex-col space-y-8 pt-[5%] pr-[3%]">
-          <div className=" flex flex-col space-y-8 ">
-            <h1 className="text-slate-900 font-bold tracking-wide text-2xl md:text-5xl font-quicksand">
-              Architectural Planning
-            </h1>
-            <p className="text-slate-500 tracking-wide text-sm md:text-xl font-quicksand">
-              HANDAL SELARAS GROUP is supported by reliable architects who have
-              decades of experience. Architectural planning includes planning
-              Concept Design, Pre-Design / Schematic Design, and Design
-              Development.
-            </p>
-
-            <div className="row-span-2 flex flex-col  space-y-3 md:grid md:grid-cols-2 gap-2 md:gap-12 ">
-              {architecs.map(({ architec, name, year }) => {
-                return (
-                  <div
-                    key={name}
-                    className=" grid  gap-4 text-center justify-items-center content-center  rounded-[1rem] bg-white shadow-2xl px-[4%] py-[5%]"
-                  >
-                    <div className="">
-                      <Image
-                        layout="intrinsic"
-                        src={architec}
-                        alt={name}
-                        width="800"
-                        height="400"
-                      />
-                    </div>
-
-                    <div className="flex flex-col justify-center">
-                      <p className="text-slate-800 font-bold tracking-wide text-sm md:text-xl font-quicksand">
-                        {name}
-                      </p>
-                      <p className="text-slate-500 tracking-wide text-sm md:text-xl font-quicksand">
-                        {year}
-                      </p>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-          <div className=" flex flex-col space-y-8 ">
-            <h1 className="text-slate-900 font-bold tracking-wide text-2xl md:text-5xl font-quicksand">
-              Detail Engineering Design Planning
-            </h1>
-            <p className="text-slate-500 tracking-wide text-sm md:text-xl font-quicksand">
-              HANDAL SELARAS GROUP is supported by reliable architects who have
-              decades of experience. We can produce a Detailed Engineering
-              Design (DED) as a product of a planning consultant, which is used
-              in making working drawings for various construction works,
-              including the Budget Cost Design (RAB).
-            </p>
-            <Image
-              className="rounded-lg"
-              src="/architecdesain.png"
-              alt="Detail Engineering Design Planning Image"
-              width="800"
-              height="400"
-              layout="intrinsic"
-            />
-          </div>
-          <div className=" flex flex-col space-y-8 ">
-            <h1 className="text-slate-900 font-bold tracking-wide text-2xl md:text-5xl font-quicksand">
-              Construction Management
-            </h1>
-            <p className="text-slate-500 tracking-wide text-sm md:text-xl font-quicksand">
-              HANDAL SELARAS GROUP is supported by reliable and experienced
-              architects who have decades of experience in the construction
-              industry, capable of carrying out supervision, providing advice
-              and assistance in a development project, especially for the
-              Procurement Implementation Process and Periodic Supervision.
-            </p>
-            <Image
-              className="rounded-lg"
-              src="/architecconstruction.png"
-              alt="Construction Management Image"
-              width="800"
-              height="400"
-              layout="intrinsic"
-            />
-          </div>
-          <div className=" flex flex-col space-y-8 ">
-            <h1 className="text-slate-900 font-bold tracking-wide text-2xl md:text-5xl font-quicksand">
-              Design and Build
-            </h1>
-            <p className="text-slate-500 tracking-wide text-sm md:text-xl font-quicksand">
-              HANDAL SELARAS GROUP With more than 25 years of experience in the
-              field of engineering design, both as planners, executors, and
-              users, at this time, We want to share experiences for your needs.
-            </p>
-            <p className="text-slate-500 tracking-wide text-sm md:text-xl font-quicksand">
-              Data generated by TVT can be effectively compared with data
-              obtained by the geophysical method. Some TVT applications are
-              exploration of oil and gas accumulation (offshore and onshore),
-              mineral exploration, environmental observation, exploration of
-              water source accumulation, infrastructure inspection (oil and gas
-              pipelines), and others.
-            </p>
-
-            <Image
-              className="rounded-lg pb-8 "
-              src="/architecbuilding.png"
-              alt="Design and Builde"
-              width="800"
-              height="400"
-              layout="intrinsic"
+        <div className="pt-8">
+          <div className="lg:hidden border border-black rounded-lg text-center">
+            <Dropdown
+              title="Select Section"
+              texts={[
+                "Architectural Planning",
+                "Detail Engineering Design Planning",
+                "Construction Management",
+                "Design and Build",
+              ]}
             />
           </div>
         </div>
-        {/* sisi kiri */}
-        <aside className="hidden md:flex col-span-1 p-[10%] ">
-          <ul className="space-y-12 ">
-            <li>Architectural Planning</li>
-            <li>Detail Engineering Design Planning</li>
-            <li>Construction Management</li>
-            <li>Design and Build</li>
-          </ul>
-        </aside>
+        <div className="flex flex-col lg:grid lg:grid-cols-4 lg:divide-x">
+          <div className="col-span-3 flex flex-col space-y-8 pt-[5%] pr-[3%]">
+            <div className=" flex flex-col space-y-8 ">
+              <h1 className="text-slate-900 font-bold tracking-wide text-2xl md:text-5xl font-quicksand">
+                Architectural Planning
+              </h1>
+              <p className="text-slate-500 tracking-wide text-sm md:text-xl font-quicksand">
+                HANDAL SELARAS GROUP is supported by reliable architects who
+                have decades of experience. Architectural planning includes
+                planning Concept Design, Pre-Design / Schematic Design, and
+                Design Development.
+              </p>
+
+              <div className="row-span-2 flex flex-col  space-y-3 md:grid md:grid-cols-2 gap-2 md:gap-12 ">
+                {architecs.map(({ architec, name, year }) => {
+                  return (
+                    <div
+                      key={name}
+                      className=" grid  gap-4 text-center justify-items-center content-center  rounded-[1rem] bg-white shadow-2xl px-[4%] py-[5%]"
+                    >
+                      <div className="">
+                        <Image
+                          layout="intrinsic"
+                          src={architec}
+                          alt={name}
+                          width="800"
+                          height="400"
+                        />
+                      </div>
+
+                      <div className="flex flex-col justify-center">
+                        <p className="text-slate-800 font-bold tracking-wide text-sm md:text-xl font-quicksand">
+                          {name}
+                        </p>
+                        <p className="text-slate-500 tracking-wide text-sm md:text-xl font-quicksand">
+                          {year}
+                        </p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+            <div className=" flex flex-col space-y-8 ">
+              <h1 className="text-slate-900 font-bold tracking-wide text-2xl md:text-5xl font-quicksand">
+                Detail Engineering Design Planning
+              </h1>
+              <p className="text-slate-500 tracking-wide text-sm md:text-xl font-quicksand">
+                HANDAL SELARAS GROUP is supported by reliable architects who
+                have decades of experience. We can produce a Detailed
+                Engineering Design (DED) as a product of a planning consultant,
+                which is used in making working drawings for various
+                construction works, including the Budget Cost Design (RAB).
+              </p>
+              <Image
+                className="rounded-lg"
+                src="/architecdesain.png"
+                alt="Detail Engineering Design Planning Image"
+                width="800"
+                height="400"
+                layout="intrinsic"
+              />
+            </div>
+            <div className=" flex flex-col space-y-8 ">
+              <h1 className="text-slate-900 font-bold tracking-wide text-2xl md:text-5xl font-quicksand">
+                Construction Management
+              </h1>
+              <p className="text-slate-500 tracking-wide text-sm md:text-xl font-quicksand">
+                HANDAL SELARAS GROUP is supported by reliable and experienced
+                architects who have decades of experience in the construction
+                industry, capable of carrying out supervision, providing advice
+                and assistance in a development project, especially for the
+                Procurement Implementation Process and Periodic Supervision.
+              </p>
+              <Image
+                className="rounded-lg"
+                src="/architecconstruction.png"
+                alt="Construction Management Image"
+                width="800"
+                height="400"
+                layout="intrinsic"
+              />
+            </div>
+            <div className=" flex flex-col space-y-8 ">
+              <h1 className="text-slate-900 font-bold tracking-wide text-2xl md:text-5xl font-quicksand">
+                Design and Build
+              </h1>
+              <p className="text-slate-500 tracking-wide text-sm md:text-xl font-quicksand">
+                HANDAL SELARAS GROUP With more than 25 years of experience in
+                the field of engineering design, both as planners, executors,
+                and users, at this time, We want to share experiences for your
+                needs.
+              </p>
+              <p className="text-slate-500 tracking-wide text-sm md:text-xl font-quicksand">
+                Data generated by TVT can be effectively compared with data
+                obtained by the geophysical method. Some TVT applications are
+                exploration of oil and gas accumulation (offshore and onshore),
+                mineral exploration, environmental observation, exploration of
+                water source accumulation, infrastructure inspection (oil and
+                gas pipelines), and others.
+              </p>
+
+              <Image
+                className="rounded-lg pb-8 "
+                src="/architecbuilding.png"
+                alt="Design and Builde"
+                width="800"
+                height="400"
+                layout="intrinsic"
+              />
+            </div>
+          </div>
+          {/* sisi kiri */}
+          <aside className="hidden md:flex col-span-1 p-[10%] ">
+            <ul className="space-y-12 ">
+              <li>Architectural Planning</li>
+              <li>Detail Engineering Design Planning</li>
+              <li>Construction Management</li>
+              <li>Design and Build</li>
+            </ul>
+          </aside>
+        </div>
       </div>
     </div>
   );

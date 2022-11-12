@@ -145,6 +145,50 @@ export const blogs = [
     writer: "Penulis: Gunawan Wibisono",
   },
 ];
+export const careers = [
+  {
+    id: "1",
+    image: "/jobimage1.png",
+    title: "Supervisor",
+    text: "Divisi: Research and Development",
+    text2: "Deadline: 29 April 2020",
+  },
+  {
+    id: "2",
+    image: "/jobimage2.png",
+    title: "Supervisor",
+    text: "Divisi: Research and Development",
+    text2: "Deadline: 29 April 2020",
+  },
+  {
+    id: "3",
+    image: "/jobimage3.png",
+    title: "Supervisor",
+    text: "Divisi: Research and Development",
+    text2: "Deadline: 29 April 2020",
+  },
+  {
+    id: "4",
+    image: "/jobimage4.png",
+    title: "Supervisor",
+    text: "Divisi: Research and Development",
+    text2: "Deadline: 29 April 2020",
+  },
+  {
+    id: "5",
+    image: "/jobimage5.png",
+    title: "Supervisor",
+    text: "Divisi: Research and Development",
+    text2: "Deadline: 29 April 2020",
+  },
+  {
+    id: "6",
+    image: "/jobimage6.png",
+    title: "Supervisor",
+    text: "Divisi: Research and Development",
+    text2: "Deadline: 29 April 2020",
+  },
+];
 export const architecs = [
   {
     architec: "/architecfoto1.png",
@@ -302,5 +346,23 @@ export const gallery = [
     gallery: "/videoimage.png",
     text: "[HSG Sekreatif] TEGAR BERIMAN TOL WITH 3D",
     key: "4",
+  },
+];
+
+export const careeractivity = [
+  {
+    activity: "/careerimageactivity1.png",
+    text: " Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmo",
+    key: "1",
+  },
+  {
+    activity: "/careerimageactivity3.png",
+    text: " Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmo",
+    key: "2",
+  },
+  {
+    activity: "/careerimageactivity4.png",
+    text: " Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmo",
+    key: "3",
   },
 ];
