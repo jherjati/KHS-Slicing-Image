@@ -3,6 +3,7 @@ import styles from "../styles/Home.module.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import AboutUs from "../components/AboutUs";
+import { useState } from "react";
 
 export default function Home() {
   return (

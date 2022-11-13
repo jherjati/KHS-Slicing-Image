@@ -4,8 +4,7 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import BlogDetail from "../../components/BlogDetail";
 
-export default function Detail({ url }) {
-  console.log(url);
+export default function Detail() {
   return (
     <div>
       <Head>
