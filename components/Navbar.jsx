@@ -63,7 +63,7 @@ const Navbar = () => {
                   type="search"
                   id="default-search"
                   className="block p-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 font-quicksand"
-                  placeholder="Enter Password"
+                  placeholder="Search"
                   required
                 />
               </div>
