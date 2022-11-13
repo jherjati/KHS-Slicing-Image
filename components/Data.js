@@ -1,18 +1,33 @@
 export const dragImage = [
   {
     image: "/DragImage1.png",
+    title: "Survey & Mapping",
+    text: "Kami dapat membantu pekerjaan pengumpulan data lapangan yang dibutuhkan dalam bentuk apapun.",
+    link: "/service/survey-and-mapping",
   },
   {
     image: "/DragImage2.png",
+    title: "Architecture & Construction",
+    text: "Kami dapat membantu pekerjaan pengumpulan data lapangan yang dibutuhkan dalam bentuk apapun.",
+    link: "/service/architecture-construction",
   },
   {
     image: "/DragImage3.png",
+    title: "Urban Planning",
+    text: "Kami dapat membantu pekerjaan pengumpulan data lapangan yang dibutuhkan dalam bentuk apapun.",
+    link: "/service/urban-planning",
   },
   {
     image: "/DragImage4.png",
+    title: "Drone Spraying",
+    text: "Kami dapat membantu pekerjaan pengumpulan data lapangan yang dibutuhkan dalam bentuk apapun.",
+    link: "/service/survey-and-mapping",
   },
   {
     image: "/DragImage5.png",
+    title: "Survey & Mapping",
+    text: "Kami dapat membantu pekerjaan pengumpulan data lapangan yang dibutuhkan dalam bentuk apapun.",
+    link: "/service/survey-and-mapping",
   },
 ];
 

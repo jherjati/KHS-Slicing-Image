@@ -14,8 +14,8 @@ const HomePage = () => {
         <Slider slides={sliderImage} />
       </div>
       {/* Service */}
-      <div className="mt-4 md:mt-16 grid grid-cols-3 gap-4 ">
-        <div className="flex flex-col space-y-1 md:space-y-3 col-span-2 mx-3">
+      <div className="mt-4 md:mt-16 grid grid-cols-6 gap-4 ">
+        <div className="flex flex-col space-y-1 md:space-y-3 col-span-4  mx-3">
           <h1 className="text-slate-900 tracking-wide text-2xl md:text-5xl font-quicksand px-3 md:px-20">
             Our Services
           </h1>
@@ -25,10 +25,10 @@ const HomePage = () => {
             varius pulvinar massa
           </p>
         </div>
-        <div className="flex flex-col justify-center">
+        <div className="col-span-2 flex flex-col justify-center">
           <button
             type="button"
-            className="text-white text-xs sm:text-sm md:text-xl rounded-lg text-center items-center w-[60%]  h-[30%] sm:h-[40%] bg-sky-700 hover:bg-sky-900"
+            className="text-white text-xs sm:text-sm md:text-xl rounded-lg text-center items-center w-[90%] md:w-[60%]  h-[30%] sm:h-[40%] bg-sky-700 hover:bg-sky-900"
           >
             Learn More
           </button>
