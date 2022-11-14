@@ -54,7 +54,7 @@ function DragImage() {
                     <p className="text-slate-200  text-xl">{text}</p>
                     <Link
                       href={link}
-                      className="text-slate-200 text-xl border-2 text-center rounded"
+                      className="text-slate-200 w-[80%] lg:w-[100%] text-xl border-2 text-center rounded"
                     >
                       View Details
                     </Link>
