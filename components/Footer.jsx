@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
-import { FaYoutube } from "react-icons/fa";
+import { FaYoutube, FaWhatsapp } from "react-icons/fa";
 import { MdCall, MdEmail } from "react-icons/md";
 import { HiOfficeBuilding } from "react-icons/hi";
 
@@ -44,6 +44,10 @@ function Footer() {
                 <div className="p-3 flex items-center space-x-1">
                   <MdCall className="text-2xl text-white cursor-pointer  hover:text-sky-200" />
                   <p className="text-white">0217514589</p>
+                </div>
+                <div className="p-3 flex items-center space-x-1">
+                  <FaWhatsapp className="text-2xl text-white cursor-pointer  hover:text-sky-200" />
+                  <p className="text-white">085195145758</p>
                 </div>
               </ul>
             </div>
