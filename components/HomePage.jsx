@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import SliderBackup from "./SliderBackup";
 import Slider from "./Slider";
 import { sliderImage } from "./Data";
 import DragImage from "./DragImage";
@@ -10,16 +11,16 @@ const HomePage = () => {
   return (
     <div className="flex flex-col ">
       {/* slider */}
-      <div className=" mt-16 ">
+      <div className=" mt-16 px-[20px] md:px-[120px]">
         <Slider slides={sliderImage} />
       </div>
       {/* Service */}
       <div className="mt-4 md:mt-16 grid grid-cols-6 gap-4 ">
         <div className="flex flex-col space-y-1 md:space-y-3 col-span-4  mx-3">
-          <h1 className="text-slate-900 tracking-wide text-2xl md:text-5xl font-quicksand px-3 md:px-20">
+          <h1 className="text-slate-900 tracking-wide text-2xl md:text-5xl font-quicksand px-[20px] md:px-[120px]">
             Our Services
           </h1>
-          <p className="text-slate-500 tracking-wide text-sm md:text-xl font-quicksand px-3 md:px-20">
+          <p className="text-slate-500 tracking-wide text-sm md:text-xl font-quicksand px-[20px] md:px-[120px]">
             Blandit 1,900 natoque dui justo, dictum turpis amet, viverra vel
             ornare quis mattis mi ac eget id integer dolor dui aliquam volutpat
             varius pulvinar massa
@@ -40,7 +41,7 @@ const HomePage = () => {
       </div>
 
       {/* Dream Reach */}
-      <div className="flex flex-col space-y-8 md:grid md:grid-cols-2 px-[3%]">
+      <div className="flex flex-col space-y-8 lg:grid lg:grid-cols-2 px-[20px] md:px-[120px]">
         <div className="flex justify-center flex-col space-y-1 md:space-y-3 col-span-1 mx-3">
           <h1 className="text-slate-900 font-bold tracking-wide text-2xl md:text-5xl font-quicksand  ">
             Dream Bigger.
@@ -79,7 +80,7 @@ const HomePage = () => {
         </div>
       </div>
       {/* Grow continue */}
-      <div className=" flex flex-col space-y-8 md:grid md:grid-cols-2 md:justify-items-start content-center px-[3%]">
+      <div className=" flex flex-col space-y-8 lg:grid lg:grid-cols-2 md:justify-items-start content-center px-[20px] md:px-[120px]">
         <div className="flex justify-start items-center py-8">
           <div className="grid grid-rows-2  bg-page4 bg-cover bg-center rounded-[2rem] w-[90%]  h-[90%]">
             <div className="grid grid-cols-2 row-start-2">
@@ -101,7 +102,7 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-        <div className="order-first md:order-last flex justify-center flex-col space-y-1 md:space-y-3 col-span-1 mx-3">
+        <div className="order-first lg:order-last flex justify-center flex-col space-y-1 md:space-y-3 col-span-1 mx-3">
           <h1 className="text-slate-900 font-bold tracking-wide text-2xl md:text-5xl font-quicksand  ">
             Grow & Continue
           </h1>
@@ -115,9 +116,9 @@ const HomePage = () => {
         </div>
       </div>
       {/* Imagine, Believe, Achive */}
-      <div className="flex flex-col space-y-12 md:space-y-20 px-[3%] text-black">
+      <div className="flex flex-col space-y-12 md:space-y-20 px-[20px] md:px-[120px] text-black">
         {/* subpage 1 */}
-        <div className="flex  md:w-1/2 flex-col space-y-2 md:space-y-6 col-span-1 mx-3">
+        <div className="flex  lg:w-1/2 flex-col space-y-2 md:space-y-6 col-span-1 mx-3">
           <h1 className="text-slate-900 font-bold tracking-wide text-2xl md:text-5xl font-quicksand">
             Imagine, Believe, Achive!
           </h1>
@@ -129,7 +130,7 @@ const HomePage = () => {
           </p>
         </div>
         {/* subpage 2 */}
-        <div className="flex flex-col md:grid md:grid-cols-4  gap-8">
+        <div className="flex flex-col lg:grid lg:grid-cols-4  gap-8">
           <div className=" bg-white grid gap-2  content-center text-center  rounded-[1rem] shadow-2xl px-[4%]">
             <div className="text-4xl font-bold text-sky-700 ">1992</div>
             <div className="text-2xl font-semibold text-slate-900">Year</div>

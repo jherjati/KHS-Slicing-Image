@@ -6,7 +6,7 @@ import Dropdown from "./Dropdown";
 const SurveyAndMapping = () => {
   return (
     <div className="flex flex-col divide-y space-y-12">
-      <div className=" flex flex-col space-y-8 md:grid md:grid-cols-2 content-center px-[5%] mt-16">
+      <div className=" flex flex-col space-y-8 md:grid md:grid-cols-2 content-center px-[20px] md:px-[120px] mt-16">
         <div className="flex justify-center flex-col space-y-2 md:space-y-8 col-span-1 mx-3">
           <h1 className="text-sky-700 font-bold tracking-wide text-xl md:text-2xl font-quicksand  ">
             Services
@@ -20,7 +20,7 @@ const SurveyAndMapping = () => {
             consectetur adipiscing elit sed do eiusmod tempor incididunt ut
             labore et
           </p>
-          <ul className="flex flex-col space-y-1 list-decimal text-slate-500 tracking-wide text-sm md:text-xl font-quicksand px-[5%]">
+          <ul className="flex flex-col space-y-1 list-decimal text-slate-500 tracking-wide text-sm md:text-xl font-quicksand px-[20px] md:px-[120px]">
             <li>Field Survey</li>
             <li>Aerial Photo</li>
             <li>UAV Lidar</li>
@@ -51,7 +51,7 @@ const SurveyAndMapping = () => {
         </div>
       </div>
       {/* page2 */}
-      <div className="px-[5%] flex flex-col space-y-16">
+      <div className="px-[20px] md:px-[120px] flex flex-col space-y-16">
         <div className="row-span-1 flex flex-col space-y-8 ">
           <h1 className="text-slate-900 font-bold tracking-wide text-2xl md:text-5xl font-quicksand">
             Our Tool
@@ -88,7 +88,7 @@ const SurveyAndMapping = () => {
         </div>
       </div>
       {/* page 3 */}
-      <div className="px-[5%] ">
+      <div className="px-[20px] md:px-[120px] ">
         <div className="pt-8">
           <div className="lg:hidden border border-black rounded-lg text-center">
             <Dropdown

@@ -14,7 +14,7 @@ import {
 const Career = () => {
   return (
     <div className="mt-16 ">
-      <div className="flex flex-col lg:grid lg:grid-cols-2 p-[5%] ">
+      <div className="flex flex-col lg:grid lg:grid-cols-2 md:py-[43px]  px-[20px] md:px-[120px] ">
         {/* halfimage */}
         <div className="order-last lg:order-first grid grid-cols-2 gap-y-4 gap-x-4 items-center justify-items-center pr-[10%] pl-[10%] lg:pr-[20%] lg:pl-0">
           <Image
@@ -61,7 +61,7 @@ const Career = () => {
         </div>
       </div>
       {/* page 2 */}
-      <div className="flex flex-col space-y-12 md:space-y-20 px-[3%] text-black">
+      <div className="flex flex-col space-y-12 md:space-y-20 px-[20px] md:px-[120px] text-black">
         {/* subpage 1 */}
         <div className="flex  md:w-1/2 flex-col space-y-2 md:space-y-6 col-span-1 mx-3">
           <h1 className="text-slate-900 font-bold tracking-wide text-2xl md:text-5xl font-quicksand">
@@ -264,7 +264,7 @@ const Career = () => {
               />
             </div>
           </div>
-          <div className="flex flex-col  space-y-3 lg:grid lg:grid-cols-3 gap-2 lg:gap-12 px-[2%] pb-20">
+          <div className="flex flex-col  space-y-3 lg:grid lg:grid-cols-3 gap-2 lg:gap-12  pb-20">
             {careers.map(({ id, image, title, text, text2 }) => {
               return (
                 <div

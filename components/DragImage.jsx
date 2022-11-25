@@ -20,7 +20,7 @@ function DragImage() {
   };
 
   return (
-    <div className="px-[3%]">
+    <div className="px-[20px] sm:px-[120px]">
       <motion.div
         ref={carousel}
         whileTap={{ cursor: "grabbing" }}

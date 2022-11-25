@@ -5,7 +5,7 @@ import Dropdown from "./Dropdown";
 const UrbanPlanning = () => {
   return (
     <div className="flex flex-col divide-y space-y-12">
-      <div className=" flex flex-col space-y-8 md:grid md:grid-cols-2 content-center px-[5%] mt-16">
+      <div className=" flex flex-col space-y-8 md:grid md:grid-cols-2 content-center px-[20px] md:px-[120px] mt-16">
         <div className="flex justify-center flex-col space-y-2 md:space-y-8 col-span-1 mx-3">
           <h1 className="text-sky-700 font-bold tracking-wide text-xl md:text-2xl font-quicksand  ">
             Services
@@ -19,7 +19,7 @@ const UrbanPlanning = () => {
             consectetur adipiscing elit sed do eiusmod tempor incididunt ut
             labore et
           </p>
-          <ul className="flex flex-col space-y-1 list-decimal text-slate-500 tracking-wide text-sm md:text-xl font-quicksand px-[5%]">
+          <ul className="flex flex-col space-y-1 list-decimal text-slate-500 tracking-wide text-sm md:text-xl font-quicksand px-[20px] md:px-[120px]">
             <li>Spatial Planning</li>
             <li>General and Sectoral Planning</li>
             <li>Property Investment Studies</li>
@@ -50,7 +50,7 @@ const UrbanPlanning = () => {
       </div>
 
       {/* page 3 */}
-      <div className="px-[5%] ">
+      <div className="px-[20px] md:px-[120px] ">
         <div className="pt-8">
           <div className="lg:hidden border border-black rounded-lg text-center">
             <Dropdown

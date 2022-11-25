@@ -29,7 +29,7 @@ function SliderBackup() {
         <motion.div
           drag="x"
           dragConstraints={{ right: 0, left: -width }}
-          className="flex bg-white "
+          className="flex  "
         >
           {dragImage.map(({ image, title, text, link }) => {
             return (

@@ -38,7 +38,7 @@ const AboutUs = () => {
               <h1 className="text-sky-600 tracking-wide text-xl md:text-2xl font-bold font-quicksand">
                 Mission
               </h1>
-              <ul className="list-decimal text-slate-500 tracking-wide text-sm md:text-xl font-quicksand px-[5%]">
+              <ul className="list-decimal text-slate-500 tracking-wide text-sm md:text-xl font-quicksand px-[20px] md:px-[120px]">
                 <li>Providing excellent service to clients and partners.</li>
                 <li>
                   Providing optimal service through affordable prices, good
@@ -74,7 +74,7 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col xl:grid xl:grid-cols-5 px-[5%]">
+      <div className="flex flex-col xl:grid xl:grid-cols-5 px-[20px] md:px-[120px]">
         <div className="flex flex-col space-y-4 col-span-3">
           <h1 className="text-slate-900 tracking-wide text-2xl md:text-5xl font-bold font-quicksand">
             Occupational Safety and Health Management Policy
@@ -101,7 +101,7 @@ const AboutUs = () => {
           <Image width="400" height="300" src="/aboutusimage3.png" alt="" />
         </div>
       </div>
-      <div className="flex flex-col space-y-4 px-[5%]">
+      <div className="flex flex-col space-y-4 px-[20px] md:px-[120px]">
         <h1 className="text-slate-900 tracking-wide text-2xl md:text-5xl font-bold font-quicksand">
           Who We Are
         </h1>
@@ -260,9 +260,9 @@ const AboutUs = () => {
       </div>
 
       {/* page3 */}
-      <div className="flex flex-col space-y-16 md:space-y-20 px-[3%] text-black">
+      <div className="flex flex-col space-y-16 md:space-y-20 px-[20px] md:px-[120px] text-black">
         {/* subpage 1 */}
-        <div className="flex  md:w-1/2 flex-col space-y-2 md:space-y-6 col-span-1 mx-3">
+        <div className="flex  md:w-1/2 flex-col space-y-2 md:space-y-6 col-span-1 ">
           <h1 className="text-slate-900 font-bold tracking-wide text-2xl md:text-5xl font-quicksand">
             Imagine, Believe, Achive!
           </h1>
