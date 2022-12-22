@@ -67,10 +67,34 @@ export const logoClient = [
   { logo: "/Clients-5.png" },
 ];
 export const licences = [
-  { licence: "/licence-1.png" },
-  { licence: "/licence-2.png" },
-  { licence: "/licence-3.png" },
-  { licence: "/licence-4.png" },
+  {
+    licence: "/licence-1.png",
+    lebar: 133,
+    panjang: 200,
+    iso: "ISO 9001",
+    desc: "Quality Management",
+  },
+  {
+    licence: "/licence-2.png",
+    lebar: 133,
+    panjang: 200,
+    iso: "ISO 9001",
+    desc: "Quality Management",
+  },
+  {
+    licence: "/licence-3.png",
+    lebar: 133,
+    panjang: 200,
+    iso: "ISO 9001",
+    desc: "Quality Management",
+  },
+  {
+    licence: "/licence-4.png",
+    lebar: 211.47,
+    panjang: 80,
+    iso: "ISO 9001",
+    desc: "Quality Management",
+  },
 ];
 export const tools = [
   { tool: "/toolsimage1.png", name: "Fixed Wing Ai-450 ER" },
@@ -230,114 +254,188 @@ export const architecs = [
 export const clients = [
   {
     client: "/client (1).png",
+    lebar: 60,
+    panjang: 60,
   },
   {
     client: "/client (2).png",
+    lebar: 128,
+    panjang: 60,
   },
   {
     client: "/client (3).png",
+    lebar: 120,
+    panjang: 60,
   },
   {
     client: "/client (4).png",
+    lebar: 60,
+    panjang: 60,
   },
   {
     client: "/client (5).png",
+    lebar: 120,
+    panjang: 60,
   },
   {
     client: "/client (6).png",
+    lebar: 40.8,
+    panjang: 60,
   },
   {
     client: "/client (7).png",
+    lebar: 120,
+    panjang: 60,
   },
   {
     client: "/client (8).png",
+    lebar: 60,
+    panjang: 60,
   },
   {
     client: "/client (9).png",
+    lebar: 54.4,
+    panjang: 60,
   },
   {
     client: "/client (10).png",
+    lebar: 44.8,
+    panjang: 60,
   },
   {
     client: "/client (11).png",
+    lebar: 55.2,
+    panjang: 60,
   },
   {
     client: "/client (12).png",
+    lebar: 56.8,
+    panjang: 60,
   },
   {
     client: "/client (13).png",
+    lebar: 93.6,
+    panjang: 60,
   },
   {
     client: "/client (14).png",
+    lebar: 106.4,
+    panjang: 60,
   },
   {
     client: "/client (15).png",
+    lebar: 60,
+    panjang: 60,
   },
   {
     client: "/client (16).png",
+    lebar: 120,
+    panjang: 60,
   },
   {
     client: "/client (17).png",
+    lebar: 120,
+    panjang: 60,
   },
   {
     client: "/client (18).png",
+    lebar: 47.2,
+    panjang: 60,
   },
   {
     client: "/client (19).png",
+    lebar: 120,
+    panjang: 60,
   },
   {
     client: "/client (20).png",
+    lebar: 120,
+    panjang: 60,
   },
   {
     client: "/client (21).png",
+    lebar: 120,
+    panjang: 60,
   },
   {
     client: "/client (22).png",
+    lebar: 120,
+    panjang: 60,
   },
   {
     client: "/client (23).png",
+    lebar: 120,
+    panjang: 60,
   },
   {
     client: "/client (24).png",
+    lebar: 112,
+    panjang: 60,
   },
   {
     client: "/client (25).png",
+    lebar: 115,
+    panjang: 60,
   },
   {
     client: "/client (26).png",
+    lebar: 120,
+    panjang: 60,
   },
   {
     client: "/client (27).png",
+    lebar: 120,
+    panjang: 60,
   },
   {
     client: "/client (28).png",
+    lebar: 120,
+    panjang: 60,
   },
   {
     client: "/client (29).png",
+    lebar: 115,
+    panjang: 60,
   },
   {
     client: "/client (30).png",
+    lebar: 115,
+    panjang: 60,
   },
   {
     client: "/client (31).png",
+    lebar: 114,
+    panjang: 60,
   },
   {
     client: "/client (32).png",
+    lebar: 103,
+    panjang: 60,
   },
   {
     client: "/client (33).png",
+    lebar: 110,
+    panjang: 60,
   },
   {
     client: "/client (34).png",
+    lebar: 110,
+    panjang: 60,
   },
   {
     client: "/client (35).png",
+    lebar: 110,
+    panjang: 60,
   },
   {
     client: "/client (36).png",
+    lebar: 110,
+    panjang: 60,
   },
   {
     client: "/client (37).png",
+    lebar: 110,
+    panjang: 60,
   },
 ];
 

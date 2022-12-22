@@ -6,6 +6,14 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        grey: "#8F8C8C",
+        blue: "#065EA1",
+        "blue-dark": "#054D83",
+        blacky: "#2A2828",
+        footer: "#032947",
+        "footer-font": "#ECF1F4",
+      },
       backgroundImage: {
         sliderimage1: "url('/sliderimage1.png')",
         sliderimage2: "url('/sliderimage2.png')",
@@ -26,6 +34,7 @@ module.exports = {
       },
       fontFamily: {
         quicksand: ["Quicksand", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
       },
     },
   },

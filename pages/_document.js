@@ -15,6 +15,10 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap"
           rel="stylesheet"
         ></link>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+          rel="stylesheet"
+        ></link>
       </Head>
       <body>
         <Main />

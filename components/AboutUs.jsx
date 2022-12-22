@@ -305,14 +305,41 @@ const AboutUs = () => {
           </div>
         </div>
         {/* subpage 3 */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4  justify-items-center  gap-8 pb-8">
-          {licences.map(({ licence }) => {
+        <div className="flex  md:w-1/2 flex-col space-y-2 md:space-y-6 col-span-1 ">
+          <h1 className="text-slate-900 font-bold tracking-wide text-2xl md:text-5xl font-quicksand">
+            Licences
+          </h1>
+          <p className="text-slate-500 tracking-wide text-sm md:text-xl font-quicksand">
+            lorem ipsum dolor sit amet consectetur adipiscing elit sed do
+            eiusmod tempor incididunt ut labore et amet consectetur adipiscing
+            elit
+          </p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-4  content-center  gap-8 pb-8">
+          {licences.map(({ licence, lebar, panjang, iso, desc }) => {
             return (
               <div
                 key={licence}
-                className="  grid gap-2 justify-items-center content-center px-[4%]"
+                className=" flex md:flex-col items-center space-x-[16px] md:space-x-0"
               >
-                <Image width="200" height="100" src={licence} alt="" />
+                <div className="flex items-center justify-center w-[60px] md:w-[200px] h-[80px] md:h-[200px]">
+                  <Image
+                    className="flex items-center"
+                    width={lebar}
+                    height={panjang}
+                    src={licence}
+                    alt=""
+                  />
+                </div>
+
+                <div className="flex-col items-center space-y-[8px] ">
+                  <h1 className=" text-[16px] md:text-[18px] font-[600] text-blacky font-inter">
+                    {iso}
+                  </h1>
+                  <p className="text-[12px] md:text-[14px] text-grey font-inter">
+                    {desc}
+                  </p>
+                </div>
               </div>
             );
           })}

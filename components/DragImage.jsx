@@ -51,7 +51,7 @@ function DragImage() {
                     className={`flex flex-col space-y-8 p-2 absolute w-[90%] lg:w-[70%] pt-3 bottom-40 font-quicksand  opacity-0 hover:opacity-100 bg-opacity-90 duration-300`}
                   >
                     <h1 className="text-white font-bold text-3xl">{title}</h1>
-                    <p className="text-slate-200  text-xl">{text}</p>
+                    <p className="text-[#EEEEEE]  text-xl">{text}</p>
                     <Link
                       href={link}
                       className="text-slate-200 w-[80%] lg:w-[100%] text-xl border-2 text-center rounded"

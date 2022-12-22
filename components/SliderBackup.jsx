@@ -1,71 +1,43 @@
-import React from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import { useRef, useEffect, useState } from "react";
-import { dragImage } from "./Data";
-function SliderBackup() {
-  const [width, setWidth] = useState(0);
-  const [isHovering, setIsHovering] = useState(false);
-  const carousel = useRef();
-  useEffect(() => {
-    console.log(carousel.current.scrollWidth, carousel.current.offsetWidth);
-    setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
-  }, []);
-  const handleMouseOver = () => {
-    setIsHovering(true);
-  };
-  const handleMouseOut = () => {
-    setIsHovering(false);
+import React, { useState } from "react";
+import { sliderImage } from "./Data";
+import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
+
+const Slider = ({ slides }) => {
+  const [current, setCurrent] = useState(0);
+  const length = slides.length;
+
+  const nextSlide = () => {
+    setCurrent(current === length - 1 ? 0 : current + 1);
   };
 
+  if (!Array.isArray(slides) || slides.length <= 0) {
+    return null;
+  }
   return (
-    <div className="px-[3%]">
-      <motion.div
-        ref={carousel}
-        whileTap={{ cursor: "grabbing" }}
-        className="cursor-grab overflow-hidden"
-      >
-        <motion.div
-          drag="x"
-          dragConstraints={{ right: 0, left: -width }}
-          className="flex  "
-        >
-          {dragImage.map(({ image, title, text, link }) => {
-            return (
-              <motion.div
-                key={image}
-                className="relative min-h-[40rem] min-w-[370px] md:min-w-[30rem] p-[40px]"
-                onMouseOver={handleMouseOver}
-                onMouseOut={handleMouseOut}
-              >
-                <Image
-                  className="w-[100%] h-[90%] rounded-[2rem] pointer-events-none"
-                  src={image}
-                  layout="responsive"
-                  width="800"
-                  height="400"
-                />
-                {isHovering && (
-                  <div
-                    className={`flex flex-col space-y-8 p-2 absolute w-[90%] lg:w-[70%] pt-3 bottom-40 font-quicksand  opacity-0 hover:opacity-100 bg-opacity-90 duration-300`}
-                  >
-                    <h1 className="text-white font-bold text-3xl">{title}</h1>
-                    <p className="text-slate-200  text-xl">{text}</p>
-                    <Link
-                      href={link}
-                      className="text-slate-200 w-[80%] lg:w-[100%] text-xl border-2 text-center rounded"
-                    >
-                      View Details
-                    </Link>
+    <div id="gallery" className=" ">
+      <div className="  ">
+        {sliderImage.map((slide, index) => {
+          return (
+            <div key={slide.image} onClick={nextSlide}>
+              {index === current && (
+                <div
+                  className={`${slide.image} flex flex-col justify-center bg-cover bg-center  h-[37.5rem] space-y-8`}
+                >
+                  <div className="text-white tracking-wide text-2xl md:text-5xl font-quicksand px-3 md:px-20">
+                    {slide.title}
                   </div>
-                )}
-              </motion.div>
-            );
-          })}
-        </motion.div>
-      </motion.div>
+                  <div className="text-slate-100 tracking-wide text-sm md:text-xl font-quicksand px-3 md:px-20">
+                    {slide.text}
+                  </div>
+                </div>
+              )}
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
-}
-export default SliderBackup;
+};
+
+export default Slider;
