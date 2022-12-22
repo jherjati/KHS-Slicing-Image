@@ -1,6 +1,7 @@
 import React from "react";
 import { MdCall, MdEmail } from "react-icons/md";
 import { HiOfficeBuilding } from "react-icons/hi";
+import { FaWhatsapp } from "react-icons/fa";
 
 const ContactUs = () => {
   return (
@@ -31,6 +32,10 @@ const ContactUs = () => {
               </div>
               <div className="p-3 flex items-center space-x-1">
                 <MdCall className="text-2xl text-slate-600 cursor-pointer  hover:text-sky-200" />
+                <p className="text-slate-600">0217514589</p>
+              </div>
+              <div className="p-3 flex items-center space-x-1">
+                <FaWhatsapp className="text-2xl text-slate-600 cursor-pointer  hover:text-sky-200" />
                 <p className="text-slate-600">0217514589</p>
               </div>
             </ul>

@@ -3,7 +3,7 @@ import Image from "next/image";
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
-import { BiChevronDown } from "react-icons/bi";
+import { BiChevronDown, BiChevronUp } from "react-icons/bi";
 import { GoSearch } from "react-icons/go";
 import { AiOutlineClose } from "react-icons/ai";
 import { FiMenu } from "react-icons/fi";
@@ -175,7 +175,13 @@ const Navbar = () => {
     "
                     >
                       <div>Service</div>
-                      <BiChevronDown className="text-2xl text-[#8F8C8C] text-center" />
+                      {dropdownOpen ? (
+                        <BiChevronUp className="text-2xl text-[#8F8C8C] text-center" />
+                      ) : (
+                        <BiChevronDown className="text-2xl text-[#8F8C8C] text-center" />
+                      )}
+                      {/* <BiChevronDown className="text-2xl text-[#8F8C8C] text-center" />
+                      <BiChevronUp className="text-2xl text-[#8F8C8C] text-center" /> */}
                     </div>
 
                     <div
