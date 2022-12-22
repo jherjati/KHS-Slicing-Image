@@ -441,22 +441,22 @@ export const clients = [
 
 export const gallery = [
   {
-    gallery: "/videoimage.png",
+    gallery: "https://www.youtube.com/embed/hGNXUs0dZqY?mute=1&controls=0",
     text: "[HSG Sekreatif] TEGAR BERIMAN TOL WITH 3D",
     key: "1",
   },
   {
-    gallery: "/videoimage.png",
+    gallery: "https://www.youtube.com/embed/hGNXUs0dZqY?mute=1&controls=0",
     text: "[HSG Sekreatif] TEGAR BERIMAN TOL WITH 3D",
     key: "2",
   },
   {
-    gallery: "/videoimage.png",
+    gallery: "https://www.youtube.com/embed/hGNXUs0dZqY?mute=1&controls=0",
     text: "[HSG Sekreatif] TEGAR BERIMAN TOL WITH 3D",
     key: "3",
   },
   {
-    gallery: "/videoimage.png",
+    gallery: "https://www.youtube.com/embed/hGNXUs0dZqY?mute=1&controls=0",
     text: "[HSG Sekreatif] TEGAR BERIMAN TOL WITH 3D",
     key: "4",
   },

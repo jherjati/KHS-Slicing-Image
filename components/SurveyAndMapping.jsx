@@ -119,14 +119,19 @@ const SurveyAndMapping = () => {
                 to product promotions. We can make aerial videos that can be
                 combined with 3D designs using the Video Tracking method.
               </p>
-              <Image
-                className="rounded-lg"
-                src="/videoimage.png"
-                alt="Field Survei Image"
-                width="1100"
-                height="400"
-                layout="responsive"
-              />
+              <div>
+                {" "}
+                <iframe
+                  width={"100%"}
+                  height={400}
+                  layout="responsive"
+                  src="https://www.youtube.com/embed/rAGoCpqXDw0?mute=1&controls=0"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
             </div>
             <div className=" flex flex-col space-y-8 ">
               <h1 className="text-slate-900 font-bold tracking-wide text-2xl md:text-5xl font-quicksand">
@@ -209,14 +214,18 @@ const SurveyAndMapping = () => {
                 height="400"
                 layout="responsive"
               />
-              <Image
-                className="rounded-lg"
-                src="/videoimage.png"
-                alt="video Image"
-                width="1100"
-                height="400"
-                layout="responsive"
-              />
+              <div>
+                <iframe
+                  width={"100%"}
+                  height={400}
+                  layout="responsive"
+                  src="https://www.youtube.com/embed/mhQVEgW-suo?mute=1&controls=0"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
             </div>
             <div className=" flex flex-col space-y-8 ">
               <h1 className="text-slate-900 font-bold tracking-wide text-2xl md:text-5xl font-quicksand">
@@ -280,7 +289,18 @@ const SurveyAndMapping = () => {
                 to product promotions. We can make aerial videos that can be
                 combined with 3D designs using the Video Tracking method.
               </p>
-              <Image />
+              <div className="pb-[100px]">
+                <iframe
+                  width={"100%"}
+                  height={400}
+                  layout="responsive"
+                  src="https://www.youtube.com/embed/hGNXUs0dZqY?mute=1&controls=0"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
             </div>
           </div>
           {/* sisi kiri */}

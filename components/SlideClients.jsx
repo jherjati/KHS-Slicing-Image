@@ -21,7 +21,10 @@ const SlideClients = ({ slides, clients }) => {
       <div className="grid  grid-cols-4 md:grid-cols-8 content-center justify-items-center">
         {clients.slice(start, end).map(({ client, lebar, panjang }) => {
           return (
-            <div className="grayscale hover:grayscale-0 flex hover:scale-[1.3] ease-in-out duration-300  items-center delay-100">
+            <div
+              key={client}
+              className="grayscale hover:grayscale-0 flex hover:scale-[1.3] ease-in-out duration-300  items-center delay-100"
+            >
               <Image
                 src={client}
                 className="m-2"

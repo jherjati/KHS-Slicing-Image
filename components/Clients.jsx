@@ -19,13 +19,16 @@ const Clients = () => {
         </div>
       </div>
       <div className="flex flex-wrap px-[30px] sm:px-[150px] gap-x-10 md:gap-x-32 gap-y-10">
-        {clients.map(({ client }) => {
+        {clients.map(({ client, lebar, panjang }) => {
           return (
-            <div key={client} className="w-auto h-auto">
+            <div
+              key={client}
+              className=" justify-center w-[100px] h-[100px] grayscale hover:grayscale-0 flex hover:scale-[1.3] ease-in-out duration-300  items-center delay-100"
+            >
               <Image
                 layout="cover"
-                width="50"
-                height="30"
+                width={lebar}
+                height={panjang}
                 src={client}
                 alt=""
               />

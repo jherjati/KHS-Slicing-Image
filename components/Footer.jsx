@@ -9,7 +9,7 @@ import { HiOfficeBuilding } from "react-icons/hi";
 function Footer() {
   return (
     <footer className="flex flex-col divide-y divide-slate-400/25">
-      <div className="bg-[#032947] h-[21.063 rem] w-full flex-col flex md:flex-row  justify-between items-center pt-10 ">
+      <div className="bg-footer h-[21.063 rem] w-full flex-col flex md:flex-row  justify-between items-center pt-10 ">
         <div className=" px-[20px] lg:px-[60px] ">
           <ul>
             <div className="py-3 w-[7.4 rem] h-[3.75 rem]">

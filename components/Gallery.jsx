@@ -27,13 +27,16 @@ const Galery = () => {
               className=" grid  gap-4 text-center justify-items-center content-center  rounded-[1rem] bg-white shadow-2xl px-[4%] py-[5%]"
             >
               <div className="">
-                <Image
+                <iframe
+                  width={550}
+                  height={400}
                   layout="responsive"
                   src={gallery}
-                  alt={text}
-                  width="800"
-                  height="400"
-                />
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
               </div>
 
               <div className="flex flex-col justify-center">
