@@ -2,10 +2,10 @@ import React from "react";
 import Image from "next/image";
 import SliderBackup from "./SliderBackup";
 import Slider from "./Slider";
-import { sliderImage } from "./Data";
+
 import DragImage from "./DragImage";
 import { logoClient, clients } from "./Data";
-import SlideLogo from "./SlideLogo";
+
 import SlideClients from "./SlideClients";
 import Slider2 from "./Slider2";
 
@@ -14,7 +14,7 @@ const HomePage = () => {
     <div className="flex flex-col ">
       {/* slider */}
       <div className=" mt-16 ">
-        <Slider2 slides={sliderImage} />
+        <Slider2 />
       </div>
 
       {/* Service */}

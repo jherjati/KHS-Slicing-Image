@@ -28,7 +28,7 @@ const Slider = () => {
               className={
                 index === current
                   ? "opacity-[1]  ease-in duration-[500ms]"
-                  : "opacity-0 "
+                  : "opacity-0 animate-scroll ease-in duration-[500ms]"
               }
             >
               {index === current && (
