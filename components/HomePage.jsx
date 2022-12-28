@@ -1,7 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import SliderBackup from "./SliderBackup";
-import Slider from "./Slider";
 
 import DragImage from "./DragImage";
 import { logoClient, clients } from "./Data";

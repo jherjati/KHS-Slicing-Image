@@ -41,6 +41,7 @@ module.exports = {
           "linear-gradient(to right,rgba(255,255,255,1),30%,rgba(255,0,0,0), transparent), url('/bg-urban.png')",
         blog: "linear-gradient(to bottom, rgba(22,126,196,1) 60%, white 50%)",
       },
+      page: "linear-gradient(to right,rgba(255,255,255,1),70%,rgba(255,0,0,0), transparent), url('/Home.png')",
       backgroundColor: {
         banner:
           "linear-gradient(65.81deg, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0) 67.52%)",

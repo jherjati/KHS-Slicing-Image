@@ -17,7 +17,9 @@ const SlideImage = () => {
           <div className="each-slide" key={index}>
             <div
               className="h-[600px] bg-cover flex items-center"
-              style={{ backgroundImage: `url(${slideImage.image})` }}
+              style={{
+                backgroundImage: `linear-gradient(65.81deg, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0) 67.52%) , url(${slideImage.image})`,
+              }}
             >
               <div className="flex flex-col  font-quicksand  px-[20px] md:px-[120px] ">
                 <h1 className="text-white font-quicksand font-bold text-[28px] md:text-[55px]">
