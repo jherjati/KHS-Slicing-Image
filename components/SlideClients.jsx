@@ -15,6 +15,26 @@ const SlideClients = ({ slides, clients }) => {
     setStart(start <= 0 ? 0 : start - 8);
     setEnd(start <= 0 ? 8 : end - 8);
   };
+  const slide1 = () => {
+    setStart(0);
+    setEnd(8);
+  };
+  const slide2 = () => {
+    setStart(8);
+    setEnd(16);
+  };
+  const slide3 = () => {
+    setStart(16);
+    setEnd(24);
+  };
+  const slide4 = () => {
+    setStart(24);
+    setEnd(32);
+  };
+  const slide5 = () => {
+    setStart(32);
+    setEnd(40);
+  };
 
   return (
     <div className="flex flex-col space-y-[16.3px]">
@@ -39,26 +59,31 @@ const SlideClients = ({ slides, clients }) => {
       <div className="flex justify-between px-[12px] md:px-5">
         <div className="flex space-x-5">
           <div
+            onClick={slide1}
             className={`${
               start == 0 ? "bg-blue" : "bg-[#EEEEEE]"
             } rounded-full w-3 h-3`}
           ></div>
           <div
+            onClick={slide2}
             className={`${
               start == 8 ? "bg-blue" : "bg-[#EEEEEE]"
             } rounded-full w-3 h-3`}
           ></div>
           <div
+            onClick={slide3}
             className={`${
               start == 16 ? "bg-blue" : "bg-[#EEEEEE]"
             } rounded-full w-3 h-3`}
           ></div>
           <div
+            onClick={slide4}
             className={`${
               start == 24 ? "bg-blue" : "bg-[#EEEEEE]"
             } rounded-full w-3 h-3`}
           ></div>
           <div
+            onClick={slide5}
             className={`${
               start == 32 ? "bg-blue" : "bg-[#EEEEEE]"
             } rounded-full w-3 h-3`}
