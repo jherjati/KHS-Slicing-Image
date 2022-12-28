@@ -5,6 +5,45 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontSize: {
+      kecil: [
+        "16px",
+        {
+          lineHeight: "28px",
+          fontWeight: "400",
+        },
+      ],
+      sedang: [
+        "55px",
+        {
+          lineHeight: "66px",
+          fontWeight: "700",
+        },
+      ],
+      sedang2: [
+        "46px",
+        {
+          lineHeight: "55px",
+          fontWeight: "700",
+        },
+      ],
+      besar: ["20px", "28px"],
+      kecilmobile: [
+        "14px",
+        {
+          lineHeight: "22px",
+          fontWeight: "400",
+        },
+      ],
+      sedangmobile: [
+        "32px",
+        {
+          lineHeight: "38px",
+          fontWeight: "700",
+        },
+      ],
+      besarmobile: ["20px", "28px"],
+    },
     extend: {
       animation: {
         scroll: "scroll 40s linear infinite",
