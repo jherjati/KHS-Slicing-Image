@@ -6,7 +6,13 @@ import { sliderImage } from "./Data";
 const SlideImage = () => {
   return (
     <div className="slide-container ">
-      <Slide duration={1000} infinite={true}>
+      <Slide
+        duration={3000}
+        infinite={true}
+        pauseOnHover={false}
+        autoplay={true}
+        canSwipe={true}
+      >
         {sliderImage.map((slideImage, index) => (
           <div className="each-slide" key={index}>
             <div

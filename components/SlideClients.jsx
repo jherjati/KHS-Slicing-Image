@@ -18,7 +18,7 @@ const SlideClients = ({ slides, clients }) => {
 
   return (
     <div className="flex flex-col space-y-[16.3px]">
-      <div className="grid  grid-cols-4 md:grid-cols-8 content-center justify-items-center">
+      <div className="grid  grid-cols-4 md:grid-cols-8 content-center justify-items-center ease-in-out duration-300">
         {clients.slice(start, end).map(({ client, lebar, panjang }) => {
           return (
             <div
