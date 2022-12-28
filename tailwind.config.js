@@ -6,6 +6,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      animation: {
+        scroll: "scroll 40s linear infinite",
+      },
+      keyframes: {
+        scroll: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(calc(-250px * 14))" },
+        },
+      },
       colors: {
         grey: "#8F8C8C",
         blue: "#065EA1",
@@ -31,6 +40,10 @@ module.exports = {
         urban:
           "linear-gradient(to right,rgba(255,255,255,1),30%,rgba(255,0,0,0), transparent), url('/bg-urban.png')",
         blog: "linear-gradient(to bottom, rgba(22,126,196,1) 60%, white 50%)",
+      },
+      backgroundColor: {
+        banner:
+          "linear-gradient(65.81deg, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0) 67.52%)",
       },
       fontFamily: {
         quicksand: ["Quicksand", "sans-serif"],

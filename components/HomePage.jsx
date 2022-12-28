@@ -7,12 +7,16 @@ import DragImage from "./DragImage";
 import { logoClient, clients } from "./Data";
 import SlideLogo from "./SlideLogo";
 import SlideClients from "./SlideClients";
+import Slider2 from "./Slider2";
 
 const HomePage = () => {
   return (
     <div className="flex flex-col ">
       {/* slider */}
-      <div className=" mt-16 ">{/* <Slider slides={sliderImage} /> */}</div>
+      <div className=" mt-16 ">
+        <Slider2 slides={sliderImage} />
+      </div>
+
       {/* Service */}
       <div className="mt-4 md:mt-16 grid grid-cols-6 gap-4 ">
         <div className="flex flex-col space-y-1 md:space-y-3 col-span-4  mx-3">
