@@ -85,7 +85,7 @@ const HomePage = () => {
         <div className="flex justify-start items-center py-8">
           <div className="grid grid-rows-2  bg-page4 bg-cover bg-center rounded-[2rem] w-[90%]  h-[90%]">
             <div className="grid grid-cols-2 row-start-2">
-              <div className="outline outline-[16px] md:outline-[28px] bg-white w-[100%]  outline-white rounded-tr-lg">
+              <div className="outline outline-[16px] md:outline-[28px] col-start-2 bg-white w-[100%]  outline-white rounded-tl-lg">
                 <Image
                   src="/testimonials.png"
                   className=""
