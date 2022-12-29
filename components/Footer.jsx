@@ -8,7 +8,7 @@ import { HiOfficeBuilding } from "react-icons/hi";
 
 function Footer() {
   return (
-    <footer className="flex flex-col divide-y divide-slate-400/25">
+    <footer className="flex flex-col divide-y divide-slate-400/25 font-inter">
       <div className="bg-footer h-[21.063 rem] w-full flex-col flex md:flex-row  justify-between items-center pt-10 ">
         <div className=" px-[20px] lg:px-[60px] ">
           <ul>
@@ -26,7 +26,7 @@ function Footer() {
               <ul>
                 <div className="py-3">
                   <div className="flex items-center space-x-1">
-                    <HiOfficeBuilding className="text-2xl text-white cursor-pointer  hover:text-sky-200" />
+                    <HiOfficeBuilding className="text-[25px] text-white cursor-pointer  hover:text-sky-200" />
                     <div>
                       <p className="text-white text-[14px] font-inter font-[400]">
                         Pondok Pinang Center C-34 Jalan Ciputat Raya,
@@ -38,17 +38,17 @@ function Footer() {
                   </div>
                 </div>
                 <div className="py-3 flex items-center space-x-1">
-                  <MdEmail className="text-2xl text-white cursor-pointer  hover:text-sky-200" />
+                  <MdEmail className="text-[25px] text-white cursor-pointer  hover:text-yellow-200" />
                   <p className="text-[14px] text-white">
                     info@handalselaras.com
                   </p>
                 </div>
                 <div className="py-3 flex items-center space-x-1">
-                  <MdCall className="text-2xl text-white cursor-pointer  hover:text-sky-200" />
+                  <MdCall className="text-[25px] text-white cursor-pointer  hover:text-blue" />
                   <p className="text-[14px] text-white">0217514589</p>
                 </div>
                 <div className="py-3 flex items-center space-x-1">
-                  <FaWhatsapp className="text-2xl text-white cursor-pointer  hover:text-sky-200" />
+                  <FaWhatsapp className="text-[25px] text-white cursor-pointer  hover:text-green-500" />
                   <p className="text-[14px] text-white">085195145758</p>
                 </div>
               </ul>
@@ -58,7 +58,9 @@ function Footer() {
         <div className="flex flex-row px-[20px] lg:px-[60px] pt-5 space-x-8 lg:space-x-28">
           <div className="">
             <ul>
-              <p className="text-white  text-2xl pb-4">Company</p>
+              <p className="text-white  text-[16px] leading-[24px] font-[700] pb-4">
+                Company
+              </p>
               <li className="text-white text-[14px] pb-2  hover:text-blue-600 cursor-pointer">
                 About Us
               </li>
@@ -75,18 +77,23 @@ function Footer() {
           </div>
           <div className="">
             <ul>
-              <p className="text-white  text-2xl pb-4">Media</p>
+              <p className="text-white  text-[16px] leading-[24px] font-[700] pb-4">
+                Media
+              </p>
+
               <li className="text-white text-[14px] pb-2  hover:text-blue-600 cursor-pointer">
-                Galery
+                Gallery
               </li>
               <li className="text-white text-[14px] pb-2  hover:text-blue-600 cursor-pointer">
-                Publications
+                Blog & Publications
               </li>
             </ul>
           </div>
           <div className="">
             <ul>
-              <p className="text-white  text-2xl pb-4">Support</p>
+              <p className="text-white  text-[16px] leading-[24px] font-[700] pb-4">
+                Support
+              </p>
               <li className="text-white text-[14px] pb-2  hover:text-blue-600 cursor-pointer">
                 Contact Us
               </li>
@@ -94,7 +101,7 @@ function Footer() {
                 Career
               </li>
               <li className="text-white text-[14px] pb-2  hover:text-blue-600 cursor-pointer">
-                Monitoring
+                App
               </li>
             </ul>
           </div>
@@ -105,9 +112,9 @@ function Footer() {
           © 2022 Handal Selaras Group
         </h1>
         <div className="flex justify-center gap-6 px-20">
-          <FaInstagram className="text-2xl text-white cursor-pointer hover:text-yellow-600" />
-          <FaFacebook className="text-2xl text-white cursor-pointer hover:text-blue-600" />
-          <FaYoutube className="text-2xl text-white cursor-pointer hover:text-red-600" />
+          <FaInstagram className="text-[20px] leading-[24px] font-[700] text-white cursor-pointer hover:text-yellow-600" />
+          <FaFacebook className="text-[20px] leading-[24px] font-[700] text-white cursor-pointer hover:text-sky-600" />
+          <FaYoutube className="text-[20px] leading-[24px] font-[700] text-white cursor-pointer hover:text-red-600" />
         </div>
       </div>
     </footer>

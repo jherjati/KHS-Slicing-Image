@@ -343,7 +343,7 @@ const AboutUs = () => {
                 </div>
 
                 <div className="flex-col items-center space-y-[8px] ">
-                  <h1 className=" text-[16px] md:text-[18px] font-[600] text-blacky font-inter">
+                  <h1 className=" text-[16px] md:text-[18px] md:text-center font-[600] text-blacky font-inter">
                     {iso}
                   </h1>
                   <p className="text-[12px] md:text-[14px] text-grey font-inter">

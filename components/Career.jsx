@@ -13,7 +13,7 @@ import {
 
 const Career = () => {
   return (
-    <div className="mt-16 ">
+    <div className="mt-[80px] ">
       <div className="flex flex-col lg:grid lg:grid-cols-2 md:py-[43px]  px-[20px] md:px-[120px] ">
         {/* halfimage */}
         <div className="order-last lg:order-first grid grid-cols-2 gap-y-4 gap-x-4 items-center justify-items-center pr-[10%] pl-[10%] lg:pr-[20%] lg:pl-0">
@@ -41,13 +41,13 @@ const Career = () => {
           />
         </div>
         <div className="flex flex-col space-y-4 justify-center">
-          <h2 className="text-sky-600 font-bold tracking-wide text-xl md:text-2xl font-quicksand ">
+          <h2 className="text-blue text-[20px] leading-[28px] font-[600] font-inter ">
             Career
           </h2>
-          <h1 className="text-slate-900 font-bold tracking-wide text-2xl md:text-5xl font-quicksand">
+          <h1 className="text-blacky text-sedangmobile md:text-sedang2 font-quicksand">
             Life at KHS
           </h1>
-          <p className="text-slate-500 tracking-wide text-sm md:text-xl font-quicksand ">
+          <p className="text-grey text-kecilmobile md:text-kecil font-inter  ">
             At Kreasi Handal Selaras, we are working hard to reach our goals and
             enjoying every challenge and having fun while doing it. We hire
             talents who have a passion for creating new solutions and next-gen
@@ -64,10 +64,10 @@ const Career = () => {
       <div className="flex flex-col space-y-12 md:space-y-20 px-[20px] md:px-[120px] text-black">
         {/* subpage 1 */}
         <div className="flex  md:w-1/2 flex-col space-y-2 md:space-y-6 col-span-1 mx-3">
-          <h1 className="text-slate-900 font-bold tracking-wide text-2xl md:text-5xl font-quicksand">
+          <h1 className="text-blacky text-sedangmobile md:text-sedang2 font-quicksand pt-8">
             Our Value
           </h1>
-          <p className="text-slate-500 tracking-wide text-sm md:text-xl font-quicksand">
+          <p className="text-grey text-kecilmobile md:text-kecil font-inter ">
             Lorem ipsum dolor sit amet consectetur adipiscing elit sed do
             eiusmod tempor incididunt ut labore et. Lorem ipsum dolor sit amet
             consectetur adipiscing elit sed do eiusmod tempor incididunt ut
@@ -77,13 +77,13 @@ const Career = () => {
         {/* subpage 2 */}
         <div className="flex flex-col lg:grid lg:grid-cols-3  gap-8">
           <div className=" bg-white  flex lg:grid  rounded-[1rem] shadow-2xl p-[4%]">
-            <BsLightningChargeFill className="text-5xl lg:text-6xl font-bold text-sky-700 p-2 " />
+            <BsLightningChargeFill className="text-[40px] md:text-[50px] font-bold text-sky-700 p-2 " />
             <div>
               <div className="text-2xl font-semibold text-slate-900">
                 Fast and Accurate
               </div>
 
-              <div className="text-xl text-slate-600">
+              <div className="text-grey text-kecilmobile md:text-kecil font-inter">
                 <ul className="list-disc px-[5%]">
                   <li>Moving in high speed while keeping excellence.</li>
                   <li>Handling issues effectively and efficiently.</li>
@@ -92,13 +92,13 @@ const Career = () => {
             </div>
           </div>
           <div className=" bg-white  flex lg:grid  rounded-[1rem] shadow-2xl p-[4%]">
-            <BsLightbulbFill className="text-5xl lg:text-6xl font-bold text-sky-700 p-2 " />
+            <BsLightbulbFill className="text-[40px] md:text-[50px] font-bold text-sky-700 p-2 " />
             <div>
               <div className="text-2xl font-semibold text-slate-900">
                 Inspire
               </div>
 
-              <div className="text-xl text-slate-600">
+              <div className="text-grey text-kecilmobile md:text-kecil font-inter">
                 <ul className="list-disc px-[5%]">
                   <li>Moving in high speed while keeping excellence.</li>
                   <li>Handling issues effectively and efficiently.</li>
@@ -107,13 +107,13 @@ const Career = () => {
             </div>
           </div>
           <div className=" bg-white  flex lg:grid  rounded-[1rem] shadow-2xl p-[4%]">
-            <BsGearFill className="text-5xl lg:text-6xl font-bold text-sky-700 p-2 " />
+            <BsGearFill className="text-[40px] md:text-[50px] font-bold text-sky-700 p-2 " />
             <div>
               <div className="text-2xl font-semibold text-slate-900">
                 Responsive
               </div>
 
-              <div className="text-xl text-slate-600">
+              <div className="text-grey text-kecilmobile md:text-kecil font-inter">
                 <ul className="list-disc px-[5%]">
                   <li>Moving in high speed while keeping excellence.</li>
                   <li>Handling issues effectively and efficiently.</li>
@@ -133,7 +133,7 @@ const Career = () => {
               alt=""
               layout="intrinsic"
             />
-            <p className="absolute w-[90%] lg:w-[70%] pt-3 bottom-0   text-slate-500 bg-white text-xl font-quicksand">
+            <p className="absolute w-[90%] lg:w-[70%] pt-3 bottom-0   text-grey text-kecilmobile md:text-kecil font-inter bg-white ">
               Lorem ipsum dolor sit amet consectetur adipiscing elit sed do
               eiusmo
             </p>
@@ -149,7 +149,7 @@ const Career = () => {
                 alt=""
                 layout="intrinsic"
               />
-              <p className="absolute w-[70%] pt-3 bottom-0   text-slate-500 bg-white  text-xl font-quicksand">
+              <p className="absolute w-[70%] pt-3 bottom-0   text-grey text-kecilmobile md:text-kecil font-inter bg-white  ">
                 Lorem ipsum dolor sit amet consectetur adipiscing elit sed do
                 eiusmo
               </p>
@@ -164,9 +164,8 @@ const Career = () => {
                   alt=""
                   layout="intrinsic"
                 />
-                <p className="absolute w-[90%] pt-3 bottom-0   text-slate-500 bg-white  text-xs font-quicksand">
+                <p className="absolute w-[90%] pt-3 bottom-0   text-grey text-kecilmobile md:text-kecil font-inter bg-white  ">
                   Lorem ipsum dolor sit amet consectetur adipiscing elit sed do
-                  eiusmo
                 </p>
               </div>
               <div className="relative w-[100%] h-[100%]">
@@ -178,9 +177,8 @@ const Career = () => {
                   alt=""
                   layout="intrinsic"
                 />
-                <p className="absolute w-[90%] pt-3 bottom-0   text-slate-500 bg-white  text-xs font-quicksand">
+                <p className="absolute w-[90%] pt-3 bottom-0   text-grey text-kecilmobile md:text-kecil font-inter bg-white  ">
                   Lorem ipsum dolor sit amet consectetur adipiscing elit sed do
-                  eiusmo
                 </p>
               </div>
             </div>
@@ -200,7 +198,7 @@ const Career = () => {
                     alt=""
                     layout="responsive"
                   />
-                  <div className="col-span-3  flex justify-center items-center text-slate-500 bg-white  text-base font-quicksand">
+                  <div className="col-span-3  flex justify-center items-center text-grey text-kecilmobile md:text-kecil font-inter bg-white ">
                     <p className="">{text}</p>
                   </div>
                 </div>
@@ -209,7 +207,7 @@ const Career = () => {
           </div>
         </div>
         <div className="flex flex-col space-y-4 ">
-          <div className="text-slate-900 font-bold tracking-wide text-2xl md:text-5xl font-quicksand">
+          <div className="text-blacky text-sedangmobile md:text-sedang2 font-quicksand">
             Join with Us
           </div>
           <div className="flex flex-col lg:grid lg:grid-cols-5 gap-8">
@@ -241,21 +239,22 @@ const Career = () => {
                 <input
                   type="search"
                   id="default-search"
-                  className="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 font-quicksand"
+                  className="block p-4 pl-10 w-full text-kecil bg-gray-50 rounded-lg border border-gray-300 font-quicksand"
                   placeholder="Search available position"
                   required
                 />
-                <button
+                {/* <button
                   type="submit"
-                  className="text-white font-quicksand absolute right-2.5 bottom-2.5 bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  className="text-grey font-quicksand absolute right-2.5 bottom-2.5 bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
                   Search
-                </button>
+                </button> */}
               </div>
             </form>
             <div className="col-span-1 px-[5%] lg:px-[20%] w-full text-xl text-slate-900 bg-gray-50 rounded-lg border border-gray-300  ">
               <Dropdown
-                title="Search Division"
+                className="relative"
+                title="-- Pilih Divisi --"
                 texts={[
                   "Field Engineer",
                   "Management Trainee",
@@ -264,7 +263,7 @@ const Career = () => {
               />
             </div>
           </div>
-          <div className="flex flex-col  space-y-3 lg:grid lg:grid-cols-3 gap-2 lg:gap-12  pb-20">
+          <div className="flex flex-col  lg:grid lg:grid-cols-3 gap-2 lg:gap-12  pb-20">
             {careers.map(({ id, image, title, text, text2 }) => {
               return (
                 <div
@@ -273,7 +272,7 @@ const Career = () => {
                 >
                   <div className="col-span-2  grid lg:px-10 content-center ">
                     <Image
-                      layout="responsive"
+                      layout=""
                       src={image}
                       alt={title}
                       width="500"
@@ -281,18 +280,18 @@ const Career = () => {
                     />
                   </div>
 
-                  <div className="col-span-4  flex flex-col justify-center space-y-4">
-                    <p className="text-slate-800 font-bold tracking-wide text-base md:text-xl font-quicksand">
+                  <div className="col-span-4  flex flex-col justify-center space-y-[8px]">
+                    <p className="text-blacky font-inter text-[16px] leading-[19px] md:text-[20px] md:leading-[24px] font-[600]">
                       {title}
                     </p>
-                    <p className="text-slate-500 tracking-wide text-base md:text-xl font-quicksand">
+                    <p className="text-grey text-kecilmobile md:text-kecil">
                       {text}
                     </p>
-                    <p className="text-slate-500 tracking-wide text-base md:text-xl font-quicksand">
+                    <p className="text-grey text-kecilmobile md:text-kecil">
                       {text2}
                     </p>
                     <Link href={`/career`} className="flex justify-between">
-                      <p className="w-full text-base lg:text-xl lg:p-5 text-center font-quicksand font-bold text-sky-700  bg-white rounded-lg border border-sky-700">
+                      <p className="w-full text-[16px] leading-[24px] font-inter lg:p-5 text-center font-bold text-blue  bg-white rounded-lg  border-[2px] border-blue">
                         View Details
                       </p>
                     </Link>

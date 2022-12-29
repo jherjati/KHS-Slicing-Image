@@ -8,20 +8,20 @@ const ArchitectureConstructionManagement = () => {
     <div className="flex flex-col divide-y space-y-12">
       <div className=" flex flex-col space-y-8 md:grid md:grid-cols-2 content-center px-[20px] md:px-[120px] mt-16">
         <div className="flex justify-center flex-col space-y-2 md:space-y-8 col-span-1 mx-3">
-          <h1 className="text-sky-700 font-bold tracking-wide text-xl md:text-2xl font-quicksand  ">
+          <h1 className="text-blue text-[20px] leading-[28px] font-[600] font-inter  ">
             Services
           </h1>
-          <h1 className="text-slate-900 font-bold tracking-wide text-2xl md:text-5xl font-quicksand ">
+          <h1 className="text-blacky text-sedangmobile md:text-sedang2 font-quicksand  ">
             Architecture & Construction
           </h1>
-          <p className="text-slate-500 tracking-wide text-sm md:text-xl font-quicksand ">
+          <p className="text-grey text-kecilmobile md:text-kecil font-inter ">
             Lorem ipsum dolor sit amet consectetur adipiscing elit sed do
             eiusmod tempor incididunt ut labore et. Lorem ipsum dolor sit amet
             consectetur adipiscing elit sed do eiusmod tempor incididunt ut
             labore et
           </p>
 
-          <ul className="flex flex-col space-y-1 list-decimal text-slate-500 tracking-wide text-sm md:text-xl font-quicksand px-[20px] md:px-[120px]">
+          <ul className="flex flex-col space-y-1 list-decimal text-grey text-kecilmobile md:text-kecil font-inter px-[20px]">
             <li>Architectural Planning</li>
             <li>Detail Engineering Design Planning</li>
             <li>Construction Management</li>
@@ -31,7 +31,7 @@ const ArchitectureConstructionManagement = () => {
         <div className="flex justify-end items-center">
           <div className="grid grid-rows-2  bg-architecture bg-cover bg-center rounded-[1rem] w-[90%]  h-[80%]">
             <div className="grid grid-cols-2 row-start-2">
-              <div className="border-[2rem] bg-white w-[100%]  border-white rounded-[1rem]">
+              <div className="outline outline-[16px] md:outline-[28px] bg-white w-[100%]  outline-white rounded-tr-lg">
                 <Image
                   src="/architectureimage.png"
                   className=""
@@ -39,10 +39,10 @@ const ArchitectureConstructionManagement = () => {
                   width="300"
                   height="300"
                 />
-                <h1 className="text-black font-bold tracking-wide text-xs md:text-xl font-quicksand  ">
+                <h1 className="text-blacky text-[14px] leading-[17px] md:text-[18px] md:leading-[22px] font-[700] font-inter  ">
                   Bangunan TIC & Komersial di Labuan Baju
                 </h1>
-                <p className="text-slate-500 tracking-wide text-xs md:text-xl font-quicksand  ">
+                <p className="text-grey text-[12px] md:text-[16px] md:leading-[19px] leading-[15px] font-[400] font-inter pb-[10px]">
                   Architecture & Construction
                 </p>
               </div>
@@ -70,10 +70,10 @@ const ArchitectureConstructionManagement = () => {
         <div className="flex flex-col lg:grid lg:grid-cols-4 lg:divide-x">
           <div className="col-span-3 flex flex-col space-y-8 pt-[5%] pr-[3%]">
             <div className=" flex flex-col space-y-8 ">
-              <h1 className="text-slate-900 font-bold tracking-wide text-2xl md:text-5xl font-quicksand">
+              <h1 className="text-blacky text-sedangmobile md:text-sedang2 font-quicksand ">
                 Architectural Planning
               </h1>
-              <p className="text-slate-500 tracking-wide text-sm md:text-xl font-quicksand">
+              <p className="text-grey text-kecilmobile md:text-kecil font-inter">
                 HANDAL SELARAS GROUP is supported by reliable architects who
                 have decades of experience. Architectural planning includes
                 planning Concept Design, Pre-Design / Schematic Design, and
@@ -85,9 +85,9 @@ const ArchitectureConstructionManagement = () => {
                   return (
                     <div
                       key={name}
-                      className=" grid  gap-4 text-center justify-items-center content-center  rounded-[1rem] bg-white shadow-2xl px-[4%] py-[5%]"
+                      className=" flex flex-col  p-[20px] lg:p-[40px] space-x-4  space-y-[24px] rounded-[1rem] bg-white shadow-2xl"
                     >
-                      <div className="">
+                      <div className="flex items-center justify-center">
                         <Image
                           layout="intrinsic"
                           src={architec}
@@ -97,11 +97,11 @@ const ArchitectureConstructionManagement = () => {
                         />
                       </div>
 
-                      <div className="flex flex-col justify-center">
-                        <p className="text-slate-800 font-bold tracking-wide text-sm md:text-xl font-quicksand">
+                      <div className="flex flex-col space-y-[10px] h-[48px] text-left  justify-center">
+                        <p className="text-blacky font-[700] text-[14px] leading-[20px]  md:text-[17px] md:leading-[22px] font-inter">
                           {name}
                         </p>
-                        <p className="text-slate-500 tracking-wide text-sm md:text-xl font-quicksand">
+                        <p className="text-grey text-[14px] leading-[17px] font-inter md:text-[16px] md:leading-[19px]">
                           {year}
                         </p>
                       </div>
@@ -111,10 +111,10 @@ const ArchitectureConstructionManagement = () => {
               </div>
             </div>
             <div className=" flex flex-col space-y-8 ">
-              <h1 className="text-slate-900 font-bold tracking-wide text-2xl md:text-5xl font-quicksand">
+              <h1 className="text-blacky text-sedangmobile md:text-sedang2 font-quicksand ">
                 Detail Engineering Design Planning
               </h1>
-              <p className="text-slate-500 tracking-wide text-sm md:text-xl font-quicksand">
+              <p className="text-grey text-kecilmobile md:text-kecil font-inter">
                 HANDAL SELARAS GROUP is supported by reliable architects who
                 have decades of experience. We can produce a Detailed
                 Engineering Design (DED) as a product of a planning consultant,
@@ -131,10 +131,10 @@ const ArchitectureConstructionManagement = () => {
               />
             </div>
             <div className=" flex flex-col space-y-8 ">
-              <h1 className="text-slate-900 font-bold tracking-wide text-2xl md:text-5xl font-quicksand">
+              <h1 className="text-blacky text-sedangmobile md:text-sedang2 font-quicksand ">
                 Construction Management
               </h1>
-              <p className="text-slate-500 tracking-wide text-sm md:text-xl font-quicksand">
+              <p className="text-grey text-kecilmobile md:text-kecil font-inter">
                 HANDAL SELARAS GROUP is supported by reliable and experienced
                 architects who have decades of experience in the construction
                 industry, capable of carrying out supervision, providing advice
@@ -151,16 +151,16 @@ const ArchitectureConstructionManagement = () => {
               />
             </div>
             <div className=" flex flex-col space-y-8 ">
-              <h1 className="text-slate-900 font-bold tracking-wide text-2xl md:text-5xl font-quicksand">
+              <h1 className="text-blacky text-sedangmobile md:text-sedang2 font-quicksand ">
                 Design and Build
               </h1>
-              <p className="text-slate-500 tracking-wide text-sm md:text-xl font-quicksand">
+              <p className="text-grey text-kecilmobile md:text-kecil font-inter">
                 HANDAL SELARAS GROUP With more than 25 years of experience in
                 the field of engineering design, both as planners, executors,
                 and users, at this time, We want to share experiences for your
                 needs.
               </p>
-              <p className="text-slate-500 tracking-wide text-sm md:text-xl font-quicksand">
+              <p className="text-grey text-kecilmobile md:text-kecil font-inter">
                 Data generated by TVT can be effectively compared with data
                 obtained by the geophysical method. Some TVT applications are
                 exploration of oil and gas accumulation (offshore and onshore),

@@ -61,7 +61,7 @@ const HomePage = () => {
         <div className="flex justify-end items-center">
           <div className="grid grid-rows-2  bg-page3 bg-cover bg-center rounded-[1rem] w-[90%]  h-[90%]">
             <div className="grid grid-cols-2 row-start-2">
-              <div className="border-[0.5rem] md:border-[2rem] bg-white w-[100%]  border-white rounded-[1rem]">
+              <div className="outline outline-[16px] md:outline-[28px] bg-white w-[100%]  outline-white rounded-tr-lg">
                 <Image
                   src="/testimonials.png"
                   className=""
@@ -69,10 +69,10 @@ const HomePage = () => {
                   width="300"
                   height="300"
                 />
-                <h1 className="text-black font-bold tracking-wide text-xs md:text-xl font-quicksand  ">
+                <h1 className="text-blacky text-[14px] leading-[17px] md:text-[18px] md:leading-[22px] font-[700] font-inter ">
                   Handal Selaras Group
                 </h1>
-                <p className="text-grey tracking-wide text-xs md:text-xl font-quicksand  ">
+                <p className="text-grey text-[12px] md:text-[16px] md:leading-[19px] leading-[15px] font-[400] font-inter pb-[10px]">
                   Agustus 2018
                 </p>
               </div>
@@ -85,7 +85,7 @@ const HomePage = () => {
         <div className="flex justify-start items-center py-8">
           <div className="grid grid-rows-2  bg-page4 bg-cover bg-center rounded-[2rem] w-[90%]  h-[90%]">
             <div className="grid grid-cols-2 row-start-2">
-              <div className="border-[0.5rem] md:border-[2rem] col-start-2 border-white rounded-[2rem]">
+              <div className="outline outline-[16px] md:outline-[28px] bg-white w-[100%]  outline-white rounded-tr-lg">
                 <Image
                   src="/testimonials.png"
                   className=""
@@ -93,10 +93,10 @@ const HomePage = () => {
                   width="300"
                   height="300"
                 />
-                <h1 className="text-black font-bold tracking-wide text-xs md:text-xl font-quicksand  ">
+                <h1 className="text-blacky text-[14px] leading-[17px] md:text-[18px] md:leading-[22px] font-[700] font-inter ">
                   Handal Selaras Group
                 </h1>
-                <p className="text-grey tracking-wide text-xs md:text-xl font-quicksand  ">
+                <p className="text-grey text-[12px] md:text-[16px] md:leading-[19px] leading-[15px] font-[400] font-inter pb-[10px] ">
                   Agustus 2018
                 </p>
               </div>

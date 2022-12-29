@@ -12,6 +12,8 @@ const SlideImage = () => {
         pauseOnHover={false}
         autoplay={true}
         canSwipe={true}
+        arrows={false}
+        slidesToScroll={true}
       >
         {sliderImage.map((slideImage, index) => (
           <div className="each-slide" key={index}>

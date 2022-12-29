@@ -88,6 +88,7 @@ module.exports = {
       fontFamily: {
         quicksand: ["Quicksand", "sans-serif"],
         inter: ["Inter", "sans-serif"],
+        roboto: ["Roboto", "sans-serif"],
       },
     },
   },

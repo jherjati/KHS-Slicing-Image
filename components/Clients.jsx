@@ -7,10 +7,10 @@ const Clients = () => {
     <div className="my-16 flex flex-col space-y-12">
       <div className=" flex flex-col space-y-8 lg:grid lg:grid-cols-3  content-center px-[20px] md:px-[120px] mt-16">
         <div className="lg:col-span-2 flex justify-center flex-col space-y-2 md:space-y-8 col-span-1 mx-3">
-          <h1 className="text-slate-900 font-bold tracking-wide text-2xl md:text-5xl font-quicksand ">
+          <h1 className="text-blacky text-sedangmobile md:text-sedang2 font-quicksand ">
             Clients
           </h1>
-          <p className="text-slate-500 tracking-wide text-sm md:text-xl font-quicksand ">
+          <p className="text-grey text-kecilmobile md:text-kecil font-inter ">
             Lorem ipsum dolor sit amet consectetur adipiscing elit sed do
             eiusmod tempor incididunt ut labore et. Lorem ipsum dolor sit amet
             consectetur adipiscing elit sed do eiusmod tempor incididunt ut

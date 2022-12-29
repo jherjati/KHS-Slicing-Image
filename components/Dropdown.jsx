@@ -9,7 +9,7 @@ const Dropdown = ({ title, texts }) => {
       <div
         onClick={() => setdropdownOpen(!dropdownOpen)}
         className=" hover:text-blue-900 hover:font-bold
-    hover:cursor-pointer text-slate-900 tracking-wide text-base font-quicksand
+    hover:cursor-pointer text-kecil font-[600] font-quicksand text-center flex item
     "
       >
         {title}

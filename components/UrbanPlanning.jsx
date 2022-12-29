@@ -7,19 +7,19 @@ const UrbanPlanning = () => {
     <div className="flex flex-col divide-y space-y-12">
       <div className=" flex flex-col space-y-8 md:grid md:grid-cols-2 content-center px-[20px] md:px-[120px] mt-16">
         <div className="flex justify-center flex-col space-y-2 md:space-y-8 col-span-1 mx-3">
-          <h1 className="text-sky-700 font-bold tracking-wide text-xl md:text-2xl font-quicksand  ">
+          <h1 className="text-blue text-[20px] leading-[28px] font-[600] font-inter">
             Services
           </h1>
-          <h1 className="text-slate-900 font-bold tracking-wide text-2xl md:text-5xl font-quicksand ">
+          <h1 className="text-blacky text-sedangmobile md:text-sedang2 font-quicksand">
             Urban Planning
           </h1>
-          <p className="text-slate-500 tracking-wide text-sm md:text-xl font-quicksand ">
+          <p className="text-grey text-kecilmobile md:text-kecil font-inter  ">
             Lorem ipsum dolor sit amet consectetur adipiscing elit sed do
             eiusmod tempor incididunt ut labore et. Lorem ipsum dolor sit amet
             consectetur adipiscing elit sed do eiusmod tempor incididunt ut
             labore et
           </p>
-          <ul className="flex flex-col space-y-1 list-decimal text-slate-500 tracking-wide text-sm md:text-xl font-quicksand px-[20px] md:px-[120px]">
+          <ul className="flex flex-col space-y-1 list-decimal text-grey text-kecilmobile md:text-kecil font-inter  px-[20px] md:px-[120px]">
             <li>Spatial Planning</li>
             <li>General and Sectoral Planning</li>
             <li>Property Investment Studies</li>
@@ -29,7 +29,7 @@ const UrbanPlanning = () => {
         <div className="flex justify-end items-center">
           <div className="grid grid-rows-2  bg-urban bg-cover bg-center rounded-[1rem] w-[90%]  h-[80%]">
             <div className="grid grid-cols-2 row-start-2">
-              <div className="border-[2rem] bg-white w-[100%]  border-white rounded-[1rem]">
+              <div className="outline outline-[16px] md:outline-[28px] bg-white w-[100%]  outline-white rounded-tr-lg">
                 <Image
                   src="/urbanimage.png"
                   className=""
@@ -37,10 +37,10 @@ const UrbanPlanning = () => {
                   width="300"
                   height="300"
                 />
-                <h1 className="text-black font-bold tracking-wide text-xs md:text-xl font-quicksand  ">
+                <h1 className="text-blacky text-[14px] leading-[17px] md:text-[18px] md:leading-[22px] font-[700] font-inter">
                   Kontur Mandalika
                 </h1>
-                <p className="text-slate-500 tracking-wide text-xs md:text-xl font-quicksand  ">
+                <p className="text-grey text-[12px] md:text-[16px] md:leading-[19px] leading-[15px] font-[400] font-inter pb-[10px] ">
                   Urban Planning
                 </p>
               </div>
@@ -67,16 +67,16 @@ const UrbanPlanning = () => {
         <div className="lg:grid lg:grid-cols-4 lg:divide-x">
           <div className="col-span-3 flex flex-col space-y-8 pt-[5%] pr-[3%]">
             <div className=" flex flex-col space-y-8 ">
-              <h1 className="text-slate-900 font-bold tracking-wide text-2xl md:text-5xl font-quicksand">
+              <h1 className="text-blacky text-sedangmobile md:text-sedang2 font-quicksand">
                 Spatial Planning
               </h1>
-              <p className="text-slate-500 tracking-wide text-sm md:text-xl font-quicksand ">
+              <p className="text-grey text-kecilmobile md:text-kecil font-inter  ">
                 HANDAL SELARAS GROUP is supported by Urban planners who have the
                 capability in preparing Spatial Plans both in general and
                 detailed scales. Technology and Speed are our advantages in the
                 preparation of spatial planning.
               </p>
-              <p className="text-slate-500 tracking-wide text-sm md:text-xl font-quicksand ">
+              <p className="text-grey text-kecilmobile md:text-kecil font-inter  ">
                 Experienced in preparing Regional Spatial Plans (RTRW), Spatial
                 Detailed Plans (RDTR), Regional Disaster Management Plans (RPBD)
                 to master plan scales for Education, Tourism and Health
@@ -94,10 +94,10 @@ const UrbanPlanning = () => {
               />
             </div>
             <div className=" flex flex-col space-y-8 ">
-              <h1 className="text-slate-900 font-bold tracking-wide text-2xl md:text-5xl font-quicksand">
+              <h1 className="text-blacky text-sedangmobile md:text-sedang2 font-quicksand">
                 General and Sectoral Planning
               </h1>
-              <p className="text-slate-500 tracking-wide text-sm md:text-xl font-quicksand">
+              <p className="text-grey text-kecilmobile md:text-kecil font-inter ">
                 HANDAL SELARAS GROUP is supported by urban planners who have the
                 capability in preparing Spatial Plan documents and studies
                 related to regional development in general and sectoral. The
@@ -116,10 +116,10 @@ const UrbanPlanning = () => {
               />
             </div>
             <div className=" flex flex-col space-y-8 ">
-              <h1 className="text-slate-900 font-bold tracking-wide text-2xl md:text-5xl font-quicksand">
+              <h1 className="text-blacky text-sedangmobile md:text-sedang2 font-quicksand">
                 Property Investment Studies
               </h1>
-              <p className="text-slate-500 tracking-wide text-sm md:text-xl font-quicksand">
+              <p className="text-grey text-kecilmobile md:text-kecil font-inter ">
                 HANDAL SELARAS GROUP sees that the investment prospects in the
                 property sector, including land, are increasingly attractive.
                 Demand and price growth in all property sectors, including land
@@ -129,7 +129,7 @@ const UrbanPlanning = () => {
                 benefits obtained compared to the investment invested can later
                 be optimal.
               </p>
-              <p className="text-slate-500 tracking-wide text-sm md:text-xl font-quicksand">
+              <p className="text-grey text-kecilmobile md:text-kecil font-inter ">
                 Before making a choice on an alternative utilization, of course,
                 requires an in-depth analysis with the right method. So it is
                 deemed necessary to provide input to land owners in determining
@@ -146,21 +146,21 @@ const UrbanPlanning = () => {
               />
             </div>
             <div className=" flex flex-col space-y-8 ">
-              <h1 className="text-slate-900 font-bold tracking-wide text-2xl md:text-5xl font-quicksand">
+              <h1 className="text-blacky text-sedangmobile md:text-sedang2 font-quicksand">
                 Information System Development
               </h1>
-              <p className="text-slate-500 tracking-wide text-sm md:text-xl font-quicksand">
+              <p className="text-grey text-kecilmobile md:text-kecil font-inter ">
                 HANDAL SELARAS GROUP has a value in innovation and technology
                 that encourages planning and studies to be easily
                 understood/applied with information technology innovation.
               </p>
-              <p className="text-slate-500 tracking-wide text-sm md:text-xl font-quicksand">
+              <p className="text-grey text-kecilmobile md:text-kecil font-inter ">
                 Innovation to assist local governments in regulating, fostering,
                 implementing and supervising spatial planning. We have an
                 innovation for spatial control which we call the Spatial
                 Utilization Control Application (Andaltaru).
               </p>
-              <p className="text-slate-500 tracking-wide text-sm md:text-xl font-quicksand">
+              <p className="text-grey text-kecilmobile md:text-kecil font-inter ">
                 In addition, we also have an information system in collecting
                 databases, both spatial information and sectoral information.
               </p>
