@@ -345,9 +345,7 @@ const SurveyAndMapping = () => {
                 name="survey"
                 onClick={linkfunc}
                 className={lin == "survey" ? "text-blue" : ""}
-              >
-                {y}
-              </Link>
+              ></Link>
               <Link
                 href={`#aerial`}
                 name="aerial"
