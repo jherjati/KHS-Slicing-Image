@@ -17,7 +17,7 @@ export async function getStaticProps({ params }) {
   let [blogRes] = await Promise.all([
     fetch(
       rootUrl +
-        "/posts?per_page=12&_embed&_fields=id,title,excerpt,modified,_links,_embedded&categories=" +
+        "/posts?per_page=12&_embed&_fields=id,title,excerpt,modified,slug,_links,_embedded&categories=" +
         params.category
     ),
   ]);
@@ -26,6 +26,7 @@ export async function getStaticProps({ params }) {
   const blogs = blogRes.map((blog) => {
     return {
       id: blog.id,
+      slug: blog.slug,
       image: blog._embedded["wp:featuredmedia"]
         ? blog._embedded["wp:featuredmedia"][0].source_url
         : null,

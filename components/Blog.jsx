@@ -108,7 +108,7 @@ const Blog = ({ blogs, categories }) => {
         </div>
         {/* list blog detail */}
         <div className='row-span-2 flex flex-col  min-[1300px]:grid min-[1300px]:grid-cols-3 gap-2 min-[1300px]:gap-12 px-[2%]'>
-          {blogs.map(({ id, image, category, title, text, publish }) => {
+          {blogs.map(({ id, slug, image, category, title, text, publish }) => {
             return (
               <div
                 key={id}
@@ -143,7 +143,7 @@ const Blog = ({ blogs, categories }) => {
                     {new Date(publish).toLocaleString()}
                   </p>
                   <Link
-                    href={`/blog/detail/${id}`}
+                    href={`/blog/detail/${slug}`}
                     className='hidden min-[1300px]:flex justify-between'
                   >
                     <p className='text-sky-600 font-bold hover:text-sky-900 tracking-wide text-sm md:text-base font-quicksand'>
