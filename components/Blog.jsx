@@ -1,8 +1,11 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Blog = ({ blogs, categories }) => {
+  const router = useRouter();
+
   return (
     <div className='mt-16 bg-blog'>
       <div className=' flex flex-col  space-y-8 lg:grid lg:grid-cols-2 content-center p-[5%] '>
@@ -39,13 +42,24 @@ const Blog = ({ blogs, categories }) => {
       <div className='bg-white rounded-lg m-[5%]'>
         {/* category and searching */}
         <div className='hidden min-[1300px]:flex flex-nowrap scrollbar-hide w-full h-[10px] space-x-[32px] px-[40px] py-[3%] overflow-x-scroll overflow-y-hidden text-[16px] leading-[18.75px] font-roboto text-[#5F5B5A] opacity-[0.6]'>
-          <div className='flex items-center whitespace-nowrap text-blue-dark font-bold'>
+          <Link
+            href={"/blog"}
+            className={
+              "flex items-center whitespace-nowrap " +
+              (router.asPath === "/blog" ? "text-blue-dark font-extrabold" : "")
+            }
+          >
             All
-          </div>
+          </Link>
           {categories.map(({ id, name, catIds }) => (
             <Link
               href={"/blog/" + catIds}
-              className='flex items-center whitespace-nowrap '
+              className={
+                "flex items-center whitespace-nowrap " +
+                (router.asPath === "/blog/" + catIds
+                  ? "text-blue-dark font-extrabold"
+                  : "")
+              }
               key={id}
             >
               {name}
@@ -129,7 +143,7 @@ const Blog = ({ blogs, categories }) => {
                     {new Date(publish).toLocaleString()}
                   </p>
                   <Link
-                    href={`/blog/detail?id=${id}`}
+                    href={`/blog/detail/${id}`}
                     className='hidden min-[1300px]:flex justify-between'
                   >
                     <p className='text-sky-600 font-bold hover:text-sky-900 tracking-wide text-sm md:text-base font-quicksand'>
