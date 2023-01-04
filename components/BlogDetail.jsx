@@ -1,13 +1,12 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { blogs } from "./Data";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaLink } from "react-icons/fa";
 
-const Detail = ({ blog }) => {
+const Detail = ({ blog, blogs }) => {
   return (
     <div className='flex flex-col divide-y-2'>
       <div className='my-16 flex flex-col space-y-12  content-center px-[5%] md:px-[15%] '>
@@ -77,7 +76,7 @@ const Detail = ({ blog }) => {
           Artikel Terkait
         </div>
         <div className='row-span-2 flex flex-col  space-y-3 lg:grid lg:grid-cols-3 gap-2 lg:gap-12 p-[2%]'>
-          {blogs.map(({ id, image, category, title, text, publish }) => {
+          {blogs.map(({ id, slug, image, category, title, text, publish }) => {
             return (
               <div
                 key={id}
@@ -86,7 +85,10 @@ const Detail = ({ blog }) => {
                 <div className='col-span-2 order-last lg:order-first grid content-center '>
                   <Image
                     layout='responsive'
-                    src={image}
+                    src={
+                      image ??
+                      "https://www.handalselaras.com/wp-content/uploads/2022/12/rwrwtw.png"
+                    }
                     alt={title}
                     width='900'
                     height='800'
@@ -97,17 +99,19 @@ const Detail = ({ blog }) => {
                   <p className='text-sky-500 font-bold tracking-wide text-sm md:text-base font-quicksand'>
                     {category}
                   </p>
-                  <p className='text-slate-800 font-bold tracking-wide text-sm md:text-xl font-quicksand'>
-                    {title}
-                  </p>
+                  <article
+                    className='text-slate-800 font-bold tracking-wide text-sm md:text-xl font-quicksand'
+                    dangerouslySetInnerHTML={{ __html: title }}
+                  />
+                  <article
+                    className='text-slate-500 tracking-wide text-sm md:text-xl font-quicksand'
+                    dangerouslySetInnerHTML={{ __html: text }}
+                  />
                   <p className='text-slate-500 tracking-wide text-sm md:text-xl font-quicksand'>
-                    {text}
-                  </p>
-                  <p className='text-slate-500 tracking-wide text-sm md:text-xl font-quicksand'>
-                    {publish}
+                    {new Date(publish).toLocaleString()}
                   </p>
                   <Link
-                    href={`/blog/detail?id=${id}`}
+                    href={`/blog/detail/${slug}`}
                     className='flex justify-between'
                   >
                     <p className='text-sky-600 font-bold hover:text-sky-900 tracking-wide text-sm md:text-base font-quicksand'>

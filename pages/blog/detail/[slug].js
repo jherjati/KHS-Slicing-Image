@@ -5,10 +5,8 @@ import BlogDetail from "../../../components/BlogDetail";
 import { rootUrl } from "../../../constants";
 
 export async function getStaticPaths() {
-  let [blogRes] = await Promise.all([
-    fetch(rootUrl + "/posts?per_page=10&_fields=slug"),
-  ]);
-  [blogRes] = await Promise.all([blogRes.json()]);
+  let blogRes = await fetch(rootUrl + "/posts?per_page=10&_fields=slug");
+  blogRes = await blogRes.json();
   return {
     paths: blogRes.map((el) => ({ params: el })),
     fallback: true,
@@ -16,21 +14,49 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  let [blogRes] = await Promise.all([
-    fetch(rootUrl + "/posts?per_page=1&_embed&slug=" + params.slug),
-  ]);
-  [blogRes] = await Promise.all([blogRes.json()]);
+  let blogRes = await (
+    await fetch(rootUrl + "/posts?per_page=1&_embed&slug=" + params.slug)
+  ).json();
+  let blogsRes = await (
+    await fetch(
+      rootUrl +
+        "/posts?per_page=7&_embed&_fields=id,title,excerpt,modified,slug,_links,_embedded&categories=" +
+        blogRes[0].categories[0]
+    )
+  ).json();
 
   const blog = blogRes[0];
+  const blogs = blogsRes
+    .filter((bl) => bl.slug !== params.slug)
+    .map((blog) => {
+      return {
+        id: blog.id,
+        slug: blog.slug,
+        image: blog._embedded["wp:featuredmedia"]
+          ? blog._embedded["wp:featuredmedia"][0].source_url
+          : null,
+        category: blog._embedded["wp:term"][0]
+          .map((category) => category.name.replace(/&amp;/g, "&"))
+          .join(", "),
+        title: blog.title.rendered,
+        text: blog.excerpt.rendered,
+        publish: blog.modified,
+        writer:
+          "Penulis: " +
+          blog._embedded["author"].map((author) => author.name).join(", "),
+      };
+    })
+    .filter((_, idx) => idx < 6);
 
   return {
     props: {
       blog,
+      blogs,
     },
   };
 }
 
-export default function Detail({ blog }) {
+export default function Detail({ blog, blogs }) {
   return (
     <div>
       <Head>
@@ -39,7 +65,7 @@ export default function Detail({ blog }) {
         <link rel='icon' href='/logo.ico' />
       </Head>
       <Navbar />
-      <BlogDetail blog={blog} />
+      <BlogDetail blog={blog} blogs={blogs} />
       <Footer />
     </div>
   );
