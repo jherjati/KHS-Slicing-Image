@@ -2,35 +2,17 @@ import Head from "next/head";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import Blog from "../../components/Blog";
-import { categories, rootUrl } from "../../constants";
+import { categories, rootUrl, wpBlog2webBlog } from "../../constants";
 
 export async function getStaticProps() {
-  let [blogRes] = await Promise.all([
-    fetch(
+  const blogsRes = await (
+    await fetch(
       rootUrl +
         "/posts?per_page=12&_embed&_fields=id,title,excerpt,modified,slug,_links,_embedded"
-    ),
-  ]);
-  [blogRes] = await Promise.all([blogRes.json()]);
+    )
+  ).json();
 
-  const blogs = blogRes.map((blog) => {
-    return {
-      id: blog.id,
-      slug: blog.slug,
-      image: blog._embedded["wp:featuredmedia"]
-        ? blog._embedded["wp:featuredmedia"][0].source_url
-        : null,
-      category: blog._embedded["wp:term"][0]
-        .map((category) => category.name.replace(/&amp;/g, "&"))
-        .join(", "),
-      title: blog.title.rendered,
-      text: blog.excerpt.rendered,
-      publish: blog.modified,
-      writer:
-        "Penulis: " +
-        blog._embedded["author"].map((author) => author.name).join(", "),
-    };
-  });
+  const blogs = blogsRes.map(wpBlog2webBlog);
 
   return {
     props: {

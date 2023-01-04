@@ -11,3 +11,22 @@ export const categories = [
   { id: 5, name: "UAV LiDAR", catIds: "237,227" },
   { id: 6, name: "Blog", catIds: "3" },
 ];
+export const wpBlog2webBlog = (blog) => {
+  return {
+    id: blog.id,
+    slug: blog.slug,
+    title: blog.title.rendered,
+    text: blog.excerpt.rendered,
+    publish: blog.modified,
+    category:
+      blog._embedded && blog._embedded["wp:term"][0]
+        ? blog._embedded["wp:term"][0]
+            .map((category) => category.name.replace(/&amp;/g, "&"))
+            .join(", ")
+        : "",
+    image:
+      blog._embedded && blog._embedded["wp:featuredmedia"]
+        ? blog._embedded["wp:featuredmedia"][0].source_url
+        : null,
+  };
+};

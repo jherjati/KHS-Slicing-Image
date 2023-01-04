@@ -2,11 +2,12 @@ import Head from "next/head";
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
 import BlogDetail from "../../../components/BlogDetail";
-import { rootUrl } from "../../../constants";
+import { rootUrl, wpBlog2webBlog } from "../../../constants";
 
 export async function getStaticPaths() {
-  let blogRes = await fetch(rootUrl + "/posts?per_page=10&_fields=slug");
-  blogRes = await blogRes.json();
+  const blogRes = await (
+    await fetch(rootUrl + "/posts?per_page=5&_fields=slug")
+  ).json();
   return {
     paths: blogRes.map((el) => ({ params: el })),
     fallback: true,
@@ -14,10 +15,10 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  let blogRes = await (
+  const blogRes = await (
     await fetch(rootUrl + "/posts?per_page=1&_embed&slug=" + params.slug)
   ).json();
-  let blogsRes = await (
+  const blogsRes = await (
     await fetch(
       rootUrl +
         "/posts?per_page=7&_embed&_fields=id,title,excerpt,modified,slug,_links,_embedded&categories=" +
@@ -27,22 +28,8 @@ export async function getStaticProps({ params }) {
 
   const blog = blogRes[0];
   const blogs = blogsRes
-    .filter((bl) => bl.slug !== params.slug)
-    .map((blog) => {
-      return {
-        id: blog.id,
-        slug: blog.slug,
-        image: blog._embedded["wp:featuredmedia"]
-          ? blog._embedded["wp:featuredmedia"][0].source_url
-          : null,
-        category: blog._embedded["wp:term"][0]
-          .map((category) => category.name.replace(/&amp;/g, "&"))
-          .join(", "),
-        title: blog.title.rendered,
-        text: blog.excerpt.rendered,
-        publish: blog.modified,
-      };
-    })
+    .filter((bl) => Boolean(bl) && bl.slug !== params.slug)
+    .map(wpBlog2webBlog)
     .filter((_, idx) => idx < 6);
 
   return {

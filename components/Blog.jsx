@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-const Blog = ({ blogs, categories }) => {
+const Blog = ({ blogs = [], categories = [] }) => {
   const router = useRouter();
 
   return (

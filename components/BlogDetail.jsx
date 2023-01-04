@@ -6,17 +6,31 @@ import { FaFacebook } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { FaLink } from "react-icons/fa";
 
-const Detail = ({ blog, blogs }) => {
+const Detail = ({ blog, blogs = [] }) => {
+  const webBlog = {
+    image:
+      blog && blog._embedded["wp:featuredmedia"]
+        ? blog._embedded["wp:featuredmedia"][0].source_url
+        : "https://www.handalselaras.com/wp-content/uploads/2022/12/rwrwtw.png",
+    categories: blog
+      ? blog._embedded["wp:term"][0]
+          .map((category) => category.name.replace(/&amp;/g, "&"))
+          .join(", ")
+      : "",
+    title: blog ? blog.title.rendered : "",
+    author: blog
+      ? blog._embedded["author"].map((author) => author.name).join(", ")
+      : "",
+    published: blog ? new Date(blog.date).toLocaleString() : "",
+    content: blog ? blog.content.rendered : "",
+  };
+
   return (
     <div className='flex flex-col divide-y-2'>
       <div className='my-16 flex flex-col space-y-12  content-center px-[5%] md:px-[15%] '>
         <div className='mt-16 flex justify-center px-[5%]'>
           <Image
-            src={
-              blog._embedded["wp:featuredmedia"]
-                ? blog._embedded["wp:featuredmedia"][0].source_url
-                : "https://www.handalselaras.com/wp-content/uploads/2022/12/rwrwtw.png"
-            }
+            src={webBlog.image}
             className='rounded-lg '
             alt=''
             width='1600'
@@ -26,13 +40,11 @@ const Detail = ({ blog, blogs }) => {
         </div>
         <div className='flex justify-center flex-col space-y-2 md:space-y-8 col-span-1 mx-3'>
           <div className='text-sky-600 font-bold tracking-wide text-sm md:text-lg font-quicksand'>
-            {blog._embedded["wp:term"][0]
-              .map((category) => category.name.replace(/&amp;/g, "&"))
-              .join(", ")}
+            {webBlog.categories}
           </div>
           <article
             className='text-slate-900 font-bold tracking-wide text-2xl md:text-5xl font-quicksand '
-            dangerouslySetInnerHTML={{ __html: blog.title.rendered }}
+            dangerouslySetInnerHTML={{ __html: webBlog.title }}
           />
           <div className='flex flex-col md:flex-row space-y-1 md:space-x-2  md:divide-x-2'>
             <div className='flex space-x-2 '>
@@ -40,9 +52,7 @@ const Detail = ({ blog, blogs }) => {
                 Penulis:
               </p>
               <p className='text-slate-500 font-bold tracking-wide text-sm md:text-xl font-quicksand'>
-                {blog._embedded["author"]
-                  .map((author) => author.name)
-                  .join(", ")}
+                {webBlog.author}
               </p>
             </div>
             <div className='flex space-x-2 md:px-2'>
@@ -50,13 +60,13 @@ const Detail = ({ blog, blogs }) => {
                 Publish:
               </p>
               <p className='text-slate-500 font-bold tracking-wide text-sm md:text-xl font-quicksand'>
-                {new Date(blog.date).toLocaleString()}
+                {webBlog.published}
               </p>
             </div>
           </div>
           <div
             className='text-slate-500 prose xl:prose-xl'
-            dangerouslySetInnerHTML={{ __html: blog.content.rendered }}
+            dangerouslySetInnerHTML={{ __html: webBlog.content }}
           ></div>
         </div>
         <div className='flex justify-between'>
