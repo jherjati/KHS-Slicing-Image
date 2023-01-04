@@ -41,9 +41,6 @@ export async function getStaticProps({ params }) {
         title: blog.title.rendered,
         text: blog.excerpt.rendered,
         publish: blog.modified,
-        writer:
-          "Penulis: " +
-          blog._embedded["author"].map((author) => author.name).join(", "),
       };
     })
     .filter((_, idx) => idx < 6);
