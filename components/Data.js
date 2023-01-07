@@ -59,13 +59,7 @@ export const sliderImage = [
   },
 ];
 
-export const logoClient = [
-  { logo: "/Clients-1.png" },
-  { logo: "/Clients-2.png" },
-  { logo: "/Clients-3.png" },
-  { logo: "/Clients-4.png" },
-  { logo: "/Clients-5.png" },
-];
+export const logoClient = [{ logo: "/Clients-1.png" }, { logo: "/Clients-2.png" }, { logo: "/Clients-3.png" }, { logo: "/Clients-4.png" }, { logo: "/Clients-5.png" }];
 export const licences = [
   {
     licence: "/licence-1.png",
@@ -98,59 +92,101 @@ export const licences = [
 ];
 export const tools = [
   {
-    tool: "/toolsimage1.png",
-    name: "Fixed Wing Ai-450 ER",
-    lebar: 71.52,
-    panjang: 40,
+    tool: "/toolsimg_1.png",
+    name: "DJI Matrice 300 RTK",
+    lebar: 136,
+    panjang: 50,
   },
   {
     tool: "/toolsimage2.png",
     name: "DJI Phantom 3-4 Pro",
-    lebar: 66,
+    lebar: 115,
     panjang: 40,
   },
   {
     tool: "/toolsimage3.png",
     name: "DJI Matrice 600",
-    lebar: 105.34,
+    lebar: 147,
     panjang: 50,
   },
   {
-    tool: "/toolsimage4.png",
-    name: "Topcon GPS Geodetik",
-    lebar: 40.35,
-    panjang: 50,
+    tool: "/toolsimg_2.png",
+    name: "Reach RS2+",
+    lebar: 65,
+    panjang: 40,
   },
   {
-    tool: "/toolsimage5.png",
-    name: "Yellowscan LiDAR System",
-    lebar: 62.29,
-    panjang: 50,
-  },
-  {
-    tool: "/toolsimage6.png",
+    tool: "/toolsimg_3.png",
     name: "Beo Skywalker Fixed Wing",
-    lebar: 62.14,
-    panjang: 50,
+    lebar: 87,
+    panjang: 40,
   },
   {
     tool: "/toolsimage7.png",
     name: "Leica BLK360 Scanner",
-    lebar: 33.58,
+    lebar: 45,
     panjang: 50,
   },
   {
     tool: "/toolsimage8.png",
     name: "Comnav T300 GNSS + RTK",
-    lebar: 105.34,
+    lebar: 147,
     panjang: 50,
   },
   {
     tool: "/toolsimage9.png",
     name: "Micasense RedEdge",
-    lebar: 88.47,
-    panjang: 50,
+    lebar: 123,
+    panjang: 100,
   },
+  {
+    tool: "/toolsimg_4.png",
+    name: "DJI MAVIC 2 PRO",
+    lebar: 168,
+    panjang: 100,
+  },
+  {
+    tool: "/toolsimg_7.png",
+    name: "LiAir 220",
+    lebar: 178,
+    panjang: 100,
+  },
+  {
+    tool: "/toolsimg_5.png",
+    name: "Geosun MID 40",
+    lebar: 121,
+    panjang: 100,
+  },
+  {
+    tool: "/toolsimg_6.png",
+    name: "Camera Zenmuse H20T",
+    lebar: 71,
+    panjang: 100,
+  },
+  // {
+  //   tool: "/toolsimage1.png",
+  //   name: "Fixed Wing Ai-450 ER",
+  //   lebar: 100,
+  //   panjang: 40,
+  // },
+  // {
+  //   tool: "/toolsimage4.png",
+  //   name: "Topcon GPS Geodetik",
+  //   lebar: 40.35,
+  //   panjang: 50,
+  // },
+  // {
+  //   tool: "/toolsimage5.png",
+  //   name: "Yellowscan LiDAR System",
+  //   lebar: 62.29,
+  //   panjang: 50,
+  // },
+  // {
+  //   tool: "/toolsimage6.png",
+  //   name: "Beo Skywalker Fixed Wing",
+  //   lebar: 62.14,
+  //   panjang: 50,
+  // },
 ];
 export const aerials = [
   {
