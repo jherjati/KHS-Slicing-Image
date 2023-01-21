@@ -37,65 +37,31 @@ const SlideClients = ({ slides, clients }) => {
   };
 
   return (
-    <div className="flex flex-col space-y-[16.3px]">
-      <div className="grid  grid-cols-4 md:grid-cols-8 content-center justify-items-center ease-in-out duration-300">
+    <div className='flex flex-col space-y-[16.3px]'>
+      <div className='grid  grid-cols-4 md:grid-cols-8 content-center justify-items-center ease-in-out duration-300'>
         {clients.slice(start, end).map(({ client, lebar, panjang }) => {
           return (
-            <div
-              key={client}
-              className="grayscale hover:grayscale-0 flex hover:scale-[1.3] ease-in-out duration-300  items-center delay-100"
-            >
-              <Image
-                src={client}
-                className="m-2"
-                alt="/"
-                width={lebar}
-                height={panjang}
-              />
+            <div key={client} className='grayscale hover:grayscale-0 flex hover:scale-[1.3] ease-in-out duration-300  items-center delay-100'>
+              <Image src={client} className='m-2' alt='/' width={lebar} height={panjang} />
             </div>
           );
         })}
       </div>
-      <div className="flex justify-between px-[12px] md:px-5">
-        <div className="flex space-x-5">
-          <div
-            onClick={slide1}
-            className={`${
-              start == 0 ? "bg-blue" : "bg-[#EEEEEE]"
-            } rounded-full w-3 h-3`}
-          ></div>
-          <div
-            onClick={slide2}
-            className={`${
-              start == 8 ? "bg-blue" : "bg-[#EEEEEE]"
-            } rounded-full w-3 h-3`}
-          ></div>
-          <div
-            onClick={slide3}
-            className={`${
-              start == 16 ? "bg-blue" : "bg-[#EEEEEE]"
-            } rounded-full w-3 h-3`}
-          ></div>
-          <div
-            onClick={slide4}
-            className={`${
-              start == 24 ? "bg-blue" : "bg-[#EEEEEE]"
-            } rounded-full w-3 h-3`}
-          ></div>
-          <div
-            onClick={slide5}
-            className={`${
-              start == 32 ? "bg-blue" : "bg-[#EEEEEE]"
-            } rounded-full w-3 h-3`}
-          ></div>
+      <div className='flex justify-between px-[12px] md:px-5'>
+        <div className='flex space-x-5'>
+          <div onClick={slide1} className={`${start == 0 ? "bg-blue" : "bg-[#EEEEEE]"} rounded-full w-3 h-3 transition-colors ease-in-out`}></div>
+          <div onClick={slide2} className={`${start == 8 ? "bg-blue" : "bg-[#EEEEEE]"} rounded-full w-3 h-3 transition-colors ease-in-out`}></div>
+          <div onClick={slide3} className={`${start == 16 ? "bg-blue" : "bg-[#EEEEEE]"} rounded-full w-3 h-3 transition-colors ease-in-out`}></div>
+          <div onClick={slide4} className={`${start == 24 ? "bg-blue" : "bg-[#EEEEEE]"} rounded-full w-3 h-3 transition-colors ease-in-out`}></div>
+          <div onClick={slide5} className={`${start == 32 ? "bg-blue" : "bg-[#EEEEEE]"} rounded-full w-3 h-3 transition-colors ease-in-out`}></div>
         </div>
-        <div className="flex space-x-4">
-          <div onClick={prevSlide}>
-            <GrFormPreviousLink className="text-[36px] text-blue" />
+        <div className='flex space-x-4'>
+          <div onClick={prevSlide} className='cursor-pointer hover:text-blue-dark'>
+            <GrFormPreviousLink className='text-[36px] text-blue' />
             {/* <div class="h-0 w-0 border-y-8 border-y-transparent border-r-[16px] border-r-grey hover:border-r-blue"></div> */}
           </div>
-          <div onClick={nextSlide}>
-            <GrFormNextLink className="text-[36px]  text-blue" />
+          <div onClick={nextSlide} className='cursor-pointer hover:text-blue-dark'>
+            <GrFormNextLink className='text-[36px]  text-blue' />
             {/* <div class="h-0 w-0 border-y-8 border-y-transparent border-l-[16px] border-l-grey hover:border-l-blue "></div> */}
           </div>
         </div>

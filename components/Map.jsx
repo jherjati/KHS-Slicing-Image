@@ -30,7 +30,7 @@ function Map() {
     }
 
     return () => {};
-  }, [mapContainer.current, mapRef.current]);
+  }, [mapContainer, mapRef]);
 
   return <div ref={mapContainer} className='w-full h-full rounded-3xl'></div>;
 }

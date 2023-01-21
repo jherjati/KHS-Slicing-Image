@@ -188,6 +188,20 @@ export const tools = [
   //   panjang: 50,
   // },
 ];
+export const drone = [
+  {
+    tool: "/drone1.png",
+    name: "DJI Agras T16",
+    lebar: 136,
+    panjang: 50,
+  },
+  {
+    tool: "/drone2.png",
+    name: "DJI Agras T30",
+    lebar: 115,
+    panjang: 40,
+  },
+];
 export const aerials = [
   {
     aerial: "/aerialfoto1.png",
@@ -483,6 +497,9 @@ export const clients = [
     lebar: 115,
     panjang: 60,
   },
+];
+
+export const clients2 = [
   {
     client: "/client (31).png",
     lebar: 114,
