@@ -172,42 +172,42 @@ function SideNav({ nav, onClick, path }) {
                   <div className={`${dropdownOpen === "content" ? `top-full opacity-100 visible` : "hidden"} mx-[24px] flex flex-col pt-1 space-y-2 ml-[16px]`}>
                     <div className='hover:text-blue/80 hover:cursor-pointer text-[#8F8C8C] tracking-wide text-sm font-quicksand'>
                       <Link
-                        href='/content/survey-and-mapping'
+                        href='/content/gallery'
                         className={clsx({
-                          "text-blue/80 font-semibold": path.includes("/content/survey-and-mapping"),
+                          "text-blue/80 font-semibold": path.includes("/content/gallery"),
                         })}
                       >
-                        Survey & Mapping
+                        Gallery
                       </Link>
                     </div>
                     <div className='hover:text-blue/80 hover:cursor-pointer text-[#8F8C8C] tracking-wide text-sm font-quicksand'>
                       <Link
-                        href='/content/architecture-construction'
+                        href='/content/blog'
                         className={clsx({
-                          "text-blue/80 font-semibold": path.includes("/content/architecture-construction"),
+                          "text-blue/80 font-semibold": path.includes("/content/blog"),
                         })}
                       >
-                        Architecture & Construction Management
+                        Blog & Publications
                       </Link>
                     </div>
                     <div className='hover:text-blue/80 hover:cursor-pointer text-[#8F8C8C] tracking-wide text-sm font-quicksand'>
                       <Link
-                        href='/content/urban-planning'
+                        href='/content/career'
                         className={clsx({
-                          "text-blue/80 font-semibold": path.includes("/content/urban-planning"),
+                          "text-blue/80 font-semibold": path.includes("/content/career"),
                         })}
                       >
-                        Urban Planning
+                        Career
                       </Link>
                     </div>
                     <div className='hover:text-blue/80 hover:cursor-pointer text-[#8F8C8C] tracking-wide text-sm font-quicksand'>
                       <Link
-                        href='/content/drone-spraying'
+                        href='/content/monitoring'
                         className={clsx({
-                          "text-blue/80 font-semibold": path.includes("/content/drone-spraying"),
+                          "text-blue/80 font-semibold": path.includes("/content/monitoring"),
                         })}
                       >
-                        Drone Spraying
+                        Monitoring
                       </Link>
                     </div>
                   </div>

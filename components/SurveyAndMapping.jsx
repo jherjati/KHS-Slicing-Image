@@ -1,56 +1,17 @@
-import React, { Fragment } from "react";
 import Image from "next/image";
 import { tools, aerials } from "./Data";
-// import Dropdown from "./Dropdown";
-import { useState, useRef } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import clsx from "clsx";
 import accentRedBlue from "../public/accents/ac-red-blue.svg";
 import accentRedBlueHalf from "../public/accents/ac-red-blue-half.svg";
 import accentGreen from "../public/accents/ac-home-green.svg";
-import { Listbox, Transition } from "@headlessui/react";
-import { BiCheck, BiChevronDown } from "react-icons/bi";
-
-function DropDown({ selected, onChange, options }) {
-  return (
-    <div className='relative w-full'>
-      <Listbox value={selected} onChange={(e) => onChange({ target: { name: e } })}>
-        <Listbox.Button className='py-[10px] px-[14px] font-inter text-sm font-normal w-full text-left'>
-          {({ open }) => (
-            <>
-              <span className='block truncate'>{options.find((x) => x.id === selected).value}</span>
-              <span className='pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2'>
-                <BiChevronDown className={clsx("h-5 w-5 text-gray-400 transition-transform ease-in-out", { "rotate-180": open })} aria-hidden='true' />
-              </span>
-            </>
-          )}
-        </Listbox.Button>
-        <Transition as={Fragment} leave='transition ease-in duration-100' leaveFrom='opacity-100' leaveTo='opacity-0'>
-          <Listbox.Options className='absolute mt-1  w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-50 sm:text-sm'>
-            {options.map((item, i) => (
-              <Listbox.Option key={i} className={({ active }) => `relative cursor-default select-none py-[10px] px-2 rounded m-[6px]  ${active ? "bg-[#E6F4FC] " : "text-gray-900"}`} value={item.id}>
-                {({ selected }) => (
-                  <Link href={"#" + item.id}>
-                    <p className={`block truncate ${selected ? "font-medium" : "font-normal"}`}>{item.value}</p>
-                    {selected ? (
-                      <p className='absolute inset-y-0 right-[8px] flex items-center pl-3 text-amber-600'>
-                        <BiCheck className='text-xl text-[#0093DE]' />
-                      </p>
-                    ) : null}
-                  </Link>
-                )}
-              </Listbox.Option>
-            ))}
-          </Listbox.Options>
-        </Transition>
-      </Listbox>
-    </div>
-  );
-}
+import SelectButton from "./SelectButton";
+import { useRouter } from "next/router";
 
 const SurveyAndMapping = () => {
+  const router = useRouter();
   const [lin, setlin] = useState("survey");
-  const boxRef = useRef();
 
   const SECTION_OPTIONS = [
     { id: "survey", value: "Field Survey" },
@@ -60,41 +21,23 @@ const SurveyAndMapping = () => {
     { id: "thermo", value: "Thermovision Technology" },
     { id: "aev", value: "Aerial Video" },
   ];
-  // X
-  // const [x, setX] = useState();
 
-  // // Y
-  // const [y, setY] = useState();
-
-  // // This function calculate X and Y
-  // const getPosition = () => {
-  //   const x = boxRef.current.offsetLeft;
-  //   setX(x);
-
-  //   const y = boxRef.current.offsetTop;
-  //   setY(y);
-  // };
-  // // Get the position of the red box in the beginning
-  // useEffect(() => {
-  //   getPosition();
-  // }, []);
-
-  // // Re-calculate X and Y of the red box when the window is resized by the user
-  // useEffect(() => {
-  //   window.addEventListener("resize", getPosition);
-  // }, []);
   const linkfunc = (e) => {
     setlin(e.target.name);
   };
-  console.log(lin);
+
+  function onClickDropDown(e) {
+    setlin(e.target.name);
+    router.push(`#${e.target.name}`);
+  }
 
   return (
-    <div className='flex flex-col  pt-[70px] relative'>
-      <div className=' flex flex-col md:space-y-0 md:grid md:grid-cols-2 content-center px-[20px] md:px-[120px] relative border-b md:py-[90px] py-10 m-0 '>
-        <div className='flex justify-center flex-col space-y-2 md:space-y-8 col-span-1 mx-3'>
+    <div className='flex flex-col pt-[70px] relative'>
+      <div className='space-y-10 flex flex-col md:space-y-0 md:grid md:grid-cols-2 content-center px-[20px] md:px-[120px] relative border-b md:py-[90px] py-10 m-0 '>
+        <div className='flex justify-center flex-col space-y-5 md:space-y-8 col-span-1 mx-3'>
           <h1 className='text-blue text-[20px] leading-[28px] font-[600] font-inter '>Services</h1>
-          <h1 className='text-blacky text-sedangmobile md:text-sedang2 font-quicksand '>Survey & Mapping</h1>
-          <p className='text-grey text-kecilmobile md:text-kecil font-inter '>
+          <h1 className='text-blacky text-sedangmobile mt-5 md:mt-0 md:text-sedang2 font-quicksand '>Survey & Mapping</h1>
+          <p className='text-grey text-kecilmobile md:text-kecil font-inter text-justify'>
             Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et. Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et
           </p>
           <ul className='flex flex-col space-y-1 list-decimal text-grey text-kecilmobile md:text-kecil font-inter px-[20px] '>
@@ -119,9 +62,9 @@ const SurveyAndMapping = () => {
       </div>
       {/* page2 */}
       <div className='px-[20px] md:px-[120px] flex flex-col space-y-16 relative mt-0 md:py-[90px] py-10 border-b'>
-        <div className='flex flex-col space-y-8  md:w-1/2 text-justify relative'>
-          <h1 className='text-blacky text-sedangmobile md:text-sedang2 font-quicksand'>Our Tool</h1>
-          <p className='text-grey text-kecilmobile md:text-kecil font-inter'>
+        <div className='flex flex-col space-y-5 md:space-y-8 md:w-1/2 text-justify relative'>
+          <h1 className='text-blacky text-sedangmobile mt-5 md:mt-0 md:text-sedang2 font-quicksand'>Our Tool</h1>
+          <p className='text-grey text-kecilmobile md:text-kecil font-inter text-justify'>
             Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et. Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et
           </p>
         </div>
@@ -143,21 +86,20 @@ const SurveyAndMapping = () => {
       {/* page 3 */}
       <div className='px-[20px] md:px-[120px]'>
         <div className='lg:hidden border rounded-lg my-10'>
-          <DropDown onChange={linkfunc} selected={lin} options={SECTION_OPTIONS} />
+          <SelectButton onChange={onClickDropDown} selected={lin} options={SECTION_OPTIONS} />
         </div>
         <div
           className='flex flex-col lg:grid lg:grid-cols-4 lg:divide-x relative'
           // ref={boxRef}
         >
-          <div className='col-span-3 flex flex-col space-y-8 md:pt-16 lg:pr-[3%]'>
-            <div id='survey' className=' flex flex-col space-y-8' ons>
+          <div className='col-span-3 flex flex-col space-y-5 md:space-y-8 md:pt-16 lg:pr-[3%]'>
+            <div id='survey' className=' flex flex-col space-y-5 md:space-y-8' ons>
               <h1 className='text-blacky text-sedangmobile md:text-sedang2 font-quicksand '>Field Survey</h1>
               <p className='text-justify text-grey text-kecilmobile md:text-kecil font-inter'>
                 HANDAL SELARAS GROUP offers high quality video supported by a safe aircraft system. We are experienced in acquiring videos for architectural purposes, landscape planning, construction videos, to product promotions. We can
                 make aerial videos that can be combined with 3D designs using the Video Tracking method.
               </p>
               <div>
-                {" "}
                 <iframe
                   width={"100%"}
                   layout='responsive'
@@ -170,8 +112,8 @@ const SurveyAndMapping = () => {
                 ></iframe>
               </div>
             </div>
-            <div id='aerial' className=' flex flex-col space-y-8 '>
-              <h1 className='text-blacky text-sedangmobile md:text-sedang2 font-quicksand'>Aerial Photo</h1>
+            <div id='aerial' className=' flex flex-col space-y-5 md:space-y-8 '>
+              <h1 className='text-blacky text-sedangmobile mt-5 md:mt-0 md:text-sedang2 font-quicksand'>Aerial Photo</h1>
               <p className='text-justify text-grey text-kecilmobile md:text-kecil font-inter'>
                 HANDAL SELARAS GROUP provides Aerial Photography Services using the Unmanned Aerial Vehicle (UAV) vehicle with the Photogrammetry method. We provide various sensors according to survey needs. The advantages of our services
                 are:
@@ -205,8 +147,8 @@ const SurveyAndMapping = () => {
                 })}
               </div>
             </div>
-            <div id='lidar' className=' flex flex-col space-y-8 '>
-              <h1 className='text-blacky text-sedangmobile md:text-sedang2 font-quicksand'>UAV LiDAR</h1>
+            <div id='lidar' className=' flex flex-col space-y-5 md:space-y-8 '>
+              <h1 className='text-blacky text-sedangmobile mt-5 md:mt-0 md:text-sedang2 font-quicksand'>UAV LiDAR</h1>
               <p className='text-justify text-grey text-kecilmobile md:text-kecil font-inter'>
                 HANDAL SELARAS GROUP provides Lidar (Laser) Services using Unmanned Aerial Vehicle (UAV) vehicles. We are the pioneers of Lidar UAV technology in Indonesia. The advantages of our services are:
               </p>
@@ -234,16 +176,16 @@ const SurveyAndMapping = () => {
                 ></iframe>
               </div>
             </div>
-            <div id='gis' className=' flex flex-col space-y-8 '>
-              <h1 className='text-blacky text-sedangmobile md:text-sedang2 font-quicksand'>GIS</h1>
+            <div id='gis' className=' flex flex-col space-y-5 md:space-y-8 '>
+              <h1 className='text-blacky text-sedangmobile mt-5 md:mt-0 md:text-sedang2 font-quicksand'>GIS</h1>
               <p className='text-justify text-grey text-kecilmobile md:text-kecil font-inter'>
                 HANDAL SELARAS GROUP not only offers raw data from the results of field surveys, aerial photographs, LiDAR, and aerial video, but is also able to bring the data and information to a higher level in the form of maps in the
                 Geographical Information System (GIS). We are ready to help you make high-level analysis using the Object Base Image Analysis (OBIA) method, Computer Vision Model (CVM) and other analysis methods.
               </p>
               <Image className='rounded-lg' src='/gisimage.png' alt='UAV Image' width='1100' height='400' layout='responsive' />
             </div>
-            <div id='thermo' className=' flex flex-col space-y-8 '>
-              <h1 className='text-blacky text-sedangmobile md:text-sedang2 font-quicksand'>Thermovision Technology</h1>
+            <div id='thermo' className=' flex flex-col space-y-5 md:space-y-8 '>
+              <h1 className='text-blacky text-sedangmobile mt-5 md:mt-0 md:text-sedang2 font-quicksand'>Thermovision Technology</h1>
               <p className='text-justify text-grey text-kecilmobile md:text-kecil font-inter'>
                 HANDAL SELARAS GROUP is developing innovative technology in the geophysical exploration method, ThermoVision Tomography (TVT). TVT offers methods with lower costs and shorter time compared to conventional geophysical surveys
                 such as seismic, electrical, gravimetrical and well logging.
@@ -255,8 +197,8 @@ const SurveyAndMapping = () => {
 
               <Image className='rounded-lg' src='/thermovisionimage.png' alt='UAV Image' width='1100' height='400' layout='responsive' />
             </div>
-            <div id='aev' className=' flex flex-col space-y-8 '>
-              <h1 className='text-blacky text-sedangmobile md:text-sedang2 font-quicksand'>Aerial Video</h1>
+            <div id='aev' className=' flex flex-col space-y-5 md:space-y-8 '>
+              <h1 className='text-blacky text-sedangmobile mt-5 md:mt-0 md:text-sedang2 font-quicksand'>Aerial Video</h1>
               <p className='text-justify text-grey text-kecilmobile md:text-kecil font-inter'>
                 HANDAL SELARAS GROUP offers high quality video supported by a safe aircraft system. We are experienced in acquiring videos for architectural purposes, landscape planning, construction videos, to product promotions. We can
                 make aerial videos that can be combined with 3D designs using the Video Tracking method.

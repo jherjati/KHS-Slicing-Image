@@ -1,26 +1,18 @@
 import React from "react";
 import Image from "next/image";
-import { tools, aerials, drone } from "./Data";
-import Dropdown from "./Dropdown";
-import { useState, useRef, useEffect } from "react";
-import Link from "next/link";
-import clsx from "clsx";
+import { drone } from "./Data";
+import accentRedBlue from "../public/accents/ac-red-blue.svg";
+import accentRedBlueHalf from "../public/accents/ac-red-blue-half.svg";
+import accentGreen from "../public/accents/ac-home-green.svg";
 
 const DroneSpraying = () => {
-  const [lin, setlin] = useState("");
-  const boxRef = useRef();
-
-  const linkfunc = (e) => {
-    setlin(e.target.name);
-  };
   return (
-    <div className='flex flex-col divide-y space-y-12 relative pb-10 '>
-      <Image src='/accent-2.svg' alt='' className='select-none absolute -top-10' />
-      <div className=' flex flex-col space-y-8 md:grid md:grid-cols-2  content-center px-[20px] md:px-[120px] pt-16 pb-10 relative'>
+    <div className='flex flex-col pt-[70px] relative '>
+      <div className='space-y-10 flex flex-col md:space-y-0 md:grid md:grid-cols-2 content-center px-[20px] md:px-[120px] relative border-b md:py-[90px] py-10 m-0 '>
         <div className='flex justify-center flex-col space-y-2 md:space-y-8 col-span-1 mx-3'>
           <h1 className='text-blue text-[20px] leading-[28px] font-[600] font-inter '>Services</h1>
           <h1 className='text-blacky text-sedangmobile md:text-sedang2 font-quicksand '>Drone Spraying</h1>
-          <p className='text-grey text-kecilmobile md:text-kecil font-inter '>HANDAL SELARAS GROUP provides spraying services for all types of plants using drone spraying. The advantages of our services are:</p>
+          <p className='text-grey text-kecilmobile md:text-kecil font-inter  text-justify'>HANDAL SELARAS GROUP provides spraying services for all types of plants using drone spraying. The advantages of our services are:</p>
           <ul className='flex flex-col space-y-1 list-decimal text-grey text-kecilmobile md:text-kecil font-inter px-[20px] '>
             <li>Rely on certified pilots</li>
             <li>Low cost and competitive according to needs</li>
@@ -43,14 +35,15 @@ const DroneSpraying = () => {
         </div>
       </div>
       {/* page2 */}
-      <div className='px-[20px] md:px-[120px] flex flex-col pb-10 relative'>
-        <Image src='/accent.svg' alt='' className='absolute right-0 top-10' />
+      <div className='px-[20px] md:px-[120px] flex flex-col pb-10 relative py-10 md:py-[90px]'>
         <div className='row-span-1 flex flex-col space-y-8 relative'>
-          <h1 className='text-blacky text-sedangmobile md:text-sedang2 font-quicksand md:mt-[80px]'>Our Tool</h1>
-          <p className='text-grey text-kecilmobile md:text-kecil font-inter w-1/2 text-justify pb-10'>
+          <h1 className='text-blacky text-sedangmobile md:text-sedang2 font-quicksand '>Our Tool</h1>
+          <p className='text-grey text-kecilmobile md:text-kecil font-inter md:w-1/2 text-justify pb-10'>
             Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et. Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et
           </p>
         </div>
+        <Image src={accentRedBlue} alt='' className='hidden md:block absolute right-0 top-10' />
+        <Image src={accentRedBlueHalf} alt='' className='md:hidden  absolute right-0 top-10' />
         <div className='flex justify-center md:justify-between relative'>
           <div className='row-span-2 grid grid-cols-2 gap-x-12 gap-y-4  gap-2 md:gap-8 w-full'>
             {drone.map(({ tool, name, lebar, panjang }) => {
@@ -64,6 +57,7 @@ const DroneSpraying = () => {
           </div>
         </div>
       </div>
+      <Image src={accentGreen} alt='Image' className='select-none absolute -top-[120px] -left-[50px] md:-top-20 md:left-0' />
     </div>
   );
 };
