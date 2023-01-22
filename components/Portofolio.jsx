@@ -43,7 +43,7 @@ const Portofolio = () => {
       </div>
       <div className='border-b flex justify-center'>
         <div className='md:mx-auto w-full md:w-[1000px] md:h-full max-h-max'>
-          <Slider2 data={sliderImage} className='mx-5 rounded-3xl overflow-auto h-full' smvh='small' arrows={true} indicators={true} />
+          <Slider2 inType='Porto' data={sliderImage} className='mx-5 rounded-3xl overflow-auto h-full' smvh='small' arrows={true} indicators={true} />
         </div>
       </div>
       <div className='py-10 md:py-[60px] flex flex-col-reverse md:grid md:grid-cols-5 gap-12 md:gap-20 font-inter px-5 md:px-[200px] relative'>

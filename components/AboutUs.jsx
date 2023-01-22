@@ -76,6 +76,7 @@ const AboutUs = () => {
           Engaged in the field of surveying and mapping, spatial planning, public policy development, architecture, construction management, design, and creative visual design, we provide services from upstream to downstream.
         </p>
       </div>
+      {/* com */}
       <div className='flex flex-col relative border-b md:mx-0 mx-5'>
         <Image src={accentGreen} alt='Accent' className='hidden md:block select-none absolute -bottom-[50px] left-0' />
         <div className='w-full space-y-[32px] py-[30px] md:py-[60px] px-5'>
@@ -83,7 +84,7 @@ const AboutUs = () => {
             <h1 className='text-blacky font-[700] text-[16px] leading-[20px] md:text-[20px] md:leading-[25px] font-quicksand'>Commisioner</h1>
             <div className='border-b w-full md:w-[748px] mt-1'></div>
           </div>
-          <div className='flex flex-col  justify-center space-y-2 md:space-y-0 gap-2 relative'>
+          <div className='flex flex-col justify-center space-y-2 md:space-y-0 gap-2 relative'>
             <div className='flex flex-col items-center space-y-2'>
               <Image width='150' height='100' src='/commisionerImage.png' layout='responsive' alt='' className='rounded-full' />
               <span className='space-y-1'>
@@ -101,96 +102,100 @@ const AboutUs = () => {
           </div>
         </div>
         <div className='w-full space-y-[32px] pb-[30px] md:pb-[60px] px-5'>
-          <div className='flex w-full items-center justify-center gap-2'>
+          <div className='f lex w-full items-center justify-center gap-2'>
             <h1 className='text-blacky font-[700] w-[140px] md:w-max text-[16px] leading-[20px] md:text-[20px] md:leading-[25px] font-quicksand'>Board of Director</h1>
             <div className='border-b  w-[calc(100%_-_140px)] md:w-[748px] mt-1'></div>
           </div>
-          <div className='flex flex-col  justify-center space-y-2 md:space-y-0 gap-2 relative'>
-            <div className='flex flex-col items-center space-y-2'>
-              <Image width='150' height='100' src='/presidenDirectorImage.png' layout='responsive' alt='' className='rounded-full' />
-              <span className='space-y-1 text-center'>
-                <h1 className='text-blacky text-[16px] leading-[19px] font-inter font-[600]'>Nurohim</h1>
-                <h2 className='text-blue text-[14px] leading-[18px] font-[700] font-quicksand'>President Director</h2>
-              </span>
-              <p className='text-[14px] leading-[20px] font-[400] font-inter text-grey'>Department Name, University Name</p>
+          <div className='flex md:flex-row flex-col gap-10 md:gap-20 items-center justify-center'>
+            <div className='flex flex-col  justify-center space-y-2 md:space-y-0 gap-2 relative'>
+              <div className='flex flex-col items-center space-y-2'>
+                <Image width='150' height='100' src='/presidenDirectorImage.png' layout='responsive' alt='' className='rounded-full' />
+                <span className='space-y-1 text-center'>
+                  <h1 className='text-blacky text-[16px] leading-[19px] font-inter font-[600]'>Nurohim</h1>
+                  <h2 className='text-blue text-[14px] leading-[18px] font-[700] font-quicksand'>President Director</h2>
+                </span>
+                <p className='text-[14px] leading-[20px] font-[400] font-inter text-grey'>Department Name, University Name</p>
+              </div>
+              <div className='flex items-center justify-center gap-5'>
+                <FaFacebook className=' text-[16px] text-gray-500 cursor-pointer hover:text-sky-600' />
+                <FaTwitter className=' text-[16px] text-gray-500 cursor-pointer hover:text-sky-600' />
+                <FaInstagram className=' text-[16px] text-gray-500 cursor-pointer hover:text-yellow-600' />
+                <FaYoutube className=' text-[16px] text-gray-500 cursor-pointer hover:text-red-600' />
+              </div>
             </div>
-            <div className='flex items-center justify-center gap-5'>
-              <FaFacebook className=' text-[16px] text-gray-500 cursor-pointer hover:text-sky-600' />
-              <FaTwitter className=' text-[16px] text-gray-500 cursor-pointer hover:text-sky-600' />
-              <FaInstagram className=' text-[16px] text-gray-500 cursor-pointer hover:text-yellow-600' />
-              <FaYoutube className=' text-[16px] text-gray-500 cursor-pointer hover:text-red-600' />
-            </div>
-          </div>
-          <div className='flex flex-col  justify-center space-y-2 md:space-y-0 gap-2 relative'>
-            <div className='flex flex-col items-center space-y-2'>
-              <Image width='150' height='100' src='/directorImage.png' layout='responsive' alt='' className='rounded-full' />
-              <span className='space-y-1 text-center'>
-                <h1 className='text-blacky text-[16px] leading-[19px] font-inter font-[600]'>Arszandi Pratama, M.Sc</h1>
-                <h2 className='text-blue text-[14px] leading-[18px] font-[700] font-quicksand'>Director of Kreasi Handal Selaras, PT</h2>
-              </span>
-              <p className='text-[14px] leading-[20px] font-[400] font-inter text-grey'>Real Estate, University of Greenwich </p>
-            </div>
-            <div className='flex items-center justify-center gap-5'>
-              <FaFacebook className=' text-[16px] text-gray-500 cursor-pointer hover:text-sky-600' />
-              <FaTwitter className=' text-[16px] text-gray-500 cursor-pointer hover:text-sky-600' />
-              <FaInstagram className=' text-[16px] text-gray-500 cursor-pointer hover:text-yellow-600' />
-              <FaYoutube className=' text-[16px] text-gray-500 cursor-pointer hover:text-red-600' />
+            <div className='flex flex-col  justify-center space-y-2 md:space-y-0 gap-2 relative'>
+              <div className='flex flex-col items-center space-y-2'>
+                <Image width='150' height='100' src='/directorImage.png' layout='responsive' alt='' className='rounded-full' />
+                <span className='space-y-1 text-center'>
+                  <h1 className='text-blacky text-[16px] leading-[19px] font-inter font-[600]'>Arszandi Pratama, M.Sc</h1>
+                  <h2 className='text-blue text-[14px] leading-[18px] font-[700] font-quicksand'>Director of Kreasi Handal Selaras, PT</h2>
+                </span>
+                <p className='text-[14px] leading-[20px] font-[400] font-inter text-grey'>Real Estate, University of Greenwich </p>
+              </div>
+              <div className='flex items-center justify-center gap-5'>
+                <FaFacebook className=' text-[16px] text-gray-500 cursor-pointer hover:text-sky-600' />
+                <FaTwitter className=' text-[16px] text-gray-500 cursor-pointer hover:text-sky-600' />
+                <FaInstagram className=' text-[16px] text-gray-500 cursor-pointer hover:text-yellow-600' />
+                <FaYoutube className=' text-[16px] text-gray-500 cursor-pointer hover:text-red-600' />
+              </div>
             </div>
           </div>
         </div>
         <div className='w-full space-y-[32px] pb-[40px] md:pb-[60px] px-5'>
           <div className='flex w-full items-center justify-center gap-2'>
             <h1 className='text-blacky font-[700] w-[140px] md:w-max text-[16px] leading-[20px] md:text-[20px] md:leading-[25px] font-quicksand'>Head of Division</h1>
-            <div className='border-b  w-[calc(100%_-_140px)] md:w-[748px] mt-1'></div>
+            <div className='border-b  w-[calc(100%_-_140px)] md:w-[`748px] mt-1'></div>
           </div>
-          <div className='flex flex-col justify-center space-y-2 md:space-y-0 gap-2 relative'>
-            <div className='flex flex-col items-center space-y-2'>
-              <Image width='150' height='100' src='/headOfSurvey.png' layout='responsive' alt='' className='rounded-full' />
-              <span className='space-y-1 text-center'>
-                <h1 className='text-blacky text-[16px] leading-[19px] font-inter font-[600]'>Rabby Awalludin, S.T</h1>
-                <h2 className='text-blue text-[14px] leading-[18px] font-[700] font-quicksand'>Head of Survey & Mapping</h2>
-              </span>
-              <p className='text-[14px] leading-[20px] font-[400] font-inter text-grey'>Geodetic Engineering, ITB</p>
+          <div className='flex md:flex-row flex-col gap-10 md:gap-20 items-center justify-center'>
+            <div className='flex flex-col justify-center space-y-2 md:space-y-0 gap-2 relative'>
+              <div className='flex flex-col items-center space-y-2'>
+                <Image width='150' height='100' src='/headOfSurvey.png' layout='responsive' alt='' className='rounded-full' />
+                <span className='space-y-1 text-center'>
+                  <h1 className='text-blacky text-[16px] leading-[19px] font-inter font-[600]'>Rabby Awalludin, S.T</h1>
+                  <h2 className='text-blue text-[14px] leading-[18px] font-[700] font-quicksand'>Head of Survey & Mapping</h2>
+                </span>
+                <p className='text-[14px] leading-[20px] font-[400] font-inter text-grey'>Geodetic Engineering, ITB</p>
+              </div>
+              <div className='flex items-center justify-center gap-5'>
+                <FaFacebook className=' text-[16px] text-gray-500 cursor-pointer hover:text-sky-600' />
+                <FaTwitter className=' text-[16px] text-gray-500 cursor-pointer hover:text-sky-600' />
+                <FaInstagram className=' text-[16px] text-gray-500 cursor-pointer hover:text-yellow-600' />
+                <FaYoutube className=' text-[16px] text-gray-500 cursor-pointer hover:text-red-600' />
+              </div>
             </div>
-            <div className='flex items-center justify-center gap-5'>
-              <FaFacebook className=' text-[16px] text-gray-500 cursor-pointer hover:text-sky-600' />
-              <FaTwitter className=' text-[16px] text-gray-500 cursor-pointer hover:text-sky-600' />
-              <FaInstagram className=' text-[16px] text-gray-500 cursor-pointer hover:text-yellow-600' />
-              <FaYoutube className=' text-[16px] text-gray-500 cursor-pointer hover:text-red-600' />
+            <div className='flex flex-col justify-center space-y-2 md:space-y-0 gap-2 relative'>
+              <div className='flex flex-col items-center space-y-2'>
+                <Image width='150' height='100' src='/headOfArchitecture.png' layout='responsive' alt='' className='rounded-full' />
+                <span className='space-y-1 text-center'>
+                  <h1 className='text-blacky text-[16px] leading-[19px] font-inter font-[600]'>Elssany Noor D, S.T</h1>
+                  <h2 className='text-blue text-[14px] leading-[18px] font-[700] font-quicksand'>Head of Architecture &</h2>
+                  <h2 className='text-blue text-[14px] leading-[18px] font-[700] font-quicksand'>Construction Management</h2>
+                </span>
+                <p className='text-[14px] leading-[20px] font-[400] font-inter text-grey'>Architecture, Itenas</p>
+              </div>
+              <div className='flex items-center justify-center gap-5'>
+                <FaFacebook className=' text-[16px] text-gray-500 cursor-pointer hover:text-sky-600' />
+                <FaTwitter className=' text-[16px] text-gray-500 cursor-pointer hover:text-sky-600' />
+                <FaInstagram className=' text-[16px] text-gray-500 cursor-pointer hover:text-yellow-600' />
+                <FaYoutube className=' text-[16px] text-gray-500 cursor-pointer hover:text-red-600' />
+              </div>
             </div>
-          </div>
-          <div className='flex flex-col justify-center space-y-2 md:space-y-0 gap-2 relative'>
-            <div className='flex flex-col items-center space-y-2'>
-              <Image width='150' height='100' src='/headOfArchitecture.png' layout='responsive' alt='' className='rounded-full' />
-              <span className='space-y-1 text-center'>
-                <h1 className='text-blacky text-[16px] leading-[19px] font-inter font-[600]'>Elssany Noor D, S.T</h1>
-                <h2 className='text-blue text-[14px] leading-[18px] font-[700] font-quicksand'>Head of Architecture &</h2>
-                <h2 className='text-blue text-[14px] leading-[18px] font-[700] font-quicksand'>Construction Management</h2>
-              </span>
-              <p className='text-[14px] leading-[20px] font-[400] font-inter text-grey'>Architecture, Itenas</p>
-            </div>
-            <div className='flex items-center justify-center gap-5'>
-              <FaFacebook className=' text-[16px] text-gray-500 cursor-pointer hover:text-sky-600' />
-              <FaTwitter className=' text-[16px] text-gray-500 cursor-pointer hover:text-sky-600' />
-              <FaInstagram className=' text-[16px] text-gray-500 cursor-pointer hover:text-yellow-600' />
-              <FaYoutube className=' text-[16px] text-gray-500 cursor-pointer hover:text-red-600' />
-            </div>
-          </div>
-          <div className='flex flex-col justify-center space-y-2 md:space-y-0 gap-2 relative '>
-            <div className='flex flex-col items-center space-y-2'>
-              <Image width='150' height='100' src='/headOfMarketting.png' layout='responsive' alt='' className='rounded-full' />
-              <span className='space-y-1 text-center'>
-                <h1 className='text-blacky text-[16px] leading-[19px] font-inter font-[600]'>Nurul Megawati Putri, S.T</h1>
-                <h2 className='text-blue text-[14px] leading-[18px] font-[700] font-quicksand'>Head of Marketing, Tender</h2>
-                <h2 className='text-blue text-[14px] leading-[18px] font-[700] font-quicksand'>and Collection</h2>
-              </span>
-            </div>
-            <p className='text-[14px] text-center leading-[20px] font-[400] font-inter text-grey'>Geodetic Engineering, Undip</p>
-            <div className='flex items-center justify-center gap-5'>
-              <FaFacebook className=' text-[16px] text-gray-500 cursor-pointer hover:text-sky-600' />
-              <FaTwitter className=' text-[16px] text-gray-500 cursor-pointer hover:text-sky-600' />
-              <FaInstagram className=' text-[16px] text-gray-500 cursor-pointer hover:text-yellow-600' />
-              <FaYoutube className=' text-[16px] text-gray-500 cursor-pointer hover:text-red-600' />
+            <div className='flex flex-col justify-center space-y-2 md:space-y-0 gap-2 relative'>
+              <div className='flex flex-col items-center space-y-2'>
+                <Image width='150' height='100' src='/headOfMarketting.png' layout='responsive' alt='' className='rounded-full' />
+                <span className='space-y-1 text-center'>
+                  <h1 className='text-blacky text-[16px] leading-[19px] font-inter font-[600]'>Nurul Megawati Putri, S.T</h1>
+                  <h2 className='text-blue text-[14px] leading-[18px] font-[700] font-quicksand'>Head of Marketing, Tender</h2>
+                  <h2 className='text-blue text-[14px] leading-[18px] font-[700] font-quicksand'>and Collection</h2>
+                </span>
+              </div>
+              <p className='text-[14px] text-center leading-[20px] font-[400] font-inter text-grey'>Geodetic Engineering, Undip</p>
+              <div className='flex items-center justify-center gap-5'>
+                <FaFacebook className=' text-[16px] text-gray-500 cursor-pointer hover:text-sky-600' />
+                <FaTwitter className=' text-[16px] text-gray-500 cursor-pointer hover:text-sky-600' />
+                <FaInstagram className=' text-[16px] text-gray-500 cursor-pointer hover:text-yellow-600' />
+                <FaYoutube className=' text-[16px] text-gray-500 cursor-pointer hover:text-red-600' />
+              </div>
             </div>
           </div>
         </div>

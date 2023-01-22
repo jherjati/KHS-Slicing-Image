@@ -69,7 +69,7 @@ const ArchitectureConstructionManagement = () => {
               <div className='row-span-2 flex flex-col  space-y-3 md:grid md:grid-cols-2 gap-2 md:gap-12 '>
                 {architecs.map(({ architec, name, year }) => {
                   return (
-                    <div key={name} className=' flex flex-col  p-[20px] lg:p-[40px] space-x-4  space-y-[24px] rounded-[1rem] bg-white shadow-xl'>
+                    <div key={name} className=' flex flex-col  p-[20px] lg:p-[40px] space-x-4  space-y-[24px] rounded-[1rem] bg-white shadow-xl cursor-pointer' onClick={() => router.push(`/service/architecture-construction/${name}`)}>
                       <div className='flex items-center justify-center'>
                         <Image layout='intrinsic' src={architec} alt={name} width='800' height='400' />
                       </div>
