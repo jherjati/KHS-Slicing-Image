@@ -1,20 +1,34 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Image from "next/image";
 import { careeractivity } from "./Data";
-import Dropdown from "./Dropdown";
 import Link from "next/link";
 import { FiSearch } from "react-icons/fi";
-
+import acLinear from "../public/accents/ac-linear.svg";
+import acRedBlue from "../public/accents/ac-red-blue.svg";
+import acRedBlueHalf from "../public/accents/ac-red-blue-half.svg";
 import { careers } from "./Data";
 import { BsLightbulbFill, BsLightningChargeFill, BsGearFill } from "react-icons/bs";
+import SelectButton from "./SelectButton";
 
 const Career = () => {
+  const [selected, setSelected] = useState(null);
+
   const searchRef = useRef();
+  const OPTIONS = [
+    { id: null, value: "--Pilih Divisi--" },
+    ...careers.map((e) => {
+      return { id: e.id, value: e.text };
+    }),
+  ];
+
+  function handleSelect(e) {
+    setSelected(e.target.name);
+  }
 
   return (
     <div className='mt-[70px] relative'>
-      <Image src='/accents/ac-linear.svg' alt='Accent' className='select-none absolute top-0 left-0' />
-      <div className='flex flex-col lg:grid lg:grid-cols-2 md:py-[43px] lg:py-[60px] px-[20px] md:px-[120px] relative border-b'>
+      <Image src={acLinear} alt='Accent' className='select-none absolute top-0 left-0' />
+      <div className='flex flex-col lg:grid lg:grid-cols-2 py-[43px] md:py-[60px] px-[20px] md:px-[120px] relative border-b '>
         {/* halfimage */}
         <div className='order-last lg:order-first grid grid-cols-2 gap-y-4 gap-x-4 items-center justify-items-center pr-[10%] pl-[10%] lg:pr-[20%] lg:pl-0'>
           <Image className='col-span-2 rounded-lg lg:rounded-[20px]' width='800' height='600' src='/careerimage1.png' alt='' priority='false' />
@@ -35,7 +49,8 @@ const Career = () => {
       </div>
       {/* page 2 */}
       <div className='flex flex-col space-y-12 md:space-y-20 px-[20px] md:px-[120px] text-black relative border-b pb-16'>
-        <Image src='/accents/ac-red-blue.svg' alt='Accent' className='select-none absolute top-0 right-0' />
+        <Image src={acRedBlue} alt='Accent' className='hidden md:block select-none absolute top-0 right-0' />
+        <Image src={acRedBlueHalf} alt='Accent' className='md:hidden select-none absolute top-[100px] right-0' />
         {/* subpage 1 */}
         <div className='flex  md:w-1/2 flex-col space-y-2 md:space-y-6 col-span-1 mx-3 relative'>
           <h1 className='text-blacky text-sedangmobile md:text-sedang2 font-quicksand '>Our Value</h1>
@@ -45,7 +60,7 @@ const Career = () => {
         </div>
         {/* subpage 2 */}
         <div className='flex flex-col lg:grid lg:grid-cols-3 gap-8 relative '>
-          <div className=' bg-white  flex lg:grid  rounded-[1rem] shadow-xl p-[4%]'>
+          <div className=' bg-white  flex lg:grid  rounded-[1rem] shadow-md p-[4%]'>
             <BsLightningChargeFill className='text-[40px] md:text-[50px] font-bold text-sky-700 p-2 ' />
             <div>
               <div className='text-2xl font-semibold text-slate-900'>Fast and Accurate</div>
@@ -58,7 +73,7 @@ const Career = () => {
               </div>
             </div>
           </div>
-          <div className=' bg-white  flex lg:grid  rounded-[1rem] shadow-2xl p-[4%]'>
+          <div className=' bg-white  flex lg:grid  rounded-[1rem] shadow-md p-[4%]'>
             <BsLightbulbFill className='text-[40px] md:text-[50px] font-bold text-sky-700 p-2 ' />
             <div>
               <div className='text-2xl font-semibold text-slate-900'>Inspire</div>
@@ -71,7 +86,7 @@ const Career = () => {
               </div>
             </div>
           </div>
-          <div className=' bg-white  flex lg:grid  rounded-[1rem] shadow-2xl p-[4%]'>
+          <div className=' bg-white  flex lg:grid  rounded-[1rem] shadow-md p-[4%]'>
             <BsGearFill className='text-[40px] md:text-[50px] font-bold text-sky-700 p-2 ' />
             <div>
               <div className='text-2xl font-semibold text-slate-900'>Responsive</div>
@@ -91,7 +106,6 @@ const Career = () => {
             <Image className=' ' width='800' height='300' src='/careerimageactivity1.png' alt='' layout='intrinsic' />
             <p className='absolute w-[90%] lg:w-[70%] pt-3 bottom-0   text-grey text-kecilmobile md:text-kecil font-inter bg-white '>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmo</p>
           </div>
-
           <div className='hidden lg:flex flex-col gap-3'>
             <div className='relative w-[100%] h-[100%]'>
               <Image className=' ' width='800' height='300' src='/careerimageactivity2.png' alt='' layout='intrinsic' />
@@ -111,9 +125,9 @@ const Career = () => {
           <div className='pt-8  flex flex-col lg:hidden space-y-8 '>
             {careeractivity.map(({ activity, text, key }) => {
               return (
-                <div className='grid  content-center grid-cols-5 gap-4' key={key}>
-                  <Image className=' col-span-2' width='800' height='900' src={activity} alt='' layout='responsive' />
-                  <div className='col-span-3  flex justify-center items-center text-grey text-kecilmobile md:text-kecil font-inter bg-white '>
+                <div className='grid content-center grid-cols-5 gap-4' key={key}>
+                  <Image className='col-span-2 md:w-full w-[100px]' width='800' height='900' src={activity} alt='' layout='responsive' />
+                  <div className='col-span-3  flex justify-center items-center text-grey text-kecilmobile md:text-kecil font-inter bg-white text-xs '>
                     <p className=''>{text}</p>
                   </div>
                 </div>
@@ -135,14 +149,17 @@ const Career = () => {
                 <FiSearch className='text-blue-dark text-lg' />
               </div>
             </form>
-            <div className='col-span-1 px-[5%] lg:px-[20%] w-full text-xl text-slate-900 bg-gray-50 rounded-lg border border-gray-300  '>
-              <Dropdown className='relative' title='-- Pilih Divisi --' texts={["Field Engineer", "Management Trainee", "Civil Engineer"]} />
+            <div className='rounded-xl border mb-10'>
+              <SelectButton selected={selected} options={OPTIONS} onChange={handleSelect} height='large' />
             </div>
+            {/* <div className='col-span-1 px-[5%] lg:px-[20%] w-full text-xl text-slate-900 bg-gray-50 rounded-lg border border-gray-300  '>
+              <Dropdown className='relative' title='-- Pilih Divisi --' texts={["Field Engineer", "Management Trainee", "Civil Engineer"]} />
+            </div> */}
           </div>
-          <div className='flex flex-col  lg:grid lg:grid-cols-3 gap-2 lg:gap-12  pb-20'>
+          <div className='flex flex-col  lg:grid lg:grid-cols-3 gap-5 lg:gap-12  pb-20'>
             {careers.map(({ id, image, title, text, text2 }) => {
               return (
-                <div key={id} className=' grid grid-cols-6 gap-4 lg:flex lg:flex-col justify-items-center content-center  rounded-[1rem] bg-white shadow-2xl px-[5%] py-[5%]'>
+                <div key={id} className=' grid grid-cols-6 gap-4 lg:flex lg:flex-col justify-items-center content-center  rounded-[1rem] bg-white shadow-md px-[5%] py-[5%]'>
                   <div className='col-span-2  grid lg:px-10 content-center '>
                     <Image layout='' src={image} alt={title} width='500' height='800' />
                   </div>

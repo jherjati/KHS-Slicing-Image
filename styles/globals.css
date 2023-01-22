@@ -29,3 +29,13 @@
     @apply font-quicksand;
   }
 } */
+
+.react-slideshow-container + ul.indicators {
+  flex-wrap: nowrap;
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-x: scroll;
+}
+ul.indicators::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}

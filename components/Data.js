@@ -577,3 +577,23 @@ export const careeractivity = [
     key: "3",
   },
 ];
+export const monitoring = [
+  {
+    title: "TalentaFast and Accurate",
+    app: "/images/talenta.png",
+    text: "A comprehensive internal system for managing employee affairs",
+    url: "#",
+  },
+  {
+    title: "GSD-Calculator",
+    app: "/logoatas.png",
+    text: "Calculate resolution of camera/sensor from altitude and focal length",
+    url: "#",
+  },
+  {
+    title: "Coordinates-Converter",
+    app: "/logoatas.png",
+    text: "Effortlessly transform coordinates with just a few simple clicks",
+    url: "#",
+  },
+];

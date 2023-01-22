@@ -1,8 +1,7 @@
 import Head from "next/head";
-
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
-import ArchitectureConstructionManagement from "../../components/ArchitectureConstructionManagement";
+import Navbar from "../../../components/Navbar";
+import Footer from "../../../components/Footer";
+import ArchitectureConstructionManagement from "../../../components/ArchitectureConstructionManagement";
 
 export default function Home() {
   return (

@@ -3,13 +3,13 @@ import Image from "next/image";
 
 import DragImage from "./DragImage";
 import { logoClient, clients } from "./Data";
-
 import SlideClients from "./SlideClients";
 import Slider2 from "./Slider2";
 import clsx from "clsx";
 import accentRedBlue from "../public/accents/ac-red-blue.svg";
 import accentRedBlueHalf from "../public/accents/ac-red-blue-half.svg";
 import accentBlueGreen from "../public/accents/ac-blue-green.svg";
+import { sliderImage } from "./Data";
 
 function ImageHeadline({ mainImg, miniImg, mainAlt, miniAlt, title, caption, align = "left" }) {
   return (
@@ -31,7 +31,7 @@ const HomePage = () => {
     <div className='flex flex-col '>
       {/* slider */}
       <div className=' mt-16 '>
-        <Slider2 />
+        <Slider2 data={sliderImage} />
       </div>
       {/* Service */}
       <div className='my-[60px] md:my-[90px] space-y-[24px] md:space-y-[40px]'>

@@ -9,8 +9,8 @@ import { HiOfficeBuilding } from "react-icons/hi";
 function Footer() {
   return (
     <footer className='flex flex-col divide-y divide-slate-400/25 font-inter'>
-      <div className='bg-footer h-[21.063 rem] w-full flex-col flex md:flex-row  justify-between items-center pt-10 '>
-        <div className=' px-[20px] lg:px-[120px] '>
+      <div className='bg-footer h-[21.063 rem] w-full flex-col flex md:flex-row  justify-between items-center pt-10  px-[20px] md:px-[60px] lg:px-[120px] '>
+        <div className=''>
           <ul>
             <div className='py-3 w-[7.4 rem] h-[3.75 rem]'>
               <Image className='w-auto h-auto' src='/logo_hs.png' alt='Logo' width={118} height={60} />
@@ -43,7 +43,7 @@ function Footer() {
             </div>
           </ul>
         </div>
-        <div className='flex flex-row px-[20px] lg:px-[120px] pt-5 space-x-8 lg:space-x-28'>
+        <div className='flex flex-row pt-5 space-x-8 lg:space-x-28'>
           <div className=''>
             <ul>
               <p className='text-white  text-[16px] leading-[24px] font-[700] pb-4'>Company</p>
