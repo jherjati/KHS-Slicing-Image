@@ -4,17 +4,17 @@ import { BiArrowBack } from "react-icons/bi";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 
-const Slider2 = ({ data, className, arrows = false, indicators = false, inType = "home", smvh = "large" }) => {
+const Slider2 = ({ data, className, arrows = false, indicators = false, autoplay = false, inType = "home", smvh = "large", arrowClass }) => {
   return (
     <div className={clsx("slide-container h-full relative", { "home-slide-container": inType === "home" })}>
       <Slide
         prevArrow={
-          <div className='hidden md:flex md:h-14 md:w-14 rounded-full bg-white px-4  items-center justify-center ml-10'>
+          <div className={clsx("hidden md:flex md:h-14 md:w-14 rounded-full bg-white px-4  items-center justify-center ml-10", arrowClass)}>
             <BiArrowBack className='text-blue-dark text-3xl' />
           </div>
         }
         nextArrow={
-          <div className='hidden md:flex md:h-14 md:w-14 rounded-full bg-white px-4  items-center justify-center mr-10'>
+          <div className={clsx("hidden md:flex md:h-14 md:w-14 rounded-full bg-white px-4  items-center justify-center mr-10", arrowClass)}>
             <BiArrowBack className='text-blue-dark text-3xl rotate-180' />
           </div>
         }
@@ -22,7 +22,7 @@ const Slider2 = ({ data, className, arrows = false, indicators = false, inType =
         duration={3000}
         infinite={true}
         pauseOnHover={false}
-        autoplay={arrows ? false : true}
+        autoplay={autoplay}
         canSwipe={true}
         arrows={arrows}
         slidesToScroll={true}

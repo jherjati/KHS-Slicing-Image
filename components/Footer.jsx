@@ -9,7 +9,7 @@ import { HiOfficeBuilding } from "react-icons/hi";
 function Footer() {
   return (
     <footer className='flex flex-col divide-y divide-slate-400/25 font-inter'>
-      <div className='bg-footer h-[21.063 rem] w-full flex-col flex md:flex-row  justify-between items-center pt-10  px-[20px] md:px-[60px] lg:px-[120px] '>
+      <div className='bg-footer  w-full flex-col flex md:flex-row  justify-between items-center pt-2  px-[20px] md:px-[60px] lg:px-[120px] '>
         <div className=''>
           <ul>
             <div className='py-3 w-[7.4 rem] h-[3.75 rem]'>
@@ -17,26 +17,26 @@ function Footer() {
               {/* Stream<span className="text-blue-600">line</span> */}
             </div>
             <div className='flex flex-col gap-6 pb-5'>
-              <ul>
-                <div className='py-3'>
-                  <div className='flex items-center space-x-1'>
-                    <HiOfficeBuilding className='text-[25px] text-white cursor-pointer  hover:text-sky-200' />
-                    <div>
+              <ul className='space-y-2'>
+                <div className=''>
+                  <div className='flex items-start space-x-2'>
+                    <HiOfficeBuilding className='text-lg text-white cursor-pointer  hover:text-sky-200' />
+                    <div className='leading-3 space-y-3'>
                       <p className='text-white text-[14px] font-inter font-[400]'>Pondok Pinang Center C-34 Jalan Ciputat Raya,</p>
-                      <p className='text-white text-[14px] font-inter font-[400]'>Kota Jakarta Selatan, DKI Jakarta 12310</p>
+                      <p className='text-white text-[14px] font-inter font-[400]'>Kota Jakarta Selatan, DKI Jakarta 12310.</p>
                     </div>
                   </div>
                 </div>
-                <div className='py-3 flex items-center space-x-1'>
-                  <MdEmail className='text-[25px] text-white cursor-pointer  hover:text-yellow-200' />
+                <div className=' flex items-center space-x-2'>
+                  <MdEmail className='text-lg text-white cursor-pointer  hover:text-yellow-200' />
                   <p className='text-[14px] text-white'>info@handalselaras.com</p>
                 </div>
-                <div className='py-3 flex items-center space-x-1'>
-                  <MdCall className='text-[25px] text-white cursor-pointer  hover:text-blue' />
+                <div className=' flex items-center space-x-2'>
+                  <MdCall className='text-lg text-white cursor-pointer  hover:text-blue' />
                   <p className='text-[14px] text-white'>0217514589</p>
                 </div>
-                <div className='py-3 flex items-center space-x-1'>
-                  <FaWhatsapp className='text-[25px] text-white cursor-pointer  hover:text-green-500' />
+                <div className=' flex items-center space-x-2'>
+                  <FaWhatsapp className='text-lg text-white cursor-pointer  hover:text-green-500' />
                   <p className='text-[14px] text-white'>085195145758</p>
                 </div>
               </ul>

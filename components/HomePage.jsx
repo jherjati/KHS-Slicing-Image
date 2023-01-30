@@ -31,7 +31,7 @@ const HomePage = () => {
     <div className='flex flex-col '>
       {/* slider */}
       <div className=' mt-16 '>
-        <Slider2 data={sliderImage} indicators={true} />
+        <Slider2 data={sliderImage} indicators={true} arrows={true} arrowClass='opacity-0 hover:opacity-100 transition-opacity ease-in-out' autoplay={true} />
       </div>
       {/* Service */}
       <div className='my-[60px] md:my-[90px] space-y-[24px] md:space-y-[40px]'>

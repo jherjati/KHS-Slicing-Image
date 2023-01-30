@@ -66,17 +66,17 @@ const ArchitectureConstructionManagement = () => {
                 HANDAL SELARAS GROUP is supported by reliable architects who have decades of experience. Architectural planning includes planning Concept Design, Pre-Design / Schematic Design, and Design Development.
               </p>
 
-              <div className='row-span-2 flex flex-col  space-y-3 md:grid md:grid-cols-2 gap-2 md:gap-12 '>
+              <div className='row-span-2 flex flex-col  space-y-3 md:grid md:grid-cols-3 gap-2 md:gap-12 '>
                 {architecs.map(({ architec, name, year }) => {
                   return (
-                    <div key={name} className=' flex flex-col  p-[20px] lg:p-[40px] space-x-4  space-y-[24px] rounded-[1rem] bg-white shadow-xl cursor-pointer' onClick={() => router.push(`/service/architecture-construction/${name}`)}>
+                    <div key={name} className=' flex flex-col  p-5 space-x-4  space-y-[24px] rounded-[1rem] bg-white shadow-xl cursor-pointer' onClick={() => router.push(`/service/architecture-construction/${name}`)}>
                       <div className='flex items-center justify-center'>
                         <Image layout='intrinsic' src={architec} alt={name} width='800' height='400' />
                       </div>
 
-                      <div className='flex flex-col space-y-[10px] h-[48px] text-left  justify-center'>
-                        <p className='text-blacky font-[700] text-[14px] leading-[20px]  md:text-[17px] md:leading-[22px] font-inter'>{name}</p>
-                        <p className='text-grey text-[14px] leading-[17px] font-inter md:text-[16px] md:leading-[19px]'>{year}</p>
+                      <div className='flex flex-col space-y-[10px]'>
+                        <p className='text-blacky font-[700] leading-[20px] text-sm md:leading-[22px] font-inter'>{name}</p>
+                        <p className='text-grey leading-[17px] font-inter text-sm md:leading-[19px]'>{year}</p>
                       </div>
                     </div>
                   );
