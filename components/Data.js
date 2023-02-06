@@ -204,24 +204,24 @@ export const drone = [
 ];
 export const aerials = [
   {
-    aerial: "/aerialfoto1.png",
-    name: "Provosion of Drone For Pipeline Ispection Exxonmobil Cepu Limited",
-    year: "2018",
+    aerial: "/aerialPhoto1.JPG",
+    name: "Aerial Photo Mapping for Tree Stocktacking",
+    year: "2022",
   },
   {
-    aerial: "/aerialfoto2.png",
-    name: "UAV Implementation of Forestry Sinarmas Forestry",
-    year: "2018",
+    aerial: "/aerialPhoto2.JPG",
+    name: "Aerial Photo Mapping for Railroad Inspection",
+    year: "2021",
   },
   {
-    aerial: "/aerialfoto3.png",
-    name: "Situ Front City Kabupaten Bogor",
-    year: "2018",
+    aerial: "/aerialPhoto3.JPG",
+    name: "1:5000 Aerial Photo Mapping of 23,000 Ha",
+    year: "2021",
   },
   {
-    aerial: "/aerialfoto4.png",
-    name: "Resort Masterplan Camp Hulu Cai",
-    year: "2018",
+    aerial: "/aerialPhoto4.JPG",
+    name: "Aerial Photo Mapping for Transportation Routes in the Jabodetabek Urban Area",
+    year: "2021",
   },
 ];
 export const blogs = [
