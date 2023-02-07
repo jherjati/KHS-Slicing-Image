@@ -38,9 +38,10 @@ const SurveyAndMapping = () => {
           <h1 className='text-blue text-[20px] leading-[28px] font-[600] font-inter '>Services</h1>
           <h1 className='text-blacky text-sedangmobile mt-5 md:mt-0 md:text-sedang2 font-quicksand '>Survey & Mapping</h1>
           <p className='text-grey text-kecilmobile md:text-kecil font-inter text-justify'>
-            Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et. Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et
+            Handal Selaras provides survey & mapping services for various industrial needs. Our focus is to provide quality solutions that work effectively and efficiently. With decades of experience and leading technology, we are ready to
+            provide service and performance best for every client.
           </p>
-          <ul className='flex flex-col space-y-1 list-decimal text-grey text-kecilmobile md:text-kecil font-inter px-[20px] '>
+          <ul className='flex flex-col space-y-1 list-disc text-grey text-kecilmobile md:text-kecil font-inter px-[20px] '>
             <li>Field Survey</li>
             <li>Photogrammetry</li>
             <li>UAV Lidar</li>
@@ -64,9 +65,9 @@ const SurveyAndMapping = () => {
       <div className='px-[20px] md:px-[120px] flex flex-col space-y-16 relative mt-0 md:py-[90px] py-10 border-b'>
         <div className='flex flex-col space-y-5 md:space-y-8 md:w-1/2 text-justify relative'>
           <h1 className='text-blacky text-sedangmobile mt-5 md:mt-0 md:text-sedang2 font-quicksand'>Our Tool</h1>
-          <p className='text-grey text-kecilmobile md:text-kecil font-inter text-justify'>
+          {/* <p className='text-grey text-kecilmobile md:text-kecil font-inter text-justify'>
             Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et. Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et
-          </p>
+          </p> */}
         </div>
         <Image src={accentRedBlue} alt='Image' className='hidden md:block absolute right-0 top-0 m-0' />
         <Image src={accentRedBlueHalf} alt='Image' className='md:hidden absolute right-0 top-[15%] m-0' />
@@ -149,16 +150,19 @@ const SurveyAndMapping = () => {
             <div id='lidar' className=' flex flex-col space-y-5 md:space-y-8 '>
               <h1 className='text-blacky text-sedangmobile mt-5 md:mt-0 md:text-sedang2 font-quicksand'>UAV LiDAR</h1>
               <p className='text-justify text-grey text-kecilmobile md:text-kecil font-inter'>
-                HANDAL SELARAS GROUP provides Lidar (Laser) Services using Unmanned Aerial Vehicle (UAV) vehicles. We are the pioneers of Lidar UAV technology in Indonesia. The advantages of our services are:
+                HANDAL SELARAS GROUP provides Lidar (Light Detection and Ranging/ Laser) services using Unmanned Aerial Vehicle (UAV) or Drone vehicles. We are pioneers of Lidar UAV technology in Indonesia since 2015. The advantages of our
+                services are:
               </p>
               <ul className='list-decimal px-[2%] text-grey text-kecilmobile md:text-kecil font-inter pl-5 text-justify '>
-                <li>UAV that can take off and landing in a narrow area</li>
-                <li>UAVs use Real Time Kinematics (RTK) technology to improve data accuracy</li>
-                <li>UAV has a fail-safe system that is safe for use in dangerous areas such as oil refineries, and so on</li>
-                <li>Sensor options for RGB Cameras, Multispectral Cameras and Thermal Cameras</li>
-                <li>Make topographic maps up to 1: 5000 (2.5 m contour)</li>
-                <li>Low cost and competitive according to need</li>
-                <li>Fast processing is supported by the latest super computers and software</li>
+                <li>A UAV that can take off and land in narrow areas,</li>
+                <li>UAV uses Real Time Kinematics (RTK) technology to improve data accuracy,</li>
+                <li>UAV has a fail safe system that is safe for use in hazardous areas such as oil refineries, and so on,</li>
+                <li>Has an accuracy of up to 15 cm (XYZ),</li>
+                <li>Create Topographic maps up to 1:1000 (density 50cm),</li>
+                <li>Create 3D Modeling for Digital Surface Model (DSM) and Digital Terrain Model (DTM),</li>
+                <li>Low cost and competitive according to needs,</li>
+                <li>Fast processing supported by the latest super computers and software,</li>
+                <li>Capacity more than 100Ha per day or 20Km corridor survey on 1 set of UAV Lidar.</li>
               </ul>
               <Image className='rounded-lg' src='/uavlidarimage.JPG' alt='UAV Lidar Image' width='1100' height='400' layout='responsive' />
               <Image className='rounded-lg' src='/uav2.JPG' alt='UAV Lidar Image' width='1100' height='400' layout='responsive' />
@@ -199,7 +203,7 @@ const SurveyAndMapping = () => {
               <p className='text-grey text-kecilmobile md:text-kecil font-inter text-justify'>
                 Thermal surveys can be used for various sectors, such as: for surveying power lines, buildings, mechanics, offshore oil and gas, ground surface temperature, plantations etc.
               </p>
-              {/* <p className='text-grey text-kecilmobile md:text-kecil font-inter text-justify'>Indonesia</p> */}
+              {/* <p className='text-grey text-kecilmobile md:text-kecil font-ninter text-justify'>Indonesia</p> */}
 
               <div className='grid grid-cols-1 md:grid-cols-2 gap-5'>
                 <Image className='rounded-lg' src='/thermalinspection1.JPG' alt='UAV Image' width='1100' height='400' layout='responsive' />

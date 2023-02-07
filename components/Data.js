@@ -214,12 +214,12 @@ export const aerials = [
     year: "2021",
   },
   {
-    aerial: "/aerialPhoto3.JPG",
+    aerial: "/aerialPhoto4.JPG",
     name: "1:5000 Aerial Photo Mapping of 23,000 Ha",
     year: "2021",
   },
   {
-    aerial: "/aerialPhoto4.JPG",
+    aerial: "/aerialPhoto3.JPG",
     name: "Aerial Photo Mapping for Transportation Routes in the Jabodetabek Urban Area",
     year: "2021",
   },
