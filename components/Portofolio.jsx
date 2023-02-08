@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { tools, aerials, sliderImage } from "./Data";
+import { tools, aerials } from "./Data";
 import React, { useState } from "react";
 import Link from "next/link";
 import clsx from "clsx";
@@ -11,7 +11,7 @@ import SelectButton from "./SelectButton";
 import { useRouter } from "next/router";
 import Slider2 from "./Slider2";
 
-const Portofolio = () => {
+const Portofolio = ({ sliderImage }) => {
   const router = useRouter();
   const [lin, setlin] = useState("survey");
 
@@ -38,12 +38,26 @@ const Portofolio = () => {
       <div className='bg-blue-dark h-[400px] absolute inset-0 mt-[70px] '></div>
       <div className='py-10 md:py-20 text-center font-quicksand text-white px-5 md:px-[120px] space-x-3 relative'>
         <p className='text-base md:text-lg font-bold'>Portofolio Detail</p>
-        <h1 className='text-2xl md:text-[40px] font-bold'>Bangunan TIC & Komersial di Labuan Baju</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam vel nostrum veritatis inventore velit. Obcaecati libero fuga deleniti, nam voluptatem aut quo delectus quas et, hic possimus distinctio pariatur dolorum?</p>
+        <h1 className='text-2xl md:text-[40px] font-bold'>
+          Bangunan TIC & Komersial di Labuan Baju
+        </h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam vel
+          nostrum veritatis inventore velit. Obcaecati libero fuga deleniti, nam
+          voluptatem aut quo delectus quas et, hic possimus distinctio pariatur
+          dolorum?
+        </p>
       </div>
       <div className='border-b flex justify-center'>
         <div className='md:mx-auto w-full md:w-[1000px] md:h-full max-h-max'>
-          <Slider2 inType='Porto' data={sliderImage} className='mx-5 rounded-3xl overflow-auto h-full' smvh='small' arrows={true} indicators={true} />
+          <Slider2
+            inType='Porto'
+            data={sliderImage}
+            className='mx-5 rounded-3xl overflow-auto h-full'
+            smvh='small'
+            arrows={true}
+            indicators={true}
+          />
         </div>
       </div>
       <div className='py-10 md:py-[60px] flex flex-col-reverse md:grid md:grid-cols-5 gap-12 md:gap-20 font-inter px-5 md:px-[200px] relative'>
@@ -70,12 +84,24 @@ const Portofolio = () => {
         <div className='md:col-span-3 space-y-5'>
           <h1 className='font-bold text-[30px] text-justify'>Title</h1>
           <p className='text-justify'>
-            Mi tincidunt elit, id quisque ligula ac diam, amet. Vel etiam suspendisse morbi eleifend faucibus eget vestibulum felis. Dictum quis montes, sit sit. Tellus aliquam enim urna, etiam. Mauris posuere vulputate arcu amet, vitae
-            nisi, tellus tincidunt. At feugiat sapien varius id. Eget quis mi enim, leo lacinia pharetra, semper. Eget in volutpat mollis at volutpat lectus velit, sed auctor. Porttitor fames arcu quis fusce augue enim. Quis at habitant
-            diam at. Suscipit tristique risus, at donec. In turpis vel et quam imperdiet. Ipsum molestie aliquet sodales id est ac volutpat. Mi tincidunt elit, id quisque ligula ac diam, amet. Vel etiam suspendisse morbi eleifend faucibus
-            eget vestibulum felis. Dictum quis montes, sit sit. Tellus aliquam enim urna, etiam. Mauris posuere vulputate arcu amet, vitae nisi, tellus tincidunt. At feugiat sapien varius id. Eget quis mi enim, leo lacinia pharetra, semper.
-            Eget in volutpat mollis at volutpat lectus velit, sed auctor. Porttitor fames arcu quis fusce augue enim. Quis at habitant diam at. Suscipit tristique risus, at donec. In turpis vel et quam imperdiet. Ipsum molestie aliquet
-            sodales id est ac volutpat.{" "}
+            Mi tincidunt elit, id quisque ligula ac diam, amet. Vel etiam
+            suspendisse morbi eleifend faucibus eget vestibulum felis. Dictum
+            quis montes, sit sit. Tellus aliquam enim urna, etiam. Mauris
+            posuere vulputate arcu amet, vitae nisi, tellus tincidunt. At
+            feugiat sapien varius id. Eget quis mi enim, leo lacinia pharetra,
+            semper. Eget in volutpat mollis at volutpat lectus velit, sed
+            auctor. Porttitor fames arcu quis fusce augue enim. Quis at habitant
+            diam at. Suscipit tristique risus, at donec. In turpis vel et quam
+            imperdiet. Ipsum molestie aliquet sodales id est ac volutpat. Mi
+            tincidunt elit, id quisque ligula ac diam, amet. Vel etiam
+            suspendisse morbi eleifend faucibus eget vestibulum felis. Dictum
+            quis montes, sit sit. Tellus aliquam enim urna, etiam. Mauris
+            posuere vulputate arcu amet, vitae nisi, tellus tincidunt. At
+            feugiat sapien varius id. Eget quis mi enim, leo lacinia pharetra,
+            semper. Eget in volutpat mollis at volutpat lectus velit, sed
+            auctor. Porttitor fames arcu quis fusce augue enim. Quis at habitant
+            diam at. Suscipit tristique risus, at donec. In turpis vel et quam
+            imperdiet. Ipsum molestie aliquet sodales id est ac volutpat.{" "}
           </p>
         </div>
       </div>
@@ -110,8 +136,16 @@ const Portofolio = () => {
 
       {/* page 3 */}
 
-      <Image src={accentGreen} alt='Image' className='hidden md:block select-none absolute md:top-[450px] md:-left-[50px]' />
-      <Image src={accentRedBlueHalf} alt='Image' className='select-none absolute -bottom-[50px] md:w-auto w-[100px] right-0 md:-bottom-[100px] md:right-0' />
+      <Image
+        src={accentGreen}
+        alt='Image'
+        className='hidden md:block select-none absolute md:top-[450px] md:-left-[50px]'
+      />
+      <Image
+        src={accentRedBlueHalf}
+        alt='Image'
+        className='select-none absolute -bottom-[50px] md:w-auto w-[100px] right-0 md:-bottom-[100px] md:right-0'
+      />
     </div>
   );
 };

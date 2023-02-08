@@ -2,7 +2,27 @@ import Head from "next/head";
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
 import Portofolio from "../../../components/Portofolio";
-export default function Home() {
+import { rootUrl } from "../../../constants";
+
+export async function getServerSideProps() {
+  const slidesRes = await (
+    await fetch(rootUrl + "/slides?_embed&_fields=acm_fields")
+  ).json();
+
+  const slides = slidesRes.map(({ acm_fields: { title, text, image } }) => ({
+    title,
+    text,
+    image: image.source_url,
+  }));
+
+  return {
+    props: {
+      slides,
+    },
+  };
+}
+
+export default function Home({ slides }) {
   return (
     <div>
       <Head>
@@ -11,7 +31,7 @@ export default function Home() {
         <link rel='icon' href='/logo.ico' />
       </Head>
       <Navbar />
-      <Portofolio />
+      <Portofolio sliderImage={slides} />
       <Footer />
     </div>
   );

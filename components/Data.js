@@ -31,35 +31,13 @@ export const dragImage = [
   },
 ];
 
-export const sliderImage = [
-  {
-    image: "/sliderimage1.png",
-    title: "Survey & Mapping",
-    text: "Kami dapat membantu pekerjaan pengumpulan data lapangan yang dibutuhkan dalam bentuk apapun.",
-  },
-  {
-    image: "/sliderimage2.png",
-    title: "Architecture & Construction",
-    text: "Kami dapat membantu pekerjaan pengumpulan data lapangan yang dibutuhkan dalam bentuk apapun.",
-  },
-  {
-    image: "/sliderimage3.png",
-    title: "Real Estate Development",
-    text: "Kami dapat membantu pekerjaan pengumpulan data lapangan yang dibutuhkan dalam bentuk apapun.",
-  },
-  {
-    image: "/sliderimage4.png",
-    title: "Urban Planning",
-    text: "Kami dapat membantu pekerjaan pengumpulan data lapangan yang dibutuhkan dalam bentuk apapun.",
-  },
-  {
-    image: "/sliderimage5.png",
-    title: "Visual Creative",
-    text: "Kami dapat membantu pekerjaan pengumpulan data lapangan yang dibutuhkan dalam bentuk apapun.",
-  },
+export const logoClient = [
+  { logo: "/Clients-1.png" },
+  { logo: "/Clients-2.png" },
+  { logo: "/Clients-3.png" },
+  { logo: "/Clients-4.png" },
+  { logo: "/Clients-5.png" },
 ];
-
-export const logoClient = [{ logo: "/Clients-1.png" }, { logo: "/Clients-2.png" }, { logo: "/Clients-3.png" }, { logo: "/Clients-4.png" }, { logo: "/Clients-5.png" }];
 export const licences = [
   {
     licence: "/licence-1.png",
