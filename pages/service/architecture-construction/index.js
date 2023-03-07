@@ -2,8 +2,47 @@ import Head from "next/head";
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
 import ArchitectureConstructionManagement from "../../../components/ArchitectureConstructionManagement";
+import { request, gql } from "graphql-request";
 
-export default function Home() {
+export async function getServerSideProps() {
+  const query = gql`
+    {
+      items: architecturePages(first: 1) {
+        nodes {
+          ...ArchitecturePageFields
+        }
+      }
+    }
+
+    fragment ArchitecturePageFields on ArchitecturePage {
+      title
+      description
+      subserviceTitle
+      subserviceDescription
+      subserviceProjects {
+        mediaItemId
+        mediaItemUrl
+        altText
+        caption
+        description
+        title
+      }
+    }
+  `;
+
+  const { items } = await request(
+    "https://www.handalselaras.com/graphql/",
+    query
+  );
+
+  return {
+    props: {
+      data: items.nodes[0],
+    },
+  };
+}
+
+export default function Home({ data }) {
   return (
     <div>
       <Head>
@@ -12,7 +51,7 @@ export default function Home() {
         <link rel='icon' href='/logo.ico' />
       </Head>
       <Navbar />
-      <ArchitectureConstructionManagement />
+      <ArchitectureConstructionManagement pageData={data} />
       <Footer />
     </div>
   );
