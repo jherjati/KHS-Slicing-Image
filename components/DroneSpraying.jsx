@@ -37,10 +37,7 @@ const DroneSpraying = () => {
       {/* page2 */}
       <div className='px-[20px] md:px-[120px] flex flex-col pb-10 relative py-10 md:py-[90px]'>
         <div className='row-span-1 flex flex-col space-y-8 relative'>
-          <h1 className='text-blacky text-sedangmobile md:text-sedang2 font-quicksand '>Our Tool</h1>
-          <p className='text-grey text-kecilmobile md:text-kecil font-inter md:w-1/2 text-justify pb-10'>
-            Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et. Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et
-          </p>
+          <h1 className='text-blacky text-sedangmobile md:text-sedang2 font-quicksand pb-10'>Our Tool</h1>
         </div>
         <Image src={accentRedBlue} alt='' className='hidden md:block absolute right-0 top-10' />
         <Image src={accentRedBlueHalf} alt='' className='md:hidden  absolute right-0 top-10' />

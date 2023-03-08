@@ -10,7 +10,7 @@ const Clients = () => {
         <div className='lg:col-span-2 flex justify-center flex-col space-y-2 md:space-y-8 col-span-1 mx-3'>
           <h1 className='text-blacky text-sedangmobile md:text-sedang2 font-quicksand '>Clients</h1>
           <p className='text-grey text-kecilmobile md:text-kecil font-inter '>
-            Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et. Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et
+            Lebih dari puluhan tahun kami selalu memberikan pelayanan terbaik untuk para client kami. +1000 project dan +500 client telah bersama-sama dengan kami untuk mencapai tujuan bersama.
           </p>
         </div>
       </div>

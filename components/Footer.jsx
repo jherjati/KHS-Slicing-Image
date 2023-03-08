@@ -13,7 +13,7 @@ function Footer() {
         <div className=''>
           <ul>
             <div className='py-3 w-[7.4 rem] h-[3.75 rem]'>
-              <Image className='w-auto h-auto' src='/logo_hs.png' alt='Logo' width={118} height={60} />
+              <Image className='object-cover bg-white rounded-lg px-5 py-[14px]' src='/logoatas.png' alt='Logo' width={112.18} height={60} />
               {/* Stream<span className="text-blue-600">line</span> */}
             </div>
             <div className='flex flex-col gap-6 pb-5'>

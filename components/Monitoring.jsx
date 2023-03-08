@@ -1,33 +1,11 @@
 import Image from "next/image";
 import { monitoring } from "./Data";
-import React, { useState } from "react";
+import React from "react";
 import accentRedBlueHalf from "../public/accents/ac-red-blue-half.svg";
 import accentGreen from "../public/accents/ac-home-green.svg";
-import { useRouter } from "next/router";
 import { BiChevronDown } from "react-icons/bi";
 
 const Monitoring = () => {
-  const router = useRouter();
-  const [lin, setlin] = useState("survey");
-
-  const SECTION_OPTIONS = [
-    { id: "survey", value: "Field Survey" },
-    { id: "aerial", value: "Aerial Photo" },
-    { id: "lidar", value: "UAV Lidar" },
-    { id: "gis", value: "GIS" },
-    { id: "thermo", value: "Thermovision Technology" },
-    { id: "aev", value: "Aerial Video" },
-  ];
-
-  const linkfunc = (e) => {
-    setlin(e.target.name);
-  };
-
-  function onClickDropDown(e) {
-    setlin(e.target.name);
-    router.push(`#${e.target.name}`);
-  }
-
   return (
     <div className='flex flex-col pt-[70px] relative pb-[60px]'>
       {/* page2 */}

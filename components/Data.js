@@ -2,42 +2,36 @@ export const dragImage = [
   {
     image: "/DragImage1.png",
     title: "Survey & Mapping",
-    text: "Kami dapat membantu pekerjaan pengumpulan data lapangan yang dibutuhkan dalam bentuk apapun.",
+    text: "Collect data and mapping as needed",
     link: "/service/survey-and-mapping",
   },
   {
     image: "/DragImage2.png",
     title: "Architecture & Construction",
-    text: "Kami dapat membantu pekerjaan pengumpulan data lapangan yang dibutuhkan dalam bentuk apapun.",
+    text: "Manage projects with comprehensive program",
     link: "/service/architecture-construction",
   },
   {
     image: "/DragImage3.png",
     title: "Urban Planning",
-    text: "Kami dapat membantu pekerjaan pengumpulan data lapangan yang dibutuhkan dalam bentuk apapun.",
+    text: "Plan and design urban layouts that are modern and livable",
     link: "/service/urban-planning",
   },
   {
     image: "/DragImage4.png",
     title: "Drone Spraying",
-    text: "Kami dapat membantu pekerjaan pengumpulan data lapangan yang dibutuhkan dalam bentuk apapun.",
-    link: "/service/survey-and-mapping",
+    text: "Efficient and effective service for spraying all kinds of plants",
+    link: "/service/drone-spraying",
   },
-  {
-    image: "/DragImage5.png",
-    title: "Survey & Mapping",
-    text: "Kami dapat membantu pekerjaan pengumpulan data lapangan yang dibutuhkan dalam bentuk apapun.",
-    link: "/service/survey-and-mapping",
-  },
+  // {
+  //   image: "/DragImage5.png",
+  //   title: "Survey & Mapping",
+  //   text: "Kami dapat membantu pekerjaan pengumpulan data lapangan yang dibutuhkan dalam bentuk apapun.",
+  //   link: "/service/survey-and-mapping",
+  // },
 ];
 
-export const logoClient = [
-  { logo: "/Clients-1.png" },
-  { logo: "/Clients-2.png" },
-  { logo: "/Clients-3.png" },
-  { logo: "/Clients-4.png" },
-  { logo: "/Clients-5.png" },
-];
+export const logoClient = [{ logo: "/Clients-1.png" }, { logo: "/Clients-2.png" }, { logo: "/Clients-3.png" }, { logo: "/Clients-4.png" }, { logo: "/Clients-5.png" }];
 export const licences = [
   {
     licence: "/licence-1.png",
@@ -560,18 +554,18 @@ export const monitoring = [
     title: "TalentaFast and Accurate",
     app: "/images/talenta.png",
     text: "A comprehensive internal system for managing employee affairs",
-    url: "#",
+    url: "https://account.mekari.com/users/sign_in?client_id=TAL-73645&return_to=L2F1dGg_Y2xpZW50X2lkPVRBTC03MzY0NSZyZXNwb25zZV90eXBlPWNvZGUmc2NvcGU9c3NvOnByb2ZpbGU%3D",
   },
   {
     title: "GSD-Calculator",
     app: "/logoatas.png",
     text: "Calculate resolution of camera/sensor from altitude and focal length",
-    url: "#",
+    url: "https://www.handalselaras.com/calculator/",
   },
   {
     title: "Coordinates-Converter",
     app: "/logoatas.png",
     text: "Effortlessly transform coordinates with just a few simple clicks",
-    url: "#",
+    url: "https://www.handalselaras.com/converter/",
   },
 ];

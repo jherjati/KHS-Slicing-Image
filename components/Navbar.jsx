@@ -223,46 +223,6 @@ function SideNav({ nav, onClick, path }) {
         </Transition.Child>
       </Dialog>
     </Transition>
-    // <Transition appear show={nav} as={Fragment}>
-    //   <div className='fixed inset-y-0 inset-x-0 sm:inset-x-full overflow-hidden'>
-    //     <Transition.Child
-    //       as={"div"}
-    //       className='fixed left-0 top-0 w-full min-w-0 h-screen bg-black/80'
-    //       enter='ease-out duration-300'
-    //       enterFrom='opacity-0'
-    //       enterTo='opacity-100'
-    //       leave='ease-in duration-200'
-    //       leaveFrom='opacity-100'
-    //       leaveTo='opacity-0'
-    //       onClick={onClick}
-    //     />
-    //     <Transition.Child
-    //       as={"div"}
-    //       className='absolute inset-y-0 bg-white overflow-y-auto overflow-x-hidden left-0'
-    //       enter='ease-in duration-300 transform transition'
-    //       enterFrom='-translate-x-full opacity-80'
-    //       enterTo='translate-x-0 opacity-100'
-    //       leave='ease-out duration-150'
-    //       leaveFrom='translate-x-0 opacity-100'
-    //       leaveTo='-translate-x-full opacity-80'
-    //       // enterFrom='opacity-0 -translate-x-full'
-    //       // enterTo='opacity-100 translate-x-0'
-    //       // leave='ease-in duration-200'
-    //       // leaveFrom='opacity-100'
-    //       // leaveTo='opacity-0'
-    //       // enter='ease-in duration-300'
-    //       // enterFrom='translate-x-full opacity-0'
-    //       // enterTo='translate-x-0 opacity-100'
-    //       // leave='ease-out duration-150'
-    //       // leaveFrom='translate-x-0 opacity-100'
-    //       // leaveTo='translate-x-full opacity-0'
-    //     >
-
-    //     </Transition.Child>
-    //     {/* <div className='fixed left-0 top-0 w-full min-w-0 h-screen bg-black/80' onClick={onClick}>
-    //   </div> */}
-    //   </div>
-    // </Transition>
   );
 }
 
@@ -405,13 +365,13 @@ const Navbar = () => {
                   path='content'
                   icon='mini'
                 >
-                  <div className={clsx("flex items-center gap-2 px-3 py-2 cursor-pointer hover:bg-[#F5F5F5] rounded-md", { "bg-[#F5F5F5]": selectedLang === "id" })} onClick={() => setSelectedLang("id")}>
+                  <div className={clsx("flex items-center gap-2 px-3 py-2 cursor-pointer hover:bg-[#F5F5F5] rounded-md", { "bg-[#F5F5F5]": selectedLang === "en" })} onClick={() => setSelectedLang("id")}>
                     <Image className='rounded-full w-5 h-5 object-cover border drop-shadow-sm' alt='US' width={16} height={16} src='/icons/ic-US.svg' />
-                    <p className='font-semibold'>Bahasa Indonesia</p>
-                  </div>
-                  <div className={clsx("flex items-center gap-2 px-3 py-2 cursor-pointer hover:bg-[#F5F5F5] rounded-md", { "bg-[#F5F5F5]": selectedLang === "en" })} onClick={() => setSelectedLang("en")}>
-                    <Image className='rounded-full w-5 h-5 object-cover border drop-shadow-sm' alt='ID' width={16} height={16} src='/icons/ic-ID.svg' />
                     <p className='font-semibold'>English</p>
+                  </div>
+                  <div className={clsx("flex items-center gap-2 px-3 py-2 cursor-pointer hover:bg-[#F5F5F5] rounded-md", { "bg-[#F5F5F5]": selectedLang === "id" })} onClick={() => setSelectedLang("en")}>
+                    <Image className='rounded-full w-5 h-5 object-cover border drop-shadow-sm' alt='ID' width={16} height={16} src='/icons/ic-ID.svg' />
+                    <p className='font-semibold'>Bahasa Indonesia</p>
                   </div>
                 </DropDown>
               </div>

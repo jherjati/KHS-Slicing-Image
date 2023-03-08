@@ -18,7 +18,7 @@ const SurveyAndMapping = () => {
     { id: "aerial", value: "Aerial Photo" },
     { id: "lidar", value: "UAV Lidar" },
     { id: "gis", value: "GIS" },
-    { id: "thermo", value: "Thermovision Technology" },
+    { id: "thermo", value: "Thermal Inspection" },
     { id: "aev", value: "Aerial Video" },
   ];
 
@@ -46,6 +46,7 @@ const SurveyAndMapping = () => {
             <li>Photogrammetry</li>
             <li>UAV Lidar</li>
             <li>GIS</li>
+            <li>Thermal Inspection</li>
             <li>Aerial Video</li>
           </ul>
         </div>
@@ -250,7 +251,7 @@ const SurveyAndMapping = () => {
               </Link>
               <Link href={`#thermo`} name='thermo' onClick={linkfunc} className={lin == "thermo" ? "text-blue font-bold flex items-center gap-2" : "group flex hover:text-blue-dark hover:font-bold items-center gap-2"}>
                 <div className={clsx("h-1 rounded w-4 bg-blue-dark group-hover:block", { block: lin == "thermo", hidden: lin != "thermo" })} />
-                Thermovision Technology
+                Thermal Inspection
               </Link>
               <Link href={`#aev`} name='aev' onClick={linkfunc} className={lin == "aev" ? "text-blue font-bold flex items-center gap-2" : "group flex hover:text-blue-dark hover:font-bold items-center gap-2"}>
                 <div className={clsx("h-1 rounded w-4 bg-blue-dark group-hover:block", { block: lin == "aev", hidden: lin != "aev" })} />
