@@ -1,10 +1,40 @@
 import Head from "next/head";
-
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import SurveyAndMapping from "../../components/SurveyAndMapping";
+import { request, gql } from "graphql-request";
 
-export default function Home() {
+export async function getServerSideProps() {
+  const query = gql`
+    {
+      items: surveyPages(first: 1) {
+        nodes {
+          ...SurveyPageFields
+        }
+      }
+    }
+
+    fragment SurveyPageFields on SurveyPage {
+      title
+      description
+      subserviceTitle
+      subserviceDescription
+    }
+  `;
+
+  const { items } = await request(
+    "https://www.handalselaras.com/graphql/",
+    query
+  );
+
+  return {
+    props: {
+      data: items.nodes[0],
+    },
+  };
+}
+
+export default function Home({ data }) {
   return (
     <div>
       <Head>
@@ -13,7 +43,7 @@ export default function Home() {
         <link rel='icon' href='/logo.ico' />
       </Head>
       <Navbar />
-      <SurveyAndMapping />
+      <SurveyAndMapping pageData={data} />
 
       <Footer />
     </div>
