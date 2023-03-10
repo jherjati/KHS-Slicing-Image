@@ -10,7 +10,7 @@ export async function getStaticPaths() {
   ).json();
   return {
     paths: blogRes.map((el) => ({ params: el })),
-    fallback: true,
+    fallback: "blocking",
   };
 }
 
@@ -37,6 +37,7 @@ export async function getStaticProps({ params }) {
       blog,
       blogs,
     },
+    revalidate: 12 * 60 * 60 * 1000,
   };
 }
 

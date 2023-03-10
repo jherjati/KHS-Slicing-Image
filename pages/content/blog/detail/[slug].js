@@ -5,16 +5,26 @@ import BlogDetail from "../../../../components/BlogDetail";
 import { rootUrl, wpBlog2webBlog } from "../../../../constants";
 
 export async function getStaticPaths() {
-  const blogRes = await (await fetch(rootUrl + "/posts?per_page=5&_fields=slug")).json();
+  const blogRes = await (
+    await fetch(rootUrl + "/posts?per_page=5&_fields=slug")
+  ).json();
   return {
     paths: blogRes.map((el) => ({ params: el })),
-    fallback: true,
+    fallback: "blocking",
   };
 }
 
 export async function getStaticProps({ params }) {
-  const blogRes = await (await fetch(rootUrl + "/posts?per_page=1&_embed&slug=" + params.slug)).json();
-  const blogsRes = await (await fetch(rootUrl + "/posts?per_page=7&_embed&_fields=id,title,excerpt,modified,slug,_links,_embedded&categories=" + blogRes[0].categories[0])).json();
+  const blogRes = await (
+    await fetch(rootUrl + "/posts?per_page=1&_embed&slug=" + params.slug)
+  ).json();
+  const blogsRes = await (
+    await fetch(
+      rootUrl +
+        "/posts?per_page=7&_embed&_fields=id,title,excerpt,modified,slug,_links,_embedded&categories=" +
+        blogRes[0].categories[0]
+    )
+  ).json();
 
   const blog = blogRes[0];
   const blogs = blogsRes
@@ -27,6 +37,7 @@ export async function getStaticProps({ params }) {
       blog,
       blogs,
     },
+    revalidate: 12 * 60 * 60 * 1000,
   };
 }
 

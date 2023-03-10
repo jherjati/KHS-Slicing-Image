@@ -19,6 +19,7 @@ export async function getStaticProps() {
       blogs,
       categories: categories,
     },
+    revalidate: 12 * 60 * 60 * 1000,
   };
 }
 

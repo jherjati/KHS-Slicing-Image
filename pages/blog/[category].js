@@ -9,7 +9,7 @@ export async function getStaticPaths() {
     paths: categories.map(({ catIds }) => {
       return { params: { category: catIds } };
     }),
-    fallback: true,
+    fallback: "blocking",
   };
 }
 
@@ -28,6 +28,7 @@ export async function getStaticProps({ params }) {
       blogs,
       categories: categories,
     },
+    revalidate: 12 * 60 * 60 * 1000,
   };
 }
 

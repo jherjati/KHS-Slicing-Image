@@ -9,12 +9,18 @@ export async function getStaticPaths() {
     paths: categories.map(({ catIds }) => {
       return { params: { category: catIds } };
     }),
-    fallback: true,
+    fallback: "blocking",
   };
 }
 
 export async function getStaticProps({ params }) {
-  const blogsRes = await (await fetch(rootUrl + "/posts?per_page=12&_embed&_fields=id,title,excerpt,modified,slug,_links,_embedded&categories=" + params.category)).json();
+  const blogsRes = await (
+    await fetch(
+      rootUrl +
+        "/posts?per_page=12&_embed&_fields=id,title,excerpt,modified,slug,_links,_embedded&categories=" +
+        params.category
+    )
+  ).json();
   const blogs = blogsRes.filter((bl) => Boolean(bl)).map(wpBlog2webBlog);
 
   return {
@@ -22,6 +28,7 @@ export async function getStaticProps({ params }) {
       blogs,
       categories: categories,
     },
+    revalidate: 12 * 60 * 60 * 1000,
   };
 }
 

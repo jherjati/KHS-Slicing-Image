@@ -5,7 +5,12 @@ import Blog from "../../../components/Blog";
 import { categories, rootUrl, wpBlog2webBlog } from "../../../constants";
 
 export async function getStaticProps() {
-  const blogsRes = await (await fetch(rootUrl + "/posts?per_page=12&_embed&_fields=id,title,excerpt,modified,slug,_links,_embedded")).json();
+  const blogsRes = await (
+    await fetch(
+      rootUrl +
+        "/posts?per_page=12&_embed&_fields=id,title,excerpt,modified,slug,_links,_embedded"
+    )
+  ).json();
 
   const blogs = blogsRes.map(wpBlog2webBlog);
 
@@ -14,6 +19,7 @@ export async function getStaticProps() {
       blogs,
       categories: categories,
     },
+    revalidate: 12 * 60 * 60 * 1000,
   };
 }
 
