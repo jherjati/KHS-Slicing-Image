@@ -4,7 +4,14 @@ import Footer from "../../../components/Footer";
 import Portofolio from "../../../components/Portofolio";
 import { rootUrl } from "../../../constants";
 
-export async function getStaticProps() {
+export async function getStaticPaths() {
+  return {
+    paths: [{ params: { detail: "4100" } }],
+    fallback: "blocking",
+  };
+}
+
+export async function getStaticProps({ params: { detail } }) {
   const slidesRes = await (
     await fetch(rootUrl + "/slides?_embed&_fields=acm_fields")
   ).json();
