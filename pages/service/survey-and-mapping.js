@@ -4,7 +4,7 @@ import Footer from "../../components/Footer";
 import SurveyAndMapping from "../../components/SurveyAndMapping";
 import { request, gql } from "graphql-request";
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const query = gql`
     {
       items: surveyPages(first: 1) {
@@ -31,6 +31,7 @@ export async function getServerSideProps() {
     props: {
       data: items.nodes[0],
     },
+    revalidate: 5 * 60 * 1000,
   };
 }
 

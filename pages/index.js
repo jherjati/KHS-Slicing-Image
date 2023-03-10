@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import HomePage from "../components/HomePage";
 import { rootUrl } from "../constants";
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const slidesRes = await (
     await fetch(rootUrl + "/slides?_embed&_fields=acm_fields")
   ).json();
@@ -19,6 +19,7 @@ export async function getServerSideProps() {
     props: {
       slides,
     },
+    revalidate: 5 * 60 * 1000,
   };
 }
 
