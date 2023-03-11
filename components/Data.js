@@ -31,7 +31,13 @@ export const dragImage = [
   // },
 ];
 
-export const logoClient = [{ logo: "/Clients-1.png" }, { logo: "/Clients-2.png" }, { logo: "/Clients-3.png" }, { logo: "/Clients-4.png" }, { logo: "/Clients-5.png" }];
+export const logoClient = [
+  { logo: "/Clients-1.png" },
+  { logo: "/Clients-2.png" },
+  { logo: "/Clients-3.png" },
+  { logo: "/Clients-4.png" },
+  { logo: "/Clients-5.png" },
+];
 export const licences = [
   {
     licence: "/licence-1.png",
@@ -176,22 +182,22 @@ export const drone = [
 ];
 export const aerials = [
   {
-    aerial: "/aerialPhoto1.JPG",
+    aerial: "/aerialphoto1.jpeg",
     name: "Aerial Photo Mapping for Tree Stocktacking",
     year: "2022",
   },
   {
-    aerial: "/aerialPhoto2.JPG",
+    aerial: "/aerialphoto2.jpeg",
     name: "Aerial Photo Mapping for Railroad Inspection",
     year: "2021",
   },
   {
-    aerial: "/aerialPhoto4.JPG",
+    aerial: "/aerialphoto4.jpeg",
     name: "1:5000 Aerial Photo Mapping of 23,000 Ha",
     year: "2021",
   },
   {
-    aerial: "/aerialPhoto3.JPG",
+    aerial: "/aerialphoto3.jpeg",
     name: "Aerial Photo Mapping for Transportation Routes in the Jabodetabek Urban Area",
     year: "2021",
   },
