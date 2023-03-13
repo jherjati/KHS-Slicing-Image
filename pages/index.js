@@ -2,28 +2,60 @@ import Head from "next/head";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import HomePage from "../components/HomePage";
-import { rootUrl } from "../constants";
+import { request, gql } from "graphql-request";
 
 export async function getStaticProps() {
-  const slidesRes = await (
-    await fetch(rootUrl + "/slides?_embed&_fields=acm_fields")
-  ).json();
+  const query = gql`
+    {
+      items: homePages(first: 1) {
+        nodes {
+          ...HomePageFields
+        }
+      }
+    }
 
-  const slides = slidesRes.map(({ acm_fields: { title, text, image } }) => ({
-    title,
-    text,
-    image: image.source_url,
-  }));
+    fragment HomePageFields on HomePage {
+      section1 {
+        mediaItemId
+        mediaItemUrl
+        title
+        altText
+        caption
+        description
+      }
+      section2Title
+      section2Description
+      section2Image {
+        mediaItemId
+        mediaItemUrl
+        altText
+        caption
+        description
+      }
+      section3Title
+      section3Description
+      section4Title
+      section4Description
+      section5Title
+      section5Description
+      section6Text
+    }
+  `;
+
+  const { items } = await request(
+    "https://www.handalselaras.com/graphql/",
+    query
+  );
 
   return {
     props: {
-      slides,
+      data: items.nodes[0],
     },
     revalidate: 5 * 60 * 1000,
   };
 }
 
-export default function Home({ slides }) {
+export default function Home({ data }) {
   return (
     <div>
       <Head>
@@ -32,7 +64,7 @@ export default function Home({ slides }) {
         <link rel='icon' href='/logo.ico' />
       </Head>
       <Navbar />
-      <HomePage slides={slides} />
+      <HomePage pageData={data} />
       <Footer />
     </div>
   );

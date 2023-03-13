@@ -64,13 +64,33 @@ function ImageHeadline({
   );
 }
 
-const HomePage = ({ slides }) => {
+const HomePage = ({ pageData }) => {
+  console.log(pageData);
+
+  const {
+    section1,
+    section2Title,
+    section2Description,
+    section2Image,
+    section3Title,
+    section3Description,
+    section4Title,
+    section4Description,
+    section5Title,
+    section5Description,
+    section6Text,
+  } = pageData;
+
   return (
     <div className='flex flex-col '>
       {/* slider */}
       <div className=' mt-16 '>
         <Slider2
-          data={slides}
+          data={section1.map((el) => ({
+            image: el.mediaItemUrl,
+            title: el.title,
+            text: el.caption,
+          }))}
           indicators={true}
           arrows={true}
           arrowClass='opacity-0 hover:opacity-100 transition-opacity ease-in-out'
@@ -82,13 +102,12 @@ const HomePage = ({ slides }) => {
         <div className=' grid md:grid-cols-4 gap-4'>
           <div className='flex flex-col space-y-2 md:space-y-3 md:col-span-3 col-span-4'>
             <h1 className='text-blacky font-[700] text-sedangmobile md:text-sedang font-quicksand px-[20px] md:px-[120px]'>
-              Our Services
+              {section2Title}
             </h1>
-            <p className='text-grey text-justify text-kecilmobile md:text-kecil font-quicksand px-[20px] md:px-[120px]'>
-              Blandit 1,900 natoque dui justo, dictum turpis amet, viverra vel
-              ornare quis mattis mi ac eget id integer dolor dui aliquam
-              volutpat varius pulvinar massa
-            </p>
+            <div
+              className='text-grey text-justify text-kecilmobile md:text-kecil font-quicksand px-[20px] md:px-[120px]'
+              dangerouslySetInnerHTML={{ __html: section2Description }}
+            ></div>
           </div>
           <div className='hidden col-span-2 md:col-span-1 md:flex flex-col pr-[120px] justify-center items-end'>
             <button
@@ -99,7 +118,14 @@ const HomePage = ({ slides }) => {
             </button>
           </div>
         </div>
-        <DragImage />
+        <DragImage
+          data={section2Image.map((el) => ({
+            image: el.mediaItemUrl,
+            title: el.caption,
+            text: el.description,
+            link: el.altText,
+          }))}
+        />
         <div className='md:hidden px-5'>
           <button
             type='button'
@@ -113,20 +139,14 @@ const HomePage = ({ slides }) => {
       <div className='md:grid md:grid-cols-2 gap-5 md:px-[120px] mb-[60px] md:mb-[90px] px-5 items-center space-y-[16px]'>
         <div className='space-y-[16px]'>
           <div>
-            <h1 className='text-blacky font-[700]  tracking-wide text-sedangmobile md:text-sedang font-quicksand'>
-              Dream Bigger.
-            </h1>
-            <h1 className='text-blacky font-[700] tracking-wide text-sedangmobile md:text-sedang font-quicksand'>
-              Reach Higher.
+            <h1 className='text-blacky font-[700]  tracking-wide text-sedangmobile md:text-sedang font-quicksand w-3/4'>
+              {section3Title}
             </h1>
           </div>
-          <p className='text-grey text-kecilmobile md:text-kecil font-quicksand text-justify '>
-            HANDAL SELARAS GROUP is a group of companies with integrated
-            business coverage. Engaged in the field of surveying and mapping,
-            spatial planning, public policy development, architecture,
-            construction management, design, and creative visual design, we
-            provide services from upstream to downstream.
-          </p>
+          <div
+            className='text-grey text-kecilmobile md:text-kecil font-quicksand text-justify '
+            dangerouslySetInnerHTML={{ __html: section3Description }}
+          ></div>
         </div>
         <ImageHeadline
           mainImg='/images/img-home-2.png'
@@ -153,15 +173,12 @@ const HomePage = ({ slides }) => {
         />
         <div className='space-y-[16px] relative'>
           <h1 className='text-blacky font-[700]  tracking-wide text-sedangmobile md:text-sedang font-quicksand'>
-            Grow & Continue
+            {section4Title}
           </h1>
-          <p className='text-grey text-kecilmobile md:text-kecil font-quicksand text-justify '>
-            HANDAL SELARAS GROUP determined to continue to grow and continue to
-            exist for the success of national development programs both at
-            central and regional level by promoting the affordability, quality
-            of work output, and complete the work on time in order to provide
-            excellent service to clients.
-          </p>
+          <div
+            className='text-grey text-kecilmobile md:text-kecil font-quicksand text-justify '
+            dangerouslySetInnerHTML={{ __html: section4Description }}
+          ></div>
         </div>
       </div>
       {/* Imagine, Believe, Achive */}
@@ -179,55 +196,32 @@ const HomePage = ({ slides }) => {
         <div className='md:grid md:grid-cols-2 gap-5 items-center md:pb-[60px] '>
           <div className='space-y-[16px]'>
             <h1 className='text-blacky font-[700]  tracking-wide text-sedangmobile md:text-sedang font-quicksand'>
-              Imagine, Believe, Achive!
+              {section5Title}
             </h1>
-            <p className='text-grey text-kecilmobile md:text-kecil font-quicksand text-justify '>
-              Engaged in the field of surveying and mapping, spatial planning,
-              public policy development, architecture, construction management,
-              design, and creative visual design, we provide services from
-              upstream to downstream.
-            </p>
+            <div
+              className='text-grey text-kecilmobile md:text-kecil font-quicksand text-justify '
+              dangerouslySetInnerHTML={{ __html: section5Description }}
+            ></div>
           </div>
         </div>
         <div className='flex flex-col lg:grid lg:grid-cols-4  gap-8 relative'>
-          <div className=' bg-white grid gap-2  content-center text-left  rounded-[1rem] shadow-md p-5 md:p-6'>
-            <div className='text-[24px] leading-[29px] md:text-[32px] md:leading-[39px] font-inter font-[800] text-blue '>
-              1992
-            </div>
-            <div className='text-[18px] leading-[22px] md:text-[20px] md:leading-[24px] font-inter  text-blacky font-[600]'>
-              Year
-            </div>
-            <div className='text-xl text-slate-600'>
-              We started our business
-            </div>
-          </div>
-          <div className=' bg-white grid gap-2  content-center text-left  rounded-[1rem] shadow-md p-5 md:p-6'>
-            <div className='text-[24px] leading-[29px] md:text-[32px] md:leading-[39px] font-inter font-[800] text-blue '>
-              523
-            </div>
-            <div className='text-[18px] leading-[22px] md:text-[20px] md:leading-[24px] font-inter  text-blacky font-[600]'>
-              Projects
-            </div>
-            <div className='text-xl text-slate-600'>Have been done</div>
-          </div>
-          <div className=' bg-white grid gap-2  content-center text-left  rounded-[1rem] shadow-md p-5 md:p-6'>
-            <div className='text-[24px] leading-[29px] md:text-[32px] md:leading-[39px] font-inter font-[800] text-blue '>
-              123
-            </div>
-            <div className='text-[18px] leading-[22px] md:text-[20px] md:leading-[24px] font-inter  text-blacky font-[600]'>
-              Employees
-            </div>
-            <div className='text-xl text-slate-600'>Working together</div>
-          </div>
-          <div className=' bg-white grid gap-2  content-center text-left  rounded-[1rem] shadow-md p-5 md:p-6'>
-            <div className='text-[24px] leading-[29px] md:text-[32px] md:leading-[39px] font-inter font-[800] text-blue '>
-              10
-            </div>
-            <div className='text-[18px] leading-[22px] md:text-[20px] md:leading-[24px] font-inter  text-blacky font-[600]'>
-              Countries
-            </div>
-            <div className='text-xl text-slate-600'>Connected with us</div>
-          </div>
+          {section6Text.map((text) => {
+            const [a, b, c] = text.split("\r\n");
+            return (
+              <div
+                key={text}
+                className=' bg-white grid gap-2  content-center text-left  rounded-[1rem] shadow-md p-5 md:p-6'
+              >
+                <div className='text-[24px] leading-[29px] md:text-[32px] md:leading-[39px] font-inter font-[800] text-blue '>
+                  {a}
+                </div>
+                <div className='text-[18px] leading-[22px] md:text-[20px] md:leading-[24px] font-inter  text-blacky font-[600]'>
+                  {b}
+                </div>
+                <div className='text-xl text-slate-600'>{c}</div>
+              </div>
+            );
+          })}
         </div>
         <div className='pt-[60px] md:pt-[90px]'>
           <SlideClients slides={logoClient} clients={clients} />

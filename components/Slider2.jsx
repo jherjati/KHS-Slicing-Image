@@ -94,9 +94,10 @@ const Slider2 = ({
                   <h1 className='text-white font-quicksand font-bold text-[28px] md:text-[55px]'>
                     {title}
                   </h1>
-                  <p className='text-[#EEEEEE] font-inter w-[330px] md:w-[540px] text-[14px] md:text-[16px] '>
-                    {text}
-                  </p>
+                  <div
+                    className='text-[#EEEEEE] font-inter w-[330px] md:w-[540px] text-[14px] md:text-[16px] '
+                    dangerouslySetInnerHTML={{ __html: text }}
+                  ></div>
                 </div>
               )}
             </div>
