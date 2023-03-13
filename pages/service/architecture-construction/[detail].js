@@ -26,7 +26,7 @@ export async function getStaticProps({ params: { detail } }) {
     props: {
       slides,
     },
-    revalidate: 5 * 60 * 1000,
+    revalidate: 1 * 30,
   };
 }
 

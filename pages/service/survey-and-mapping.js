@@ -31,7 +31,7 @@ export async function getStaticProps() {
     props: {
       data: items.nodes[0],
     },
-    revalidate: 5 * 60 * 1000,
+    revalidate: 1 * 30,
   };
 }
 

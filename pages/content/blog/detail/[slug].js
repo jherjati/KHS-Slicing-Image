@@ -37,7 +37,7 @@ export async function getStaticProps({ params }) {
       blog,
       blogs,
     },
-    revalidate: 5 * 60 * 1000,
+    revalidate: 1 * 30,
   };
 }
 
