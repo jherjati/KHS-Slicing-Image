@@ -90,8 +90,13 @@ const SurveyAndMapping = ({ pageData }) => {
                   key={title}
                   className='text-center flex flex-col items-center justify-center space-y-4 rounded-[1rem] bg-white shadow-lg w-full p-2 md:p-4'
                 >
-                  <div className='relative h-20'>
-                    <img src={mediaItemUrl} alt='Image' />
+                  <div className='relative h-20 w-full'>
+                    <Image
+                      fill
+                      src={mediaItemUrl}
+                      alt='Image'
+                      className='object-contain object-center'
+                    />
                   </div>
                   <p className='pb-2 text-blacky text-[12px] md:text-[14px] leading-[15px] md:leading-[17px] font-[600] font-inter'>
                     {title}

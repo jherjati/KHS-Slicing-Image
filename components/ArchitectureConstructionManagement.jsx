@@ -110,12 +110,14 @@ const ArchitectureConstructionManagement = ({ pageData }) => {
                               )
                             }
                           >
-                            <img
-                              src={mediaItemUrl}
-                              alt={altText}
-                              className='object-cover object-center w-full aspect-video'
-                            />
-
+                            <div className='relative w-full aspect-video'>
+                              <Image
+                                fill
+                                src={mediaItemUrl}
+                                alt={altText}
+                                className='object-cover object-center'
+                              />
+                            </div>
                             <div className='flex flex-col space-y-[10px]'>
                               <div
                                 className='text-blacky font-[700] leading-[20px] text-sm md:leading-[22px] font-inter'
