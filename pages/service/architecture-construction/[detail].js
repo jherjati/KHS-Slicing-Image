@@ -2,7 +2,7 @@ import Head from "next/head";
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
 import Portofolio from "../../../components/Portofolio";
-import { rootUrl } from "../../../constants";
+import { gql, request } from "graphql-request";
 
 export async function getStaticPaths() {
   return {
@@ -12,15 +12,39 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params: { detail } }) {
-  const slidesRes = await (
-    await fetch(rootUrl + "/slides?_embed&_fields=acm_fields")
-  ).json();
+  const query = gql`
+    {
+      items: homePages(first: 1) {
+        nodes {
+          ...HomePageFields
+        }
+      }
+    }
 
-  const slides = slidesRes.map(({ acm_fields: { title, text, image } }) => ({
-    title,
-    text,
-    image: image.source_url,
-  }));
+    fragment HomePageFields on HomePage {
+      section1 {
+        mediaItemId
+        mediaItemUrl
+        title
+        altText
+        caption
+        description
+      }
+    }
+  `;
+
+  const { items } = await request(
+    "https://www.handalselaras.com/graphql/",
+    query
+  );
+
+  const slides = items.nodes[0].section1.map(
+    ({ title, caption, mediaItemUrl }) => ({
+      title,
+      text: caption,
+      image: mediaItemUrl,
+    })
+  );
 
   return {
     props: {
