@@ -19,6 +19,14 @@ export async function getStaticProps() {
       description
       subserviceTitle
       subserviceDescription
+      tools {
+        mediaItemId
+        mediaItemUrl
+        title
+        altText
+        caption
+        description
+      }
     }
   `;
 

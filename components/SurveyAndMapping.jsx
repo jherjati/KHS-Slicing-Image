@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { tools, aerials } from "./Data";
+import { aerials } from "./Data";
 import React, { useState } from "react";
 import clsx from "clsx";
 import accentRedBlue from "../public/accents/ac-red-blue.svg";
@@ -17,7 +17,7 @@ const SurveyAndMapping = ({ pageData }) => {
     router.push(`#${e.target.name}`);
   }
 
-  const { title, description, subserviceTitle, subserviceDescription } =
+  const { title, description, subserviceTitle, subserviceDescription, tools } =
     pageData;
 
   return (
@@ -84,21 +84,17 @@ const SurveyAndMapping = ({ pageData }) => {
         />
         <div className='flex justify-center md:justify-between relative'>
           <div className='row-span-2 grid grid-cols-2 gap-x-12 gap-y-4 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-8 w-full'>
-            {tools.map(({ tool, name, lebar, panjang }) => {
+            {tools.map(({ title, mediaItemUrl }) => {
               return (
                 <div
-                  key={tool}
-                  className='grid gap-4 text-center justify-items-center content-center rounded-[1rem] bg-white shadow-lg w-full min-[1299px]:h-[159px]'
+                  key={title}
+                  className='text-center flex flex-col items-center justify-center space-y-4 rounded-[1rem] bg-white shadow-lg w-full p-2 md:p-4'
                 >
-                  <Image
-                    width={lebar}
-                    height={panjang}
-                    layout='responsive'
-                    src={tool}
-                    alt='Image'
-                  />
-                  <p className='pb-2 self-end text-blacky text-[12px] md:text-[14px] leading-[15px] md:leading-[17px] font-[600] font-inter'>
-                    {name}
+                  <div className='relative h-20'>
+                    <img src={mediaItemUrl} alt='Image' />
+                  </div>
+                  <p className='pb-2 text-blacky text-[12px] md:text-[14px] leading-[15px] md:leading-[17px] font-[600] font-inter'>
+                    {title}
                   </p>
                 </div>
               );
