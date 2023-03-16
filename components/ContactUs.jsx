@@ -31,11 +31,11 @@ const ContactUs = () => {
             </div>
             <div className='flex items-center space-x-1 gap-2'>
               <MdCall className='text-sm md:text-2xl text-[#8F8C8C] cursor-pointer  hover:text-sky-200' />
-              <p className='text-[#8F8C8C] md:text-base text-sm'>0851 9514 5758 (Nurul)</p>
+              <p className='text-[#8F8C8C] md:text-base text-sm'>0851-9514-5758</p>
             </div>
-            <div className='flex items-center space-x-1 gap-2' onClick={() => window.open("https://wa.me/>085195145758", "_blank")}>
+            <div className='flex items-center space-x-1 gap-2 cursor-pointer' onClick={() => window.open("https://wa.me/6285195145758", "_blank")}>
               <FaWhatsapp className='text-sm md:text-2xl text-[#8F8C8C] cursor-pointer  hover:text-sky-200' />
-              <p className='text-[#8F8C8C] md:text-base text-sm'>0851 9514 5758 (Nurul)</p>
+              <p className='text-[#8F8C8C] md:text-base text-sm'>0851-9514-5758</p>
             </div>
           </div>
         </div>

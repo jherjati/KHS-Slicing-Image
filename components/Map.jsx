@@ -11,8 +11,8 @@ function Map() {
       mapRef.current = new maplibregl.Map({
         container: mapContainer.current,
         style: `https://api.maptiler.com/maps/streets/style.json?key=HJUbFGdyhTnKTnEt7XiJ`,
-        center: [107.613144, -6.905977],
-        zoom: 8,
+        center: [106.77362941159411, -6.273664348029148],
+        zoom: 10,
         attributionControl: false,
       });
 
@@ -27,6 +27,9 @@ function Map() {
         "top-right"
       );
       mapRef.current.addControl(new maplibregl.NavigationControl({ showCompass: false, showZoom: true }), "bottom-right");
+      mapRef.current.on("load", () => {
+        var marker = new maplibregl.Marker().setLngLat([106.77362941159411, -6.273664348029148]).addTo(mapRef.current);
+      });
     }
 
     return () => {};

@@ -279,7 +279,9 @@ const Navbar = () => {
         <div className='z-[200] w-full'>
           <div className='hidden lg:flex justify-between h-[70px]  shadow-lg md:px-10  bg-white   fixed top-0 left-0 right-0 z-10'>
             <div className='gap-10 flex w-auto h-auto px-3 items-center '>
-              <Image width={76.54} height={33.93} className='w-[77.54px] h-[33.93px] ' src='/logoatas.png' alt='khs logo' />
+              <Link href='/'>
+                <Image width={76.54} height={33.93} className='w-[77.54px] h-[33.93px] ' src='/logoatas.png' alt='khs logo' />
+              </Link>
               <Link href='/' className={clsx("font-bold font-quicksand transition-colors ease-in-out hover:text-blue-dark", { "text-blue-dark": router.pathname === "/" })} onClick={() => setActiveNav("home")}>
                 Home
               </Link>
@@ -376,9 +378,9 @@ const Navbar = () => {
                 </DropDown>
               </div>
               <div className='hidden md:flex gap-6 items-center pl-3'>
-                <FaInstagram className=' text-16px] font-bold cursor-pointer hover:text-yellow-600' />
-                <FaFacebook className=' text-16px] font-bold cursor-pointer hover:text-sky-600' />
-                <FaYoutube className=' text-16px] font-bold cursor-pointer hover:text-red-600' />
+                <FaInstagram className=' text-16px] font-bold cursor-pointer hover:text-yellow-600' onClick={() => window.open("https://www.instagram.com/handalselaras/?hl=en", "_blank")} />
+                {/* <FaFacebook className=' text-16px] font-bold cursor-pointer hover:text-sky-600' /> */}
+                <FaYoutube className=' text-16px] font-bold cursor-pointer hover:text-red-600' onClick={() => window.open("https://www.youtube.com/channel/UCqdgCMFewMEKRnJVcTeJi6w", "_blank")} />
               </div>
             </div>
           </div>

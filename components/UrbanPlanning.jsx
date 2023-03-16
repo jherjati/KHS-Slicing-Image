@@ -40,12 +40,12 @@ const UrbanPlanning = () => {
           </ul>
         </div>
         <div className='flex justify-end items-center'>
-          <div className='grid grid-rows-2  bg-urban bg-cover bg-center rounded-[1rem] w-[90%]  h-[80%]'>
+          <div className='grid grid-rows-2  bg-urban bg-cover bg-center rounded-[1rem] w-full md:w-[90%]  h-[80%]'>
             <div className='grid grid-cols-2 row-start-2'>
-              <div className='outline outline-[16px] md:outline-[28px] bg-white w-[100%]  outline-white rounded-tr-lg'>
-                <Image src='/urbanimage.png' className='' alt='' width='300' height='300' />
-                <h1 className='text-blacky text-[14px] leading-[17px] md:text-[18px] md:leading-[22px] font-[700] font-inter'>Kontur Mandalika</h1>
-                <p className='text-grey text-[12px] md:text-[16px] md:leading-[19px] leading-[15px] font-[400] font-inter pb-[10px] '>Urban Planning</p>
+              <div className='outline outline-[16px] md:outline-[28px] bg-white w-[100%]  outline-white rounded-2xl'>
+                <Image src='/urbanimage.png' className='h-full object-cover ' alt='' width='300' height='300' />
+                {/* <h1 className='text-blacky text-[14px] leading-[17px] md:text-[18px] md:leading-[22px] font-[700] font-inter'>Kontur Mandalika</h1>
+                <p className='text-grey text-[12px] md:text-[16px] md:leading-[19px] leading-[15px] font-[400] font-inter pb-[10px] '>Urban Planning</p> */}
               </div>
             </div>
           </div>

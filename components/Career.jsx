@@ -42,9 +42,9 @@ const Career = () => {
             At Kreasi Handal Selaras, we are working hard to reach our goals and enjoying every challenge and having fun while doing it. We hire talents who have a passion for creating new solutions and next-gen technology to help
             businesses and people.
           </p>
-          <div className='grid md:flex pb-8'>
+          {/* <div className='grid md:flex pb-8'>
             <button className=' text-white font-bold bg-sky-700 rounded-lg tracking-wide text-sm md:text-base font-quicksand py-3 px-5 hover:bg-opacity-80 transition-colors ease-in-out'>See Opportunity</button>
-          </div>
+          </div> */}
         </div>
       </div>
       {/* page 2 */}
@@ -104,21 +104,18 @@ const Career = () => {
         <div className='flex flex-col lg:grid lg:grid-cols-2 gap-3'>
           <div className='relative w-[100%] h-[100%]'>
             <Image className=' ' width='800' height='300' src='/careerimageactivity1.png' alt='' layout='intrinsic' />
-            <p className='absolute w-[90%] lg:w-[70%] pt-3 bottom-0   text-grey text-kecilmobile md:text-kecil font-inter bg-white '>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmo</p>
           </div>
           <div className='hidden lg:flex flex-col gap-3'>
             <div className='relative w-[100%] h-[100%]'>
               <Image className=' ' width='800' height='300' src='/careerimageactivity2.png' alt='' layout='intrinsic' />
-              <p className='absolute w-[70%] pt-3 bottom-0   text-grey text-kecilmobile md:text-kecil font-inter bg-white  '>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmo</p>
             </div>
             <div className='grid grid-cols-2 gap-3'>
               <div className='relative w-[100%] h-[100%]'>
                 <Image className=' ' width='800' height='300' src='/careerimageactivity3.png' alt='' layout='intrinsic' />
-                <p className='absolute w-[90%] pt-3 bottom-0   text-grey text-kecilmobile md:text-kecil font-inter bg-white  '>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do</p>
               </div>
               <div className='relative w-[100%] h-[100%]'>
                 <Image className=' ' width='800' height='300' src='/careerimageactivity4.png' alt='' layout='intrinsic' />
-                <p className='absolute w-[90%] pt-3 bottom-0   text-grey text-kecilmobile md:text-kecil font-inter bg-white  '>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do</p>
+                {/* <p className='absolute w-[90%] pt-3 bottom-0   text-grey text-kecilmobile md:text-kecil font-inter bg-white  '>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do</p> */}
               </div>
             </div>
           </div>

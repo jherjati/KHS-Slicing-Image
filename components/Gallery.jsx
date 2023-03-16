@@ -8,9 +8,6 @@ const Galery = () => {
       <div className=' flex flex-col space-y-8 lg:grid lg:grid-cols-3  content-center px-[20px] md:px-[120px] mt-16'>
         <div className='lg:col-span-2 flex justify-center flex-col space-y-2 md:space-y-8 col-span-1 mx-3'>
           <h1 className='text-slate-900 font-bold tracking-wide text-2xl md:text-5xl font-quicksand '>Our Gallery</h1>
-          <p className='text-slate-500 tracking-wide text-sm md:text-xl font-quicksand text-justify'>
-            Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et. Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et
-          </p>
         </div>
       </div>
       {/* batas */}
@@ -31,7 +28,6 @@ const Galery = () => {
                   className='md:w-[550px] md:max-w-[550px] md:h-[400px] max-w-[330px] h-[175px] w-full'
                 ></iframe>
               </div>
-
               <div className='flex flex-col justify-center'>
                 <p className='text-slate-800 font-bold tracking-wide text-sm md:text-xl font-quicksand'>{text}</p>
               </div>

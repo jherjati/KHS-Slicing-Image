@@ -31,13 +31,7 @@ export const dragImage = [
   // },
 ];
 
-export const logoClient = [
-  { logo: "/Clients-1.png" },
-  { logo: "/Clients-2.png" },
-  { logo: "/Clients-3.png" },
-  { logo: "/Clients-4.png" },
-  { logo: "/Clients-5.png" },
-];
+export const logoClient = [{ logo: "/Clients-1.png" }, { logo: "/Clients-2.png" }, { logo: "/Clients-3.png" }, { logo: "/Clients-4.png" }, { logo: "/Clients-5.png" }];
 export const licences = [
   {
     licence: "/licence-1.png",
@@ -473,6 +467,41 @@ export const clients = [
   {
     client: "/client (30).png",
     lebar: 115,
+    panjang: 60,
+  },
+  {
+    client: "/client (31).png",
+    lebar: 114,
+    panjang: 60,
+  },
+  // {
+  //   client: "/client (32).png",
+  //   lebar: 103,
+  //   panjang: 60,
+  // },
+  {
+    client: "/client (33).png",
+    lebar: 110,
+    panjang: 60,
+  },
+  {
+    client: "/client (34).png",
+    lebar: 110,
+    panjang: 60,
+  },
+  {
+    client: "/client (35).png",
+    lebar: 110,
+    panjang: 60,
+  },
+  {
+    client: "/client (36).png",
+    lebar: 110,
+    panjang: 60,
+  },
+  {
+    client: "/client (37).png",
+    lebar: 110,
     panjang: 60,
   },
 ];

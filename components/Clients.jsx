@@ -21,20 +21,20 @@ const Clients = () => {
         <div className='grid grid-cols-4 md:grid-cols-5 px-[30px] md:px-[150px] gap-5'>
           {clients.map(({ client, lebar, panjang }) => {
             return (
-              <div key={client} className='flex items-center justify-center mx-auto w-full md:w-[100px] h-[60px] md:h-[100px] grayscale hover:grayscale-0 hover:scale-[1.3] ease-in-out duration-300 delay-100'>
-                <Image width={lebar} height={panjang} src={client} alt={client} className='md:h-[70%] h-[30px] md:w-auto max-w-[90%] w-full object-contain' />
+              <div key={client} className='flex items-center justify-center mx-auto w-full md:w-[100px] h-[60px] md:h-[100px] hover:scale-[1.3] ease-in-out duration-300 delay-100'>
+                <Image width={lebar} height={panjang} src={client} alt={client} className='md:h-[70%] h-[30px] md:w-auto max-w-[90%] w-full object-scale-down' />
               </div>
             );
           })}
-          {clients2.map(({ client, lebar, panjang }) => {
+          {/* {clients2.map(({ client, lebar, panjang }) => {
             return (
               <div key={client} className='md:hidden flex items-center justify-center mx-auto w-full md:w-[100px] h-[60px] md:h-[100px] grayscale hover:grayscale-0 hover:scale-[1.3] ease-in-out duration-300 delay-100'>
                 <Image width={lebar} height={panjang} src={client} alt={clients2} className='md:h-[70%] h-[30px] md:w-auto max-w-[90%] w-full object-contain' />
               </div>
             );
-          })}
+          })} */}
         </div>
-        <div className='hidden md:grid grid-cols-4 md:grid-cols-7 px-[30px] md:px-[150px] gap-5'>
+        {/* <div className='hidden md:grid grid-cols-4 md:grid-cols-7 px-[30px] md:px-[150px] gap-5'>
           {clients2.map(({ client, lebar, panjang }) => {
             return (
               <div key={client} className='flex items-center justify-center mx-auto w-full md:w-[100px] h-[60px] md:h-[100px] grayscale hover:grayscale-0 hover:scale-[1.3] ease-in-out duration-300 delay-100'>
@@ -42,7 +42,7 @@ const Clients = () => {
               </div>
             );
           })}
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -93,12 +93,12 @@ const AboutUs = () => {
               </span>
               <p className='text-[14px] leading-[20px] font-[400] font-inter text-grey'>Architecture, University of Indonesia</p>
             </div>
-            <div className='flex items-center justify-center gap-5'>
+            {/* <div className='flex items-center justify-center gap-5'>
               <FaFacebook className=' text-[16px] text-gray-500 cursor-pointer hover:text-sky-600' />
               <FaTwitter className=' text-[16px] text-gray-500 cursor-pointer hover:text-sky-600' />
               <FaInstagram className=' text-[16px] text-gray-500 cursor-pointer hover:text-yellow-600' />
               <FaYoutube className=' text-[16px] text-gray-500 cursor-pointer hover:text-red-600' />
-            </div>
+            </div> */}
           </div>
         </div>
         <div className='w-full space-y-[32px] pb-[30px] md:pb-[60px] px-5'>
@@ -116,12 +116,12 @@ const AboutUs = () => {
                 </span>
                 <p className='text-[14px] leading-[20px] font-[400] font-inter text-grey'>Department Name, University Name</p>
               </div>
-              <div className='flex items-center justify-center gap-5'>
+              {/* <div className='flex items-center justify-center gap-5'>
                 <FaFacebook className=' text-[16px] text-gray-500 cursor-pointer hover:text-sky-600' />
                 <FaTwitter className=' text-[16px] text-gray-500 cursor-pointer hover:text-sky-600' />
                 <FaInstagram className=' text-[16px] text-gray-500 cursor-pointer hover:text-yellow-600' />
                 <FaYoutube className=' text-[16px] text-gray-500 cursor-pointer hover:text-red-600' />
-              </div>
+              </div> */}
             </div>
             <div className='flex flex-col  justify-center space-y-2 md:space-y-0 gap-2 relative'>
               <div className='flex flex-col items-center space-y-2'>
@@ -132,12 +132,12 @@ const AboutUs = () => {
                 </span>
                 <p className='text-[14px] leading-[20px] font-[400] font-inter text-grey'>Real Estate, University of Greenwich </p>
               </div>
-              <div className='flex items-center justify-center gap-5'>
+              {/* <div className='flex items-center justify-center gap-5'>
                 <FaFacebook className=' text-[16px] text-gray-500 cursor-pointer hover:text-sky-600' />
                 <FaTwitter className=' text-[16px] text-gray-500 cursor-pointer hover:text-sky-600' />
                 <FaInstagram className=' text-[16px] text-gray-500 cursor-pointer hover:text-yellow-600' />
                 <FaYoutube className=' text-[16px] text-gray-500 cursor-pointer hover:text-red-600' />
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -156,12 +156,12 @@ const AboutUs = () => {
                 </span>
                 <p className='text-[14px] leading-[20px] font-[400] font-inter text-grey'>Geodetic Engineering, ITB</p>
               </div>
-              <div className='flex items-center justify-center gap-5'>
+              {/* <div className='flex items-center justify-center gap-5'>
                 <FaFacebook className=' text-[16px] text-gray-500 cursor-pointer hover:text-sky-600' />
                 <FaTwitter className=' text-[16px] text-gray-500 cursor-pointer hover:text-sky-600' />
                 <FaInstagram className=' text-[16px] text-gray-500 cursor-pointer hover:text-yellow-600' />
                 <FaYoutube className=' text-[16px] text-gray-500 cursor-pointer hover:text-red-600' />
-              </div>
+              </div> */}
             </div>
             <div className='flex flex-col justify-center space-y-2 md:space-y-0 gap-2 relative'>
               <div className='flex flex-col items-center space-y-2'>
@@ -173,12 +173,12 @@ const AboutUs = () => {
                 </span>
                 <p className='text-[14px] leading-[20px] font-[400] font-inter text-grey'>Architecture, Itenas</p>
               </div>
-              <div className='flex items-center justify-center gap-5'>
+              {/* <div className='flex items-center justify-center gap-5'>
                 <FaFacebook className=' text-[16px] text-gray-500 cursor-pointer hover:text-sky-600' />
                 <FaTwitter className=' text-[16px] text-gray-500 cursor-pointer hover:text-sky-600' />
                 <FaInstagram className=' text-[16px] text-gray-500 cursor-pointer hover:text-yellow-600' />
                 <FaYoutube className=' text-[16px] text-gray-500 cursor-pointer hover:text-red-600' />
-              </div>
+              </div> */}
             </div>
             <div className='flex flex-col justify-center space-y-2 md:space-y-0 gap-2 relative'>
               <div className='flex flex-col items-center space-y-2'>
@@ -190,12 +190,12 @@ const AboutUs = () => {
                 </span>
               </div>
               <p className='text-[14px] text-center leading-[20px] font-[400] font-inter text-grey'>Geodetic Engineering, Undip</p>
-              <div className='flex items-center justify-center gap-5'>
+              {/* <div className='flex items-center justify-center gap-5'>
                 <FaFacebook className=' text-[16px] text-gray-500 cursor-pointer hover:text-sky-600' />
                 <FaTwitter className=' text-[16px] text-gray-500 cursor-pointer hover:text-sky-600' />
                 <FaInstagram className=' text-[16px] text-gray-500 cursor-pointer hover:text-yellow-600' />
                 <FaYoutube className=' text-[16px] text-gray-500 cursor-pointer hover:text-red-600' />
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
