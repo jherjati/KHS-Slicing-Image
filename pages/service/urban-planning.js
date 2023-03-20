@@ -3,8 +3,48 @@ import Head from "next/head";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import UrbanPlanning from "../../components/UrbanPlanning";
+import { request, gql } from "graphql-request";
 
-export default function Home() {
+export async function getStaticProps() {
+  const query = gql`
+    {
+      items: urbanPages(first: 1) {
+        nodes {
+          ...UrbanPageFields
+        }
+      }
+    }
+
+    fragment UrbanPageFields on UrbanPage {
+      title
+      description
+      subserviceTitle
+      subserviceDescription
+      subserviceImage {
+        mediaItemId
+        mediaItemUrl
+        altText
+        title
+        caption
+        description
+      }
+    }
+  `;
+
+  const { items } = await request(
+    "https://www.handalselaras.com/graphql/",
+    query
+  );
+
+  return {
+    props: {
+      data: items.nodes[0],
+    },
+    revalidate: 1 * 30,
+  };
+}
+
+export default function Home({ data }) {
   return (
     <div>
       <Head>
@@ -13,7 +53,7 @@ export default function Home() {
         <link rel='icon' href='/logo.ico' />
       </Head>
       <Navbar />
-      <UrbanPlanning />
+      <UrbanPlanning pageData={data} />
       <Footer />
     </div>
   );
