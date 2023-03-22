@@ -2,8 +2,46 @@ import Head from "next/head";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import DroneSpraying from "../../components/DroneSpraying";
+import { request, gql } from "graphql-request";
 
-export default function Home() {
+export async function getStaticProps() {
+  const query = gql`
+    {
+      items: dronePages(first: 1) {
+        nodes {
+          ...DronePageFields
+        }
+      }
+    }
+
+    fragment DronePageFields on DronePage {
+      title
+      description
+      tools {
+        mediaItemId
+        mediaItemUrl
+        title
+        altText
+        caption
+        description
+      }
+    }
+  `;
+
+  const { items } = await request(
+    "https://www.handalselaras.com/graphql/",
+    query
+  );
+
+  return {
+    props: {
+      data: items.nodes[0],
+    },
+    revalidate: 1 * 30,
+  };
+}
+
+export default function Home({ data }) {
   return (
     <div>
       <Head>
@@ -12,7 +50,7 @@ export default function Home() {
         <link rel='icon' href='/logo.ico' />
       </Head>
       <Navbar />
-      <DroneSpraying />
+      <DroneSpraying pageData={data} />
       <Footer />
     </div>
   );
