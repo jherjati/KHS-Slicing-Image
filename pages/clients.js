@@ -2,8 +2,46 @@ import Head from "next/head";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Clients from "../components/Clients";
+import { request, gql } from "graphql-request";
 
-export default function Client() {
+export async function getStaticProps() {
+  const query = gql`
+    {
+      items: clientPages(first: 1) {
+        nodes {
+          ...ClientPageFields
+        }
+      }
+    }
+
+    fragment ClientPageFields on ClientPage {
+      title
+      description
+      clients {
+        mediaItemId
+        mediaItemUrl
+        title
+        altText
+        caption
+        description
+      }
+    }
+  `;
+
+  const { items } = await request(
+    "https://www.handalselaras.com/graphql/",
+    query
+  );
+
+  return {
+    props: {
+      data: items.nodes[0],
+    },
+    revalidate: 1 * 30,
+  };
+}
+
+export default function Client({ data }) {
   return (
     <div>
       <Head>
@@ -12,7 +50,7 @@ export default function Client() {
         <link rel='icon' href='/logo.ico' />
       </Head>
       <Navbar />
-      <Clients />
+      <Clients pageData={data} />
       <Footer />
     </div>
   );
