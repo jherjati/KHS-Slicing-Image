@@ -65,8 +65,6 @@ function ImageHeadline({
 }
 
 const HomePage = ({ pageData }) => {
-  console.log(pageData);
-
   const {
     section1,
     section2Title,

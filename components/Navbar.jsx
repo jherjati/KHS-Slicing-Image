@@ -236,7 +236,7 @@ const Navbar = () => {
 
   const onSubmit = (event) => {
     event.preventDefault();
-    console.log(term);
+    // console.log(term);
     //TODO: fetch api here
   };
 
