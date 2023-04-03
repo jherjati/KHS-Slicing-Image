@@ -110,7 +110,7 @@ const Sidebar = () => {
             </ul>
             <ul>
               <li className=" py-3 align-middle hover:text-blue-900 hover:font-bold hover:cursor-pointer text-slate-900 tracking-wide text-base font-quicksand">
-                <Link href="/blog">Blog & Publications</Link>
+                <Link href="/content/blog">Blog & Publications</Link>
               </li>
             </ul>
             <ul>

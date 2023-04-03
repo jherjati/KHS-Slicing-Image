@@ -1,25 +1,17 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-// import { useRouter } from "next/router";
 import acBg from "../public/accents/ac-bg.svg";
 import acBgMini from "../public/accents/ac-bg-mini.svg";
 import SelectButton from "./SelectButton";
 import Pagination from "./Pagination";
 import { rootUrl, wpBlog2webBlog } from "../constants";
+import { useRouter } from "next/router";
 
-const Blog = ({ serverBlogs = [], categories = [] }) => {
-  const OPTIONS = [
-    { id: "all", value: "All" },
-    ...categories.map((e) => ({ id: e.catIds, value: e.name })),
-  ];
-
-  function handleChange(event) {
-    console.log(event.target);
-  }
+const Blog = ({ serverBlogs = [], categories = [], currentMenu = "All" }) => {
+  const { push } = useRouter();
 
   const [page, setPage] = useState(1);
-
   const [isLoading, setIsLoading] = useState(false);
   const [clientBlogs, setClientBlogs] = useState([]);
   useEffect(() => {
@@ -48,8 +40,6 @@ const Blog = ({ serverBlogs = [], categories = [] }) => {
   }, [page]);
 
   const renderedBlogs = clientBlogs.length ? clientBlogs : serverBlogs;
-
-  // console.log({ serverBlogs, clientBlogs });
   return (
     <div className='pt-[70px] relative w-full '>
       <Image
@@ -62,6 +52,7 @@ const Blog = ({ serverBlogs = [], categories = [] }) => {
         alt=''
         className='absolute -top-[70px] w-full md:hidden max-h-[835px] object-cover'
       />
+
       <div className=' flex flex-col space-y-8 lg:grid lg:grid-cols-2 content-center p-[5%] relative'>
         <div className='flex justify-center flex-col space-y-4 lg:space-y-8 col-span-1 mx-3'>
           <h1 className='text-white text-[20px] leading-[28px] font-inter font-[600] '>
@@ -93,15 +84,17 @@ const Blog = ({ serverBlogs = [], categories = [] }) => {
           />
         </div>
       </div>
+
       <div className=' md:bg-white rounded-lg m-[5%] relative'>
         {/* category and searching */}
         <div className='hidden min-[1100px]:grid min-[1100px]:grid-cols-6 items-center'>
           {/* <div className='hidden min-[1300px]:flex  scrollbar-hide w-full h-[10px] space-x-[32px] px-[40px] py-[3%] overflow-x-scroll overflow-y-hidden text-[16px] leading-[18.75px] font-roboto text-[#5F5B5A] opacity-[0.6]'> */}
           <div className='col-span-5 flex w-full justify-between p-5'>
             <Link
-              href={"/blog"}
+              href={"/content/blog"}
               className={
-                "flex items-center whitespace-nowrap text-blue-dark font-extrabold"
+                "flex items-center whitespace-nowrap " +
+                (currentMenu === "All" ? "text-blue-dark font-extrabold" : "")
               }
             >
               All
@@ -109,7 +102,12 @@ const Blog = ({ serverBlogs = [], categories = [] }) => {
             {categories.map(({ id, name, catIds }) => (
               <Link
                 href={"/content/blog/" + catIds}
-                className={"flex items-center whitespace-nowrap "}
+                className={
+                  "flex items-center whitespace-nowrap " +
+                  (currentMenu === catIds
+                    ? "text-blue-dark font-extrabold"
+                    : "")
+                }
                 key={id}
               >
                 {name}
@@ -148,20 +146,23 @@ const Blog = ({ serverBlogs = [], categories = [] }) => {
                 placeholder='Cari Artikel'
                 required
               />
-              {/* <button
-                  type="submit"
-                  className="text-grey font-quicksand absolute right-2.5 bottom-2.5 bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                >
-                  Search
-                </button> */}
             </div>
           </form>
         </div>
-        <div className='rounded-xl border mb-10'>
+
+        <div className='min-[1300px]:hidden rounded-xl border mb-10'>
           <SelectButton
-            selected={"all"}
-            options={OPTIONS}
-            onChange={handleChange}
+            selected={currentMenu}
+            options={[
+              { id: "All", value: "All" },
+              ...categories.map((e) => ({ id: e.catIds, value: e.name })),
+            ]}
+            onChange={(event) => {
+              push(
+                "/content/blog/" +
+                  (event.target.name === "All" ? "" : event.target.name)
+              );
+            }}
           />
         </div>
         {/* list blog detail */}

@@ -3,6 +3,7 @@ import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
 import Blog from "../../../components/Blog";
 import { categories, rootUrl, wpBlog2webBlog } from "../../../constants";
+import { useRouter } from "next/router";
 
 export async function getStaticPaths() {
   return {
@@ -33,6 +34,7 @@ export async function getStaticProps({ params }) {
 }
 
 export default function Home({ blogs, categories }) {
+  const { query } = useRouter();
   return (
     <div>
       <Head>
@@ -41,7 +43,11 @@ export default function Home({ blogs, categories }) {
         <link rel='icon' href='/logo.ico' />
       </Head>
       <Navbar />
-      <Blog serverBlogs={blogs} categories={categories} />
+      <Blog
+        serverBlogs={blogs}
+        categories={categories}
+        currentMenu={query?.category}
+      />
       <Footer />
     </div>
   );

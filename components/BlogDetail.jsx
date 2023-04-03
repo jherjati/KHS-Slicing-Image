@@ -64,7 +64,7 @@ const Detail = ({ blog, blogs = [] }) => {
                   <article className='text-slate-800 font-bold tracking-wide text-sm md:text-xl font-quicksand' dangerouslySetInnerHTML={{ __html: title }} />
                   <article className='text-grey text-[12px] leading-[18px] font-inter md:text-[16px] md:leading-[26px] text-justify line-clamp-2' dangerouslySetInnerHTML={{ __html: text }} />
                   <p className='text-slate-500 tracking-wide text-sm md:text-xl font-quicksand'>Publish: {new Date(publish).toDateString()}</p>
-                  <Link href={`/blog/detail/${slug}`} className='flex justify-between'>
+                  <Link href={`/content/blog/detail/${slug}`} className='flex justify-between'>
                     <p className='text-sky-600 font-bold hover:text-sky-900 tracking-wide text-sm md:text-base font-quicksand'>Read More</p>
                     <p className='hidden lg:flex text-sky-600 hover:text-sky-900 tracking-wide text-sm md:text-xl font-quicksand'> {">"} </p>
                   </Link>
