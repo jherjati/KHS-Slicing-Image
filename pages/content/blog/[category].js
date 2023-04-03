@@ -41,7 +41,7 @@ export default function Home({ blogs, categories }) {
         <link rel='icon' href='/logo.ico' />
       </Head>
       <Navbar />
-      <Blog blogs={blogs} categories={categories} />
+      <Blog serverBlogs={blogs} categories={categories} />
       <Footer />
     </div>
   );
