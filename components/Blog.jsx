@@ -53,37 +53,7 @@ const Blog = ({ serverBlogs = [], categories = [], currentMenu = "All" }) => {
         className='absolute -top-[70px] w-full md:hidden max-h-[835px] object-cover'
       />
 
-      <div className=' flex flex-col space-y-8 lg:grid lg:grid-cols-2 content-center p-[5%] relative'>
-        <div className='flex justify-center flex-col space-y-4 lg:space-y-8 col-span-1 mx-3'>
-          <h1 className='text-white text-[20px] leading-[28px] font-inter font-[600] '>
-            Blog
-          </h1>
-          <h1 className='text-white text-sedangmobile md:text-sedang2 font-quicksand '>
-            UAV Lidar untuk Perencanaan Perumahan
-          </h1>
-          <p className='text-[#F5F5F5] text-kecilmobile md:text-kecil font-quicksand '>
-            Dalam perencanaan perumahan salah satu elemen kunci adalah data
-            lahan dari lahan yang akan dibangun. Data lahan yang diperlukan
-            meliputi batas lahan, data topografi dan data tematik lainnya.
-            Berikut adalah manfaat UAV Lidar untuk perencanaan perumahan
-          </p>
-          <div className='grid md:flex'>
-            <button className=' text-blue  bg-white rounded-md text-[14px] leading-[21px] md:text-[16px] md:leading-[24px] font-[600] font-inter py-3 px-5'>
-              Read More
-            </button>
-          </div>
-        </div>
-        <div className='flex justify-center lg:justify-end items-center '>
-          <Image
-            src='/blogimage.png'
-            className='rounded-lg'
-            alt=''
-            width='500'
-            height='300'
-            layout='intrinsic'
-          />
-        </div>
-      </div>
+      <FirstBlog blog={serverBlogs[0]} />
 
       <div className=' md:bg-white rounded-lg m-[5%] relative'>
         {/* category and searching */}
@@ -243,3 +213,45 @@ const Blog = ({ serverBlogs = [], categories = [], currentMenu = "All" }) => {
 };
 
 export default Blog;
+
+const FirstBlog = ({ blog }) => {
+  const { id, slug, image, category, title, text, publish } = blog;
+  return (
+    <div className=' flex flex-col space-y-8 lg:grid lg:grid-cols-2 content-center p-[5%] relative'>
+      <div className='flex justify-center flex-col space-y-4 lg:space-y-8 col-span-1 mx-3'>
+        <h1 className='text-white text-[20px] leading-[28px] font-inter font-[600] '>
+          Blog
+        </h1>
+        <div
+          className='text-white text-sedangmobile md:text-sedang2 font-quicksand '
+          dangerouslySetInnerHTML={{ __html: title }}
+        ></div>
+        <div
+          className='text-[#F5F5F5] text-kecilmobile md:text-kecil font-quicksand '
+          dangerouslySetInnerHTML={{ __html: text }}
+        ></div>
+        <div className='grid md:flex'>
+          <Link
+            href={`/content/blog/detail/${slug}`}
+            className=' text-blue  bg-white rounded-md text-[14px] leading-[21px] md:text-[16px] md:leading-[24px] font-[600] font-inter py-3 px-5'
+          >
+            Read More
+          </Link>
+        </div>
+      </div>
+      <div className='flex justify-center lg:justify-end items-center '>
+        <Image
+          src={
+            image ??
+            "https://www.handalselaras.com/wp-content/uploads/2022/12/rwrwtw.png"
+          }
+          className='rounded-lg'
+          alt={title}
+          width='500'
+          height='300'
+          layout='intrinsic'
+        />
+      </div>
+    </div>
+  );
+};
