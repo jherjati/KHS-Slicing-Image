@@ -2,8 +2,50 @@ import Head from "next/head";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import Career from "../../components/Career";
+import { request, gql } from "graphql-request";
 
-export default function Client() {
+export async function getStaticProps() {
+  const query = gql`
+    {
+      items: careerPages(first: 1) {
+        nodes {
+          ...CareerPageFields
+        }
+      }
+    }
+
+    fragment CareerPageFields on CareerPage {
+      title
+      section1Title
+      section1Description
+      section2Title
+      section2Description
+      section2Cards
+      section3Title
+      section3Jobs {
+        databaseId
+        mediaItemUrl
+        altText
+        title
+        caption
+      }
+    }
+  `;
+
+  const { items } = await request(
+    "https://www.handalselaras.com/graphql/",
+    query
+  );
+
+  return {
+    props: {
+      data: items.nodes[0],
+    },
+    revalidate: 1 * 30,
+  };
+}
+
+export default function Client({ data }) {
   return (
     <div>
       <Head>
@@ -12,7 +54,7 @@ export default function Client() {
         <link rel='icon' href='/logo.ico' />
       </Head>
       <Navbar />
-      <Career />
+      <Career pageData={data} />
       <Footer />
     </div>
   );
